@@ -1,0 +1,47 @@
+.skillSet{
+    padding: 1rem 0;
+}
+.skillSet h4{
+    font-weight: 400;
+    padding: .375rem 0 .125rem 0;
+}
+.tagSlider{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto-fit, 3.375rem);
+    gap: .5rem;
+}
+.skillTag{
+    display: grid;
+    grid-template-columns: 2.375rem calc(100% - 2.875rem);
+    column-gap: .5rem;
+    grid-template-areas: 
+    "img name"
+    "img desc";
+    align-items: center;
+    border-radius: .75rem;
+    background-color: #26252E;
+    padding: .5rem;
+}
+.skillTag img{
+    grid-area: img;
+    width: 2.375rem;
+    height: 2.375rem;
+    user-select: none;
+}
+.skillTag .name{
+    grid-area: name;
+    font-size: 14px;
+    color: #DDD;
+}
+.skillTag .desc{
+    grid-area: desc;
+    font-size: 12px;
+    color: #777;
+}
+.skillTag .name,
+.skillTag .desc{
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
