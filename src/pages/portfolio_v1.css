@@ -244,3 +244,20 @@ header .heading .extras{
 main{
   padding: 1rem 2rem 2rem 2rem;
 }
+
+@media (max-width: 800px){
+  .portfolio{
+    height: fit-content;
+    flex-direction: column;
+  }
+  section{
+    height: fit-content;
+  }
+  section.right,
+  section.left{
+    width: 100%;
+  }
+  header{
+    max-height: 20rem;
+  }
+}
