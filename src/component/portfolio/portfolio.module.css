@@ -1,0 +1,82 @@
+.portfolio{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1rem;
+}
+.portfolio article{
+    border-radius: .75rem;
+    background-color: #26252E;
+    padding: .5rem;
+    transition: all .3s;
+}
+.portfolio article:hover{
+    box-shadow: 0 0 1px 1px #3e3d4b;
+}
+.portfolio article .imgContainer{
+    width: 100%;
+    height: 7rem;
+    border-radius: .5rem .5rem 0 0;
+    background: #161618;
+    position: relative;
+    overflow: hidden;
+}
+.portfolio article .imgContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.portfolio article .imgContainer .links{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding-right: .5rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    gap: .5rem;
+}
+.portfolio article .imgContainer .links::after{
+    z-index: 1;
+    content: "";
+    width: calc(100% + 1rem);
+    height: 3rem;
+    background: #26252E;
+    clip-path: polygon(0 50%, 100% 0, 100% 100%, 0% 100%);;
+    position: absolute;
+    bottom: -3rem;
+    right: -.5rem;
+    transition: all .3s ease-in-out;
+}
+.portfolio article .imgContainer .links svg{
+    width: 1.5rem;
+    height: 1.5rem;
+    color: transparent;
+    transition: all .5s ease-in-out;
+    filter: drop-shadow(0 0 2px #26252E);
+}
+.portfolio article .imgContainer .links a{
+    z-index: 3;
+}
+.portfolio article .techs{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #888;
+    padding-top: .25rem;
+}
+.portfolio article .desc{
+    text-align: justify;
+    font-size: 14px;
+    color: #888;
+}
+
+.portfolio article:hover .imgContainer .links svg{
+    color: #ffffffde;
+}
+.portfolio article:hover .imgContainer .links::after{
+    bottom: -1.5rem;
+}

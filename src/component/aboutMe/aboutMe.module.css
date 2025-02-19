@@ -1,0 +1,46 @@
+.aboutMe{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    font-size: 14px;
+}
+.aboutMe article{
+    display: flex;
+    flex-direction: column;
+}
+.aboutMe article:first-child{
+    gap: .5rem;
+    max-width: 16rem;
+    position: relative;
+}
+.aboutMe article:last-child{
+    gap: 1rem;
+    justify-content: center;
+}
+.aboutMe article:first-child::after{
+    content: "";
+    position: absolute;
+    bottom: 1rem;
+    right: -1rem;
+    width: 2px;
+    height: calc(100% - 2rem);
+    background: linear-gradient(#2F145E 40%, #6F2CE3 75%, #2F145E 90%);
+}
+.aboutMe p{
+    text-indent: 20px;
+    text-align: justify;
+    color: #bbb;
+}
+.aboutMe .eduItem{
+    border-radius: .75rem;
+    background-color: #26252E;
+    padding: .5rem;
+    transition: all .3s;
+}
+.aboutMe .eduItem :first-child{
+    color: #888;
+    font-size: 12px;
+}
+.aboutMe .eduItem:hover{
+    box-shadow: 0 0 1px 1px #3e3d4b;
+}

@@ -1,12 +1,14 @@
 import React from "react";
 import "./footer.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCreativeCommons } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
 	return(
 		<footer className="center">
-			<h3 className="heading">
-				<h2>Prototype Portfolio</h2>
-			</h3>
+			<h2 className="heading">
+				Prototype Portfolio <FontAwesomeIcon icon={faCreativeCommons}/>
+			</h2>
 			<div className="info">
 				<div className="center">
 					<h3>Creación</h3>

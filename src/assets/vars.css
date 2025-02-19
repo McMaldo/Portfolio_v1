@@ -12,14 +12,10 @@
     
     /* general colors */
     --font-color: rgba(255, 255, 255, 0.87);
-    --font-color-soft: rgba(255, 255, 255, 0.6);
-    --bg-color: #242424;
-    --bg-color-header: #10112c;
-    --bg-color-main: var(--bg-color);
-    --bg-color-link: #646cff;
-    --bg-color-link-hover: #535bf2;
-    --bg-color-card: rgba(181, 184, 245, 0.1);
-    --bg-color-card-hover: rgba(181, 184, 245, 0.15);
+    --font-color-soft: #888;
+    --bg-color: #161618;
+    --bg-color-tag: rgba(181, 184, 245, 0.1);
+    --bg-color-tag-hover: rgba(181, 184, 245, 0.15);
     
     /* static in both themes */
     --bg-color-footer: #242424;
@@ -35,19 +31,15 @@
 }
 
 /* light theme active */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     :root {
         /* general colors */
         --font-color: rgba(0, 0, 0, 0.87);
         --font-color-soft: rgba(0, 0, 0, 0.6);
         --bg-color: #d8dbdd;
-        --bg-color-header: #c6c8f7;
-        --bg-color-main: #f1f1f1;
-        --bg-color-link: #646cff;
-        --bg-color-link-hover: #535bf2;
-        --bg-color-card: rgba(100, 108, 255, 0.15);
-        --bg-color-card-hover: rgba(102, 110, 255, 0.25);
-        --bg-color-card-shadow: rgba(0, 0, 0, 0.2);
+        --bg-color-tag: rgba(100, 108, 255, 0.15);
+        --bg-color-tag-hover: rgba(102, 110, 255, 0.25);
+        --bg-color-tag-shadow: rgba(0, 0, 0, 0.2);
 
         /* main colors */
         --color-1: #f1a585;

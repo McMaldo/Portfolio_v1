@@ -21,13 +21,15 @@ section::-webkit-scrollbar{
 
 /* LEFT------------------------------------------------------------------------ */
 section.left{
-  max-width: 400px;
-  width: 25%;
+  width: 14.75rem;
   background-image: linear-gradient(#161618, #161618),
     linear-gradient(90deg, #6F2CE3, #2F145E);
 }
 section .leftContent{
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
 }
 .avatar{
   width: 100%;
@@ -38,7 +40,6 @@ section .leftContent{
 .accounts{
   width: 100%;
   display: flex;
-  padding: .5rem 0;
   gap: .5rem;
 }
 .accounts a,
@@ -48,7 +49,7 @@ section .leftContent{
   display: grid;
   place-items: center;
   background-color: #26252E;
-  border-radius: 10px;
+  border-radius: .5rem;
   cursor: pointer;
 }
 .accounts a svg,
@@ -74,7 +75,7 @@ section .leftContent{
   font-size: 10px;
 }
 .contactItem .content :first-child{
-  color: #777;
+  color: #888;
 }
 .contactItem .text{
   width: 100%;
@@ -87,9 +88,9 @@ section.left h2{
   display: flex;
   justify-content: center;
   font-weight: 400;
-  padding: .25rem 0;
 }
-section.left h5{
+section.left h5,
+section.left .spkLangTag{
   color: #ccc;
   display: flex;
   align-items: center;
@@ -99,13 +100,33 @@ section.left h5{
   border-radius: .25rem;
   padding: .125rem;
 }
+section.left .spkLangs{
+  width: 100%;
+  display: flex;
+  gap: .5rem;
+}
+section.left .spkLangs .spkLangTag{
+  width: 50%;
+  display: flex;
+  gap: .25rem;
+}
+section.left .spkLangs .spkLangTag img{
+  height: 1rem;
+  aspect-ratio: 1 / 1;
+}
 section.left h3{
-  margin: .75rem 0 .25rem 0;
+  margin-top: .5rem;
 }
 section.left h3,
 main h3{
   width: fit-content;
   position: relative;
+}
+section.left h3{
+  margin: .5rem 0;
+}
+main h3{
+  margin: 2rem 0 1rem 0;
 }
 section.left h3::after,
 main h3::after{
@@ -122,16 +143,10 @@ section.left h3::after{
 main h3::after{
   background: linear-gradient(90deg, #2F145E, #6528ce);
 }
-section.left .aboutMe{
-  font-size: 14px;
-  text-indent: 20px;
-  text-align: justify;
-  color: #bbb;
-}
 
 /* RIGHT----------------------------------------------------------------------- */
 section.right{
-  width: 75%;
+  width: calc(100% - 16.75rem);
   background-image: linear-gradient(#161618, #161618),
     linear-gradient(90deg, #2F145E 60%, #6F2CE3);
 }
@@ -227,5 +242,5 @@ header .heading .extras{
 	}
 }
 main{
-  padding: 2rem 2rem 1rem 2rem;
+  padding: 1rem 2rem 2rem 2rem;
 }

@@ -1,14 +1,12 @@
-.skillSet{
-    padding: 1rem 0;
-}
 .skillSet h4{
     font-weight: 400;
     padding: .375rem 0 .125rem 0;
+    color: #888;
 }
 .tagSlider{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(auto-fit, 3.375rem);
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(3.375rem, 1fr));
     gap: .5rem;
 }
 .skillTag{
@@ -22,12 +20,17 @@
     border-radius: .75rem;
     background-color: #26252E;
     padding: .5rem;
+    transition: all .3s;
+}
+.skillTag:hover{
+    box-shadow: 0 0 1px 1px #3e3d4b;
 }
 .skillTag img{
     grid-area: img;
     width: 2.375rem;
     height: 2.375rem;
     user-select: none;
+    transition: all .3s;
 }
 .skillTag .name{
     grid-area: name;
@@ -37,7 +40,7 @@
 .skillTag .desc{
     grid-area: desc;
     font-size: 12px;
-    color: #777;
+    color: #888;
 }
 .skillTag .name,
 .skillTag .desc{
