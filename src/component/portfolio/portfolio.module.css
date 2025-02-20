@@ -55,7 +55,7 @@
     height: 1.5rem;
     color: transparent;
     transition: all .5s ease-in-out;
-    filter: drop-shadow(0 0 2px #26252E);
+    filter: drop-shadow(0 0 3px #26252E);
 }
 .portfolio article .imgContainer .links a{
     z-index: 3;

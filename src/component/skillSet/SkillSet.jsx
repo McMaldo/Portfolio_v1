@@ -2,112 +2,51 @@ import React from "react";
 import s from './skillSet.module.css';
 
 export default function SkillSet() {
+	const ICONS_DIR = "/Portfolio_v1/icons/";
+
+	let skillTags = [
+		{catName: "Front-end", skills: [
+			{img:"CSS.svg", name:"CSS", desc: "Styling Lang"},
+			{img:"React-Dark.svg", name:"React", desc: "JS Lib"},
+			{img:"JavaScript.svg", name:"Java Script", desc: "Lang"},
+			{img:"NodeJS-Dark.svg", name:"Node JS", desc: "JS Lib"},
+			{img:"Bootstrap.svg", name:"Bootstrap", desc: "Styling Lib"},
+			{img:"MaterialUI-Dark.svg", name:"Material UI", desc: "React Lib"},
+			{img:"TailwindCSS-Dark.svg", name:"Tailwind CSS", desc: "Styling Lib"},
+			{img:"AntDesign.svg", name:"Ant Design", desc: "Component Lib"}
+		]},
+		{catName: "Back-end", skills: [
+			{img:"PHP-Dark.svg", name:"PHP", desc: "Lang"},
+			{img:"Python-Dark.svg", name:"Python", desc: "Lang"},
+			{img:"Bash-Dark.svg", name:"Bash", desc: "Lang"},
+			{img:"ExpressJS-Dark.svg", name:"Express JS", desc: "JS Lib"}
+		]},
+		{catName: "General Tools", skills: [
+			{img:"Git.svg", name:"Git", desc: "Version Control"},
+			{img:"Figma-Dark.svg", name:"Figma", desc: "Design Tool"},
+			{img:"Notion-Dark.svg", name:"Notion", desc: "Organization Tool"},
+			{img:"Trello.svg", name:"Trello", desc: "Organization Tool"},
+			{img:"SpanishFlag.webp", name:"Spanish", desc: "Native Lang"},
+			{img:"EnglishFlag.webp", name:"English", desc: "Second Lang"}
+		]}
+	];
+
   return (
 		<div className={s.skillSet}>
-			<h4>Front-end</h4>
-			<div className={s.tagSlider}>
-				<div className={s.skillTag}>
-					<img src="/Portfolio_v1/icons/CSS.svg" alt="" />
-					<div className={s.name}>CSS</div>
-					<div className={s.desc}>Styling Lang</div>
+			{skillTags.map((cat, catKey) => (
+				<div key={catKey}>
+					<h4>{cat.catName}</h4>
+					<div className={s.tagSlider}>
+						{cat.skills.map((skill, skillKey) => (
+							<div className={s.skillTag} key={skillKey}>
+								<img src={ICONS_DIR + skill.img} alt="" />
+								<div className={s.name}>{skill.name}</div>
+								<div className={s.desc}>{skill.desc}</div>
+							</div>
+						))}
+					</div>
 				</div>
-				<div className={s.skillTag}>
-					<img src="/Portfolio_v1/icons/React-Dark.svg" alt="" />
-					<div className={s.name}>React</div>
-					<div className={s.desc}>JS Lib</div>
-				</div>
-				<div className={s.skillTag}>
-					<img src="/Portfolio_v1/icons/JavaScript.svg" alt="" />
-					<div className={s.name}>Java Script</div>
-					<div className={s.desc}>Lang</div>
-				</div>
-				<div className={s.skillTag}>
-					<img src="/Portfolio_v1/icons/NodeJS-Dark.svg" alt="" />
-					<div className={s.name}>Node JS</div>
-					<div className={s.desc}>JS Lib</div>
-				</div>
-				<div className={s.skillTag}>
-					<img src="/Portfolio_v1/icons/Bootstrap.svg" alt="" />
-					<div className={s.name}>Bootstrap</div>
-					<div className={s.desc}>Styling Lib</div>
-				</div>
-				<div className={s.skillTag}>
-					<img src="/Portfolio_v1/icons/MaterialUI-Dark.svg" alt="" />
-					<div className={s.name}>Material UI</div>
-					<div className={s.desc}>React Lib</div>
-				</div>
-				<div className={s.skillTag}>
-					<img src="/Portfolio_v1/icons/TailwindCSS-Dark.svg" alt="" />
-					<div className={s.name}>Tailwind</div>
-					<div className={s.desc}>Styling Lib</div>
-				</div>
-				<div className={s.skillTag}>
-					<img src="/Portfolio_v1/icons/AntDesign.svg" alt="" />
-					<div className={s.name}>Ant Design</div>
-					<div className={s.desc}>Component Lib</div>
-				</div>
-			</div>
-			<h4>Back-end</h4>
-			<div className={s.tagSlider}>
-				<div className={s.skillTag}>
-					<img src="/Portfolio_v1/icons/PHP-Dark.svg" alt="" />
-					<div className={s.name}>PHP</div>
-					<div className={s.desc}>Lang</div>
-				</div>
-				<div className={s.skillTag}>
-					<img src="/Portfolio_v1/icons/Python-Dark.svg" alt="" />
-					<div className={s.name}>Python</div>
-					<div className={s.desc}>Lang</div>
-				</div>
-				<div className={s.skillTag}>
-					<img src="/Portfolio_v1/icons/Bash-Dark.svg" alt="" />
-					<div className={s.name}>Bash</div>
-					<div className={s.desc}>Lang</div>
-				</div>
-				<div className={s.skillTag}>
-					<img src="/Portfolio_v1/icons/ExpressJS-Dark.svg" alt="" />
-					<div className={s.name}>Express</div>
-					<div className={s.desc}>JS Lib</div>
-				</div>
-			</div>
-			<h4>General Tools</h4>
-			<div className={s.tagSlider}>
-				<div className={s.skillTag}>
-					<img src="/Portfolio_v1/icons/Git.svg" alt="" />
-					<div className={s.name}>Git</div>
-					<div className={s.desc}>Version Control</div>
-				</div>
-				<div className={s.skillTag}>
-					<img src="/Portfolio_v1/icons/Figma-Dark.svg" alt="" />
-					<div className={s.name}>Figma</div>
-					<div className={s.desc}>Design Tool</div>
-				</div>
-				<div className={s.skillTag}>
-					<img src="/Portfolio_v1/icons/Notion-Dark.svg" alt="" />
-					<div className={s.name}>Notion</div>
-					<div className={s.desc}>Organization Tool</div>
-				</div>
-				<div className={s.skillTag}>
-					<img src="/Portfolio_v1/icons/Trello.svg" alt="" />
-					<div className={s.name}>Trello</div>
-					<div className={s.desc}>Organization Tool</div>
-				</div>
-				<div className={s.skillTag}>
-					<img src="/Portfolio_v1/icons/SpanishFlag.webp" alt="" />
-					<div className={s.name}>Spanish</div>
-					<div className={s.desc}>Native Lang</div>
-				</div>
-				<div className={s.skillTag}>
-					<img src="/Portfolio_v1/icons/EnglishFlag.webp" alt="" />
-					<div className={s.name}>English</div>
-					<div className={s.desc}>Second Lang</div>
-				</div>
-				<div className={s.skillTag}>
-					<img src="/Portfolio_v1/icons/Monday.png" alt="" />
-					<div className={s.name}>Monday</div>
-					<div className={s.desc}>Organization Tool</div>
-				</div>
-			</div>
+			))}
 		</div>
   )
 }

@@ -87,7 +87,6 @@ section .leftContent{
 section.left h2{
   display: flex;
   justify-content: center;
-  font-weight: 400;
 }
 section.left h5,
 section.left .spkLangTag{
@@ -126,7 +125,8 @@ section.left h3{
   margin: .5rem 0;
 }
 main h3{
-  margin: 2rem 0 1rem 0;
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
 }
 section.left h3::after,
 main h3::after{
@@ -195,7 +195,7 @@ header::after{
   z-index: 1;
   content: "";
   position: absolute;
-  right: 0;
+  left: 2rem;
   bottom: 0;
   height: 2px;
   width: calc(100% - 2rem);
@@ -209,7 +209,7 @@ header nav button{
 }
 header nav button:hover{
   padding: .5rem;
-  background: #363441;
+  background: #32303d;
 }
 
 .gradient {
@@ -249,15 +249,42 @@ main{
   .portfolio{
     height: fit-content;
     flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
   }
   section{
-    height: fit-content;
+    height: max-content;
   }
   section.right,
   section.left{
     width: 100%;
   }
   header{
-    max-height: 20rem;
+    max-height: 15rem;
+  }
+}
+@media (max-width: 500px){
+  section .leftContent{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .avatar,
+  section.left h2,
+  section.left h5,
+  section.left .spkLangTag,
+  .accounts{
+    width: calc(50% - .25rem);
+  }
+  section.left h2{
+    height: fit-content;
+  }
+  header .heading h1{
+    font-size: 40px;
+  }
+  header nav{
+    right: unset;
+  }
+  header::after{
+    width: calc(100% - 4rem);
   }
 }

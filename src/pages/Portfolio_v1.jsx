@@ -7,6 +7,7 @@ import Contacts from "../component/contacts/Contacs";
 import AboutMe from "../component/aboutMe/AboutMe";
 import SkillSet from "../component/skillSet/SkillSet";
 import Portfolio from "../component/portfolio/Portfolio";
+import Footer from '../component/footer/Footer.jsx';
 
 export default function Portfolio_v1() {
   return (
@@ -59,6 +60,7 @@ export default function Portfolio_v1() {
           <h3 id="AboutMe">About Me</h3>
           <AboutMe/>
         </main>
+        <Footer/>
       </section>
     </div>
   )
