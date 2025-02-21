@@ -14,24 +14,26 @@ export default function Portfolio_v1() {
     <div className='portfolio'>
       <section className='left'>
         <div className="leftContent">
-          <div className="avatar"></div>
-          <h2>McMaldo</h2>
-          <h5>Front-end Developer</h5>
-          <div className="spkLangs">
-            <div className="spkLangTag">
-              <h5>Spanish</h5>
-              <img src="/Portfolio_v1/icons/SpanishFlag.webp" alt=""/>
+          <img src="/Portfolio_v1/img/McMaldo.jpg" className="avatar"/>
+          <div className="infoTags">
+            <h2>McMaldo</h2>
+            <h5>Front-end Developer</h5>
+            <div className="spkLangs">
+              <div className="spkLangTag">
+                <h5>Spanish</h5>
+                <img src="/Portfolio_v1/icons/SpanishFlag.webp" alt=""/>
+              </div>
+              <div className="spkLangTag">
+                <img src="/Portfolio_v1/icons/EnglishFlag.webp" alt=""/>
+                <h5>English</h5>
+              </div>
             </div>
-            <div className="spkLangTag">
-              <img src="/Portfolio_v1/icons/EnglishFlag.webp" alt=""/>
-              <h5>English</h5>
+            <div className="accounts">
+              <a href="https://github.com/McMaldo"><FontAwesomeIcon icon={faGithub}/></a>
+              <a href="https://gitlab.com/maldonado.ignacio.pablo"><FontAwesomeIcon icon={faGitlab}/></a>
+              <a href="https://www.linkedin.com/in/pablo-ignacio-maldonado"><FontAwesomeIcon icon={faLinkedin}/></a>
+              <a href="https://dev.to/mcmaldo"><FontAwesomeIcon icon={faDev}/></a>
             </div>
-          </div>
-          <div className="accounts">
-            <a href="https://github.com/McMaldo"><FontAwesomeIcon icon={faGithub}/></a>
-            <a href="https://gitlab.com/maldonado.ignacio.pablo"><FontAwesomeIcon icon={faGitlab}/></a>
-            <a href="https://www.linkedin.com/in/pablo-ignacio-maldonado"><FontAwesomeIcon icon={faLinkedin}/></a>
-            <a href="https://dev.to/mcmaldo"><FontAwesomeIcon icon={faDev}/></a>
           </div>
           <Contacts/>
         </div>

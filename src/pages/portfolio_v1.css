@@ -35,7 +35,11 @@ section .leftContent{
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 1rem;
-  background-color: #26252E;
+}
+.infoTags{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
 }
 .accounts{
   width: 100%;
@@ -253,7 +257,7 @@ main{
     gap: 1rem;
   }
   section{
-    height: max-content;
+    height: fit-content;
   }
   section.right,
   section.left{
@@ -269,10 +273,7 @@ main{
     flex-wrap: wrap;
   }
   .avatar,
-  section.left h2,
-  section.left h5,
-  section.left .spkLangTag,
-  .accounts{
+  .infoTags{
     width: calc(50% - .25rem);
   }
   section.left h2{

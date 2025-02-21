@@ -11,17 +11,17 @@ export default function Footer() {
 			</h2>
 			<div className="info">
 				<div className="center">
-					<h3>Creación</h3>
+					<h3>Creation</h3>
 					<p>13/02/2025</p>
 				</div>
-				<div className="center">
-					<h3>Autores</h3>
+				<div className="author center">
+					<h3>Author</h3>
 					<a href="https://github.com/McMaldo">@McMaldo</a>
 				</div>
 			</div>
 			<div className="ubic">
-				<p className="pais">Arg.</p>
-				<p className="prov">Bs. As.</p>
+				<p>Arg.</p>
+				<p>Bs. As.</p>
 			</div>
 		</footer>
 	);
