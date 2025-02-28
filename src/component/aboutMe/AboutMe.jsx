@@ -6,7 +6,7 @@ export default function AboutMe() {
 		<div className={s.aboutMe}>
 			<article>
 				<p>
-					Maldonado Ignacio, comunmente conocido como Maldo.
+					Maldonado Ignacio, tambien conocido como Maldo.
 					Técnico en Informática Personal y Profesional, programando desde los 15 años.
 				</p>
 				<p>
@@ -14,7 +14,7 @@ export default function AboutMe() {
 					A su vez con mucha práctica en Back-end y Bases de Datos para la Web.
 				</p>
 				<p>
-					Actualmente focalizado en React JS, con sus multiples librerias como MUI, AntD, etc.
+					Actualmente focalizado en React JS, con sus multiples librerias como MUI, AntD, rrd, etc.
 				</p>
 			</article>
 			<article>
