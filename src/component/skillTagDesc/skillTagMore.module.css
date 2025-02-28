@@ -1,0 +1,50 @@
+.skillTagMore{
+    z-index: 2;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: fit-content;
+    background: #26252E;
+    padding: .5rem;
+    border-radius: 0 0 .75rem .75rem;
+    box-shadow: 0 0 1px 1px #383844;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.skillTagMore h5{
+    color: #888;
+    line-height: 1;
+}
+.skillTag{
+    display: grid;
+    grid-template-columns: 2.375rem calc(100% - 2.875rem);
+    column-gap: .5rem;
+    grid-template-areas: 
+    "img name"
+    "img desc";
+    align-items: center;
+}
+.skillTag img{
+    grid-area: img;
+    width: 2.375rem;
+    height: 2.375rem;
+    user-select: none;
+    transition: all .3s;
+}
+.skillTag .name{
+    grid-area: name;
+    font-size: 14px;
+    color: #DDD;
+}
+.skillTag .desc{
+    grid-area: desc;
+    font-size: 12px;
+    color: #888;
+}
+.skillTag .name,
+.skillTag .desc{
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}

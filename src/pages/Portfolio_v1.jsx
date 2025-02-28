@@ -1,23 +1,27 @@
 import React from "react";
 import './portfolio_v1.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faGitlab, faLinkedin, faDev } from '@fortawesome/free-brands-svg-icons';
+import { useWindowSize } from "@uidotdev/usehooks";
+import userData from "../assets/userData.json";
 
+import Accounts from "../component/accounts/Accounts";
 import Contacts from "../component/contacts/Contacs";
 import AboutMe from "../component/aboutMe/AboutMe";
 import SkillSet from "../component/skillSet/SkillSet";
 import Portfolio from "../component/portfolio/Portfolio";
-import Footer from '../component/footer/Footer.jsx';
+import Footer from '../component/footer/Footer';
 
 export default function Portfolio_v1() {
+
+  let size = useWindowSize();
+
   return (
     <div className='portfolio'>
       <section className='left'>
         <div className="leftContent">
           <img src="/Portfolio_v1/img/McMaldo.jpg" className="avatar"/>
           <div className="infoTags">
-            <h2>McMaldo</h2>
-            <h5>Front-end Developer</h5>
+            <h2>{userData.name}</h2>
+            <h5>{userData.focusedOn}</h5>
             <div className="spkLangs">
               <div className="spkLangTag">
                 <h5>Spanish</h5>
@@ -28,24 +32,20 @@ export default function Portfolio_v1() {
                 <h5>English</h5>
               </div>
             </div>
-            <div className="accounts">
-              <a href="https://github.com/McMaldo"><FontAwesomeIcon icon={faGithub}/></a>
-              <a href="https://gitlab.com/maldonado.ignacio.pablo"><FontAwesomeIcon icon={faGitlab}/></a>
-              <a href="https://www.linkedin.com/in/pablo-ignacio-maldonado"><FontAwesomeIcon icon={faLinkedin}/></a>
-              <a href="https://dev.to/mcmaldo"><FontAwesomeIcon icon={faDev}/></a>
-            </div>
+            {size.width < 750 && <Accounts/>}
           </div>
           <Contacts/>
+          {size.width >= 750 && <Accounts/>}
         </div>
       </section>
       <section className='right'>
         <header>
           <div className='heading'>
-            <h1 className='gradient'>Web Developer</h1>
+            <h1 className='gradient'>{userData.heading.h1}</h1>
             <div className='extras gradient'>
-              <span>Front-end</span>
-              <span>Back-end</span>
-              <span>Design</span>
+              {userData.heading.subtitle.map((s, sKey) => (
+                <span key={sKey}>{s}</span>
+              ))}
             </div>
           </div>
           <nav>

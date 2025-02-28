@@ -6,10 +6,11 @@ export default function AboutMe() {
 		<div className={s.aboutMe}>
 			<article>
 				<p>
-					Técnico en Informática Personal y Profesional, programando desde los 15 años,
-					con una gran afinidad por el desarrollo Front-end y el Diseño Web.
+					Maldonado Ignacio, comunmente conocido como Maldo.
+					Técnico en Informática Personal y Profesional, programando desde los 15 años.
 				</p>
 				<p>
+					Con una gran afinidad por el desarrollo Front-end y el Diseño Web.
 					A su vez con mucha práctica en Back-end y Bases de Datos para la Web.
 				</p>
 				<p>

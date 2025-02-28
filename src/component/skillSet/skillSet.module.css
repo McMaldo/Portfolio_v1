@@ -1,34 +1,39 @@
 .skillSet h4{
-    font-weight: 400;
-    padding: .375rem 0 .125rem 0;
-    color: #888;
+	font-weight: 400;
+	padding: .5rem 0 .125rem 0;
+	color: #888;
 }
 .tagSlider{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(3.375rem, 1fr));
-    justify-content: center;
-    gap: .5rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	grid-template-rows: repeat(auto-fit, minmax(3.375rem, 1fr));
+	justify-content: center;
+	gap: .5rem;
 }
 .skillTag{
-    display: grid;
-    grid-template-columns: 2.375rem calc(100% - 2.875rem);
-    column-gap: .5rem;
-    grid-template-areas: 
-    "img name"
-    "img desc";
-    align-items: center;
-    border-radius: .75rem;
-    background: linear-gradient(90deg, #26252E 47%, #34333f 50%, #26252E 60%);
-	background-size: 300% 100%;
-    padding: .5rem;
-    transition: all .3s;
-    position: relative;
-    overflow: hidden;
+	display: grid;
+	grid-template-columns: 2.375rem calc(100% - 2.875rem);
+	column-gap: .5rem;
+	grid-template-areas: 
+	"img name"
+	"img desc";
+	align-items: center;
+	border-radius: .75rem;
+	background: #26252E;
+	padding: .5rem;
+	transition: all .3s;
+	position: relative;
 }
 .skillTag:hover{
-    box-shadow: 0 0 1px 1px #383844;
-	animation: gradientBack 2.5s linear infinite;
+	box-shadow: 0 0 1px 1px #383844;
+}
+.skillTagMore{
+	background: linear-gradient(90deg, #26252E 47%, #34333f 50%, #26252E 60%);
+	background-size: 300% 100%;
+	animation: gradientBack 3s linear infinite;
+}
+.skillTagMore:hover{
+	border-radius: .75rem .75rem 0 0;
 }
 @keyframes gradientBack {
 	0% {
@@ -42,31 +47,31 @@
 	}
 }
 .skillTag img{
-    grid-area: img;
-    width: 2.375rem;
-    height: 2.375rem;
-    user-select: none;
-    transition: all .3s;
+	grid-area: img;
+	width: 2.375rem;
+	height: 2.375rem;
+	user-select: none;
+	transition: all .3s;
 }
 .skillTag .name{
-    grid-area: name;
-    font-size: 14px;
-    color: #DDD;
+	grid-area: name;
+	font-size: 14px;
+	color: #DDD;
 }
 .skillTag .desc{
-    grid-area: desc;
-    font-size: 12px;
-    color: #888;
+	grid-area: desc;
+	font-size: 12px;
+	color: #888;
 }
 .skillTag .name,
 .skillTag .desc{
-    overflow: hidden;
-    text-wrap: nowrap;
-    text-overflow: ellipsis;
+	overflow: hidden;
+	text-wrap: nowrap;
+	text-overflow: ellipsis;
 }
 
 @media (max-width: 390px){
-    .tagSlider{
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
+	.tagSlider{
+		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	}
 }
