@@ -14,7 +14,7 @@
     position: relative;
 }
 .aboutMe article:last-child{
-    gap: 1rem;
+    gap: .5rem;
     justify-content: center;
 }
 .aboutMe article:first-child::after{
