@@ -216,6 +216,17 @@ main{
   section.left{
     width: 100%;
   }
+  section .leftContent{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  section.left h2{
+    height: fit-content;
+  }
+  .avatar,
+  .infoTags{
+    width: calc(50% - .25rem);
+  }
   section.right{
     height: fit-content;
   }
@@ -224,17 +235,6 @@ main{
   }
 }
 @media (max-width: 500px){
-  section .leftContent{
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .avatar,
-  .infoTags{
-    width: calc(50% - .25rem);
-  }
-  section.left h2{
-    height: fit-content;
-  }
   header .heading h1{
     font-size: 40px;
   }

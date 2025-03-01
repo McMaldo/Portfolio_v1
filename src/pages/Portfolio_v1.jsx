@@ -5,9 +5,10 @@ import userData from "../assets/userData.json";
 
 import Accounts from "../component/accounts/Accounts";
 import Contacts from "../component/contacts/Contacs";
-import AboutMe from "../component/aboutMe/AboutMe";
 import SkillSet from "../component/skillSet/SkillSet";
 import Portfolio from "../component/portfolio/Portfolio";
+import AboutMe from "../component/aboutMe/AboutMe";
+import Hobbies from "../component/hobbies/Hobbies";
 import Footer from '../component/footer/Footer';
 
 export default function Portfolio_v1() {
@@ -61,6 +62,7 @@ export default function Portfolio_v1() {
           <Portfolio/>
           <h3 id="AboutMe">About Me</h3>
           <AboutMe/>
+          <Hobbies/>
         </main>
         <Footer/>
       </section>

@@ -10,24 +10,21 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     
-    /* general colors */
-    --font-color: rgba(255, 255, 255, 0.87);
-    --font-color-soft: #888;
-    --bg-color: #161618;
-    --bg-color-tag: rgba(181, 184, 245, 0.1);
-    --bg-color-tag-hover: rgba(181, 184, 245, 0.15);
-    
     /* static in both themes */
     --bg-color-footer: #242424;
     --font-color-footer: rgb(198, 203, 215);
     --font-color-soft-footer: rgba(198, 203, 215, 0.5);
+    
+    /* general colors */
+    --font-color: rgba(255, 255, 255, 0.87);
+    --font-color-soft: #888;
+    --bg-color: #161618;
+    --bg-color-tag: #26252E;
+    --box-shadow-tag-hover: 0 0 1px 1px #383844;
 
     /* main colors */
-    --color-1: #9d7361;
-    --color-2: rgba(244, 129, 6, 0.5);
-    --color-3: rgba(221, 88, 70, 0.5);
-    --color-4: rgba(216, 81, 13, 1);
-    --color-5: rgba(229, 60, 51, 1);
+    --main-color: #6F2CE3;
+    --main-color-soft: #2F145E;
 }
 
 /* light theme active */
@@ -42,11 +39,6 @@
         --bg-color-tag-shadow: rgba(0, 0, 0, 0.2);
 
         /* main colors */
-        --color-1: #f1a585;
-        --color-2: #f48106;
-        --color-3: #dd5846;
-        --color-4: #d8500d;
-        --color-5: #e53b33;
     }
 }
 
