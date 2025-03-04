@@ -1,7 +1,7 @@
 .skillSet h4{
 	font-weight: 400;
 	padding: .5rem 0 .125rem 0;
-	color: #888;
+	color: var(--font-color-soft);
 }
 .tagSlider{
 	display: grid;
@@ -19,16 +19,16 @@
 	"img desc";
 	align-items: center;
 	border-radius: .75rem;
-	background: #26252E;
+	background: var(--bg-color-tag);
 	padding: .5rem;
 	transition: all .3s;
 	position: relative;
 }
 .skillTag:hover{
-	box-shadow: 0 0 1px 1px #383844;
+	box-shadow: var(--box-shadow-tag-hover);
 }
 .skillTagMore{
-	background: linear-gradient(90deg, #26252E 47%, #34333f 50%, #26252E 60%);
+	background: linear-gradient(90deg, var(--bg-color-tag) 47%, var(--bg-color-tag-light) 50%, var(--bg-color-tag) 60%);
 	background-size: 300% 100%;
 	animation: gradientBack 3s linear infinite;
 }
@@ -61,7 +61,7 @@
 .skillTag .desc{
 	grid-area: desc;
 	font-size: 12px;
-	color: #888;
+	color: var(--font-color-soft);
 }
 .skillTag .name,
 .skillTag .desc{
