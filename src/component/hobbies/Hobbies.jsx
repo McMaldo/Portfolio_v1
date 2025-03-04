@@ -1,5 +1,6 @@
 import { useState } from "react";
 import s from "./hobbies.module.css";
+import { hobbies } from "../../assets/userData.json";
 
 export default function Hobbies() {
 
@@ -21,13 +22,13 @@ export default function Hobbies() {
                             Here are some of my favourite things.
                         </p>
                     </article>
-                    <img src="/Portfolio_v1/img/Berserk-Cover.jpg" alt="" />
-                    <img src="/Portfolio_v1/img/OnePiece-Cover.jpg" alt="" />
-                    <img src="/Portfolio_v1/img/Invincible-Cover.jpg" alt="" />
-                    <img src="/Portfolio_v1/img/Blasphemous1-Cover.avif" alt="" />
-                    <img src="/Portfolio_v1/img/HotlineMiami1-Cover.webp" alt="" />
-                    <img src="/Portfolio_v1/img/djangoUnchained-Cover.webp" alt="" />
-                    <img src="/Portfolio_v1/img/EternalSunshineoftheSpotlessMind-Cover.jpg" alt="" />
+                    {hobbies.articles.map((article, articleKey) => (
+                    <article className={s.imgContainer} key={articleKey}>
+                        <img src={hobbies.ARTICLES_IMGS_DIR+article.img} alt="" />
+                        <div className={s.type}>
+                            <span>{article.type}</span>
+                        </div>
+                    </article>))}
                 </div>
             )}
         </div>

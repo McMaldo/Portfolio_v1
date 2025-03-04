@@ -55,8 +55,9 @@
     width: 1.5rem;
     height: 1.5rem;
     color: transparent;
+    padding: .375rem;
+    border-radius: 50%;
     transition: all .5s ease-in-out;
-    filter: drop-shadow(0 0 3px #26252E);
 }
 .portfolio article .imgContainer .links a{
     z-index: 3;
@@ -77,6 +78,7 @@
 
 .portfolio article:hover .imgContainer .links svg{
     color: #ffffffde;
+    background: var(--bg-color-tag);
 }
 .portfolio article:hover .imgContainer .links::after{
     bottom: -1.5rem;

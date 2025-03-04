@@ -19,7 +19,7 @@ export default function Portfolio_v1() {
     <div className='portfolio'>
       <section className='left'>
         <div className="leftContent">
-          <img src="/Portfolio_v1/img/McMaldo.jpg" className="avatar"/>
+          <img src="/Portfolio_v1/img/avatar.webp" className="avatar"/>
           <div className="infoTags">
             <h2>{userData.name}</h2>
             <h5>{userData.focusedOn}</h5>

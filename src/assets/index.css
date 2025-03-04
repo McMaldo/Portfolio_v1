@@ -7,27 +7,6 @@
   box-sizing: border-box;
 }
 
-/* @font-face {
-  font-family: ROBOTECH;
-  src: url('/font/robotech/ROBOTECH GP.ttf');
-}
-@font-face {
-  font-family: Airstrike;
-  src: url('/font/airstrike/airstrike.ttf'),
-    url('/font/airstrike/airstrike3d.ttf'),
-    url('/font/airstrike/airstrikeacad.ttf'),
-    url('/font/airstrike/airstrikeb3d.ttf'),
-    url('/font/airstrike/airstrikebold.ttf'),
-    url('/font/airstrike/airstrikebullet.ttf'),
-    url('/font/airstrike/airstrikechrome.ttf'),
-    url('/font/airstrike/airstrikecond.ttf'),
-    url('/font/airstrike/airstrikeexpand.ttf'),
-    url('/font/airstrike/airstrikegrad.ttf'),
-    url('/font/airstrike/airstrikehalf.ttf'),
-    url('/font/airstrike/airstrikelaser.ttf'),
-    url('/font/airstrike/airstrikeout.ttf'),
-    url('/font/airstrike/airstrikeplat.ttf');
-} */
 @font-face {
   font-family: Prototype;
   src: url('/font/prototype/Prototype.ttf');

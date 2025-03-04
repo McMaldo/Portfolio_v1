@@ -54,6 +54,45 @@
     justify-content: space-evenly;
     background: var(--bg-color-tag);
 }
+.hobbies article.imgContainer{
+    position: relative;
+    flex: 0 0 fit-content;
+    padding: 0;
+    transition: all .2s;
+}
+.hobbies article.imgContainer .type{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 0 0 .375rem;
+    border-radius: .5rem 0 0 0;
+    background: var(--bg-color);
+    transition: all .4s;
+}
+.hobbies article.imgContainer .type span{
+    position: relative;
+    z-index: 2;
+}
+.hobbies article.imgContainer .type::before,
+.hobbies article.imgContainer .type::after {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background: transparent;
+}
+.hobbies article.imgContainer .type::before{
+    bottom: 0;
+    left: -1rem;
+    border-bottom-right-radius: .5rem;
+    box-shadow: .5rem .5rem 0 .5rem var(--bg-color);
+}
+.hobbies article.imgContainer .type::after {
+    top: -1rem;
+    right: 0;
+    border-bottom-right-radius: .5rem;
+    box-shadow: .5rem .5rem 0 .5rem var(--bg-color);
+}
 .hobbiesSlider article,
 .hobbiesSlider img{
     border-radius: .5rem;
