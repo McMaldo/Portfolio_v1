@@ -8,10 +8,9 @@ export default function Hobbies() {
 
     return(
         <div className={s.hobbies}>
-            <button onClick={() => setArticlesVisible(!articlesVisible)}>
-                About My Hobbies
-            </button>
-            {articlesVisible && (
+            {articlesVisible ? (
+            <>
+                <h3>My Hobbies</h3>
                 <div className={s.hobbiesSlider}>
                     <article>
                         <p>
@@ -29,7 +28,15 @@ export default function Hobbies() {
                             <span>{article.type}</span>
                         </div>
                     </article>))}
+                    <button>
+                        Show More
+                    </button>
                 </div>
+            </>
+            ):(
+            <button onClick={() => setArticlesVisible(true)}>
+                About My Hobbies
+            </button>
             )}
         </div>
     );

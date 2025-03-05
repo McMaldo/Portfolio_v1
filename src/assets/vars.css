@@ -19,9 +19,10 @@
     --font-color: rgba(255, 255, 255, 0.87);
     --font-color-soft: #888;
     --bg-color: #161618;
+    --bg-color-soft: #2D2B37;
     --bg-color-tag: #26252E;
     --bg-color-tag-dark: #26252e79;
-    --bg-color-tag-light: #34333f;
+    --bg-color-tag-light: #32303d;
     --box-shadow-tag-hover: 0 0 1px 1px #383844;
 
     /* main colors */
@@ -41,12 +42,5 @@
         --bg-color-tag-shadow: rgba(0, 0, 0, 0.2);
 
         /* main colors */
-    }
-}
-
-/* if a user's device settings are set to reduced motion */
-@media (prefers-reduced-motion) {
-    * {
-        animation: none;
     }
 }

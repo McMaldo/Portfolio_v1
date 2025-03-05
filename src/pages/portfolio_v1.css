@@ -24,8 +24,8 @@ section.left{
   height: fit-content;
   max-height: calc(100vh - 4rem);
   align-self: center;
-  background-image: linear-gradient(#161618, #161618),
-    linear-gradient(90deg, #6F2CE3, #2F145E);
+  background-image: linear-gradient(var(--bg-color), var(--bg-color)),
+    linear-gradient(90deg, var(--main-color), var(--main-color-soft));
 }
 section .leftContent{
   padding: 1.75rem;
@@ -54,7 +54,7 @@ section.left .spkLangTag{
   align-items: center;
   justify-content: center;
   font-weight: 400;
-  background-color: #26252e;
+  background-color: var(--bg-color-tag);
   border-radius: .25rem;
   padding: .125rem;
 }
@@ -97,18 +97,18 @@ main h3::after{
   height: 2px;
 }
 section.left h3::after{
-  background: linear-gradient(90deg, #6528ce, #2F145E);
+  background: linear-gradient(90deg, var(--main-color), var(--main-color-soft));
 }
 main h3::after{
-  background: linear-gradient(90deg, #2F145E, #6528ce);
+  background: linear-gradient(90deg, var(--main-color-soft), var(--main-color));
 }
 
 /* RIGHT----------------------------------------------------------------------- */
 section.right{
   width: calc(100% - 16.75rem);
   height: calc(100vh - 4rem);
-  background-image: linear-gradient(#161618, #161618),
-    linear-gradient(90deg, #2F145E 60%, #6F2CE3);
+  background-image: linear-gradient(var(--bg-color), var(--bg-color)),
+    linear-gradient(90deg, var(--main-color-soft) 60%, var(--main-color));
 }
 header{
   width: 100%;
@@ -129,7 +129,7 @@ header .heading h1{
   font-size: 48px;
 }
 header .heading .extras{
-  color: #2D2B37;
+  color: var(--bg-color-soft);
   font-weight: 700;
   font-size: 20px;
   display: flex;
@@ -147,8 +147,8 @@ header nav{
   border: 2px solid transparent;
   background-origin: border-box;
   background-clip: content-box, border-box;
-  background-image: linear-gradient(#26252e, #26252e),
-    linear-gradient(90deg, #341668 0%, #6F2CE3);
+  background-image: linear-gradient(var(--bg-color-tag), var(--bg-color-tag)),
+    linear-gradient(90deg, #341668 0%, var(--main-color));
   overflow: hidden;
 }
 header::after{
@@ -159,7 +159,7 @@ header::after{
   bottom: 0;
   height: 2px;
   width: calc(100% - 2rem);
-  background: linear-gradient(90deg, #161618 0%, #2F145E 1%, #2F145E 55%, #6F2CE3);
+  background: linear-gradient(90deg, var(--bg-color) 0%, var(--main-color-soft) 1%, var(--main-color-soft) 55%, var(--main-color));
 }
 header nav button{
   width: 5rem;
@@ -169,11 +169,11 @@ header nav button{
 }
 header nav button:hover{
   padding: .5rem;
-  background: #32303d;
+  background: var(--bg-color-tag-light);
 }
 
 .gradient {
-	background: linear-gradient(323deg, #fff 25%, #6F2CE3 50%, #fff 75%);
+	background: linear-gradient(323deg, var(--font-color) 25%, var(--main-color) 50%, var(--font-color) 75%);
 	background-size: 400% 400%;
 	animation: gradient 4s linear infinite;
 
@@ -182,7 +182,7 @@ header nav button:hover{
 	box-shadow: none;
 }
 header .heading .extras{
-	background: linear-gradient(323deg, #2D2B37 25%, #6F2CE3 50%, #2D2B37 75%);
+	background: linear-gradient(323deg, var(--bg-color-soft) 25%, var(--main-color) 50%, var(--bg-color-soft) 75%);
 	background-size: 400% 400%;
 	animation: gradient 4s linear infinite;
 

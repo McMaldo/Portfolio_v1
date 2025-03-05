@@ -1,9 +1,14 @@
 .hobbies{
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    width: calc(100% + 4rem);
+    left: -2rem;
+}
+.hobbies h3{
+    margin-left: 2rem;
+    align-self: flex-start;
 }
 .hobbies button{
     padding: .5rem 1rem;
@@ -47,13 +52,26 @@
     right: 0;
     background: linear-gradient(90deg, #0000, var(--bg-color));
 }
-.hobbiesSlider article{
+.hobbiesSlider article,
+.hobbiesSlider button{
     flex: 0 0 11.25rem;
     padding: .5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     background: var(--bg-color-tag);
+}
+.hobbiesSlider button{
+    z-index: 3;
+    font-size: 1rem;
+    color: var(--bg-color-tag);
+    background: var(--bg-color);
+    border: 2px solid var(--bg-color-tag);
+}
+.hobbiesSlider button:hover{
+    font-size: 1.125rem;
+    color: var(--main-color);
+    border-color: var(--main-color);
 }
 .hobbies article.imgContainer{
     position: relative;
@@ -102,4 +120,5 @@
     width: auto;
     height: 100%;
     object-fit: contain;
+    user-select: none;
 }

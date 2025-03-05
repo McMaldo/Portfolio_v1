@@ -10,6 +10,7 @@ import Portfolio from "../component/portfolio/Portfolio";
 import AboutMe from "../component/aboutMe/AboutMe";
 import Hobbies from "../component/hobbies/Hobbies";
 import Footer from '../component/footer/Footer';
+import Menu from '../component/menu/Menu';
 
 export default function Portfolio_v1() {
 
@@ -62,10 +63,11 @@ export default function Portfolio_v1() {
           <Portfolio/>
           <h3 id="AboutMe">About Me</h3>
           <AboutMe/>
+          <Hobbies/>
         </main>
-        <Hobbies/>
         <Footer/>
       </section>
+      <Menu/>
     </div>
   )
 }
