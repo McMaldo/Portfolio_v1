@@ -1,25 +1,38 @@
 import { useState } from "react";
 import s from "./hobbies.module.css";
+import { useLocalStorage } from "@uidotdev/usehooks";
 import { hobbies } from "../../assets/userData.json";
 
 export default function Hobbies() {
 
+    let [isTranslatedToEnglish, setTranslatedToEnglish] = useLocalStorage("translatedToEnglish", true);
     let [articlesVisible, setArticlesVisible] = useState(false);
 
     return(
         <div className={s.hobbies}>
             {articlesVisible ? (
             <>
-                <h3>My Hobbies</h3>
+                <h3>{isTranslatedToEnglish? "My Hobbies" : "Mis Pasatiempos"}</h3>
                 <div className={s.hobbiesSlider}>
                     <article>
-                        <p>
-                            I really enjoy programming, reading mangas & comics, 
-                            playing videogames, watching anime & films and listening to music.
-                        </p>
-                        <p>
-                            Here are some of my favourite things.
-                        </p>
+                        {isTranslatedToEnglish? 
+                        <>
+                            <p>
+                                I really enjoy programming, reading mangas & comics, 
+                                playing videogames, watching anime & films and listening to music.
+                            </p>
+                            <p>
+                                Here are some of my favourite things.
+                            </p>
+                        </> : <>
+                            <p>
+                                Disfruto mucho programar, leer mangas y comics, 
+                                jugar videojuegos, ver anime y peliculas, y escuchar música.
+                            </p>
+                            <p>
+                                Aquí dejo algunas de mis cosas favoritas.
+                            </p>
+                        </>}
                     </article>
                     {hobbies.articles.map((article, articleKey) => (
                     <article className={s.imgContainer} key={articleKey}>
@@ -34,7 +47,7 @@ export default function Hobbies() {
                 </div>
             </>
             ):(
-            <button onClick={() => setArticlesVisible(true)}>
+            <button className={s.expand} onClick={() => setArticlesVisible(true)}>
                 About My Hobbies
             </button>
             )}

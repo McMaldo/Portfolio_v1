@@ -18,6 +18,9 @@
     user-select: none;
     cursor: pointer;
 }
+.hobbies .expand{
+    margin-top: .5rem;
+}
 .hobbies button:hover{
     box-shadow: var(--box-shadow-tag-hover);
 }

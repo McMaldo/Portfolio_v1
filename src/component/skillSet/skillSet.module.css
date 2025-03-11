@@ -27,6 +27,9 @@
 .skillTag:hover{
 	box-shadow: var(--box-shadow-tag-hover);
 }
+.skillTag:hover img{
+	filter: drop-shadow(0 0 10px var(--bg-color-tag-dark));
+}
 .skillTagMore{
 	background: linear-gradient(90deg, var(--bg-color-tag) 47%, var(--bg-color-tag-light) 50%, var(--bg-color-tag) 60%);
 	background-size: 300% 100%;

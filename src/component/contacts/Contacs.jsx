@@ -12,27 +12,27 @@ export default function Contacts() {
 		{icon:faLocationDot, name:"LOCATION", desc:"Buenos Aires, Argentina"}
 	];
 
+	let copyToClipboard = (textToCopy) => {
+		navigator.clipboard.writeText(textToCopy).then(() => {
+			console.log('Texto copiado al portapapeles');
+			alert('Texto copiado al portapapeles');
+		})
+		.catch((error) => {
+			console.error('Error al copiar el texto: ', error);
+		})
+	}
+
 	return (
 		<div className={s.contacts}>
-			{contacts.map((c, cKey) => {
-				let copyToClipboard = () => {
-					navigator.clipboard.writeText(c.desc).then(() => {
-						console.log('Texto copiado al portapapeles');
-						alert('Texto copiado al portapapeles');
-					})
-					.catch((error) => {
-						console.error('Error al copiar el texto: ', error);
-					})
-				}
-
-				return (<div className={s.contactItem} key={cKey} onClick={copyToClipboard}>
+			{contacts.map((c, cKey) => (
+				<div className={s.contactItem} key={cKey} onClick={() => copyToClipboard(c.desc)}>
 					<span><FontAwesomeIcon icon={c.icon}/></span>
 					<div className={s.content}>
 						<div>{c.name}</div>
 						<div className={s.text}>{c.desc}</div>
 					</div>
 				</div>
-			)})}
+			))}
 		</div>
 	)
 }

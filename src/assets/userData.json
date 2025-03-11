@@ -2,8 +2,12 @@
     "name": "McMaldo",
     "focusedOn": "Front-end Developer",
     "heading": {
-        "h1": "Web Developer",
-        "subtitle": ["Front-end", "Back-end", "Design"]
+        "h1": {"en": "Web Developer", "es": "Desarrollador Web"},
+        "subtitle": [
+			{"en":"Front-end", "es": "Front-end"}, 
+			{"en":"Back-end", "es": "Back-end"}, 
+			{"en":"Design", "es": "Diseño"}
+		]
     },
     "accounts": [
         {"platform": "github", "link": "https://github.com/McMaldo"},
@@ -25,20 +29,23 @@
 				{"img":"TailwindCSS-Dark.svg", "name":"Tailwind CSS", "desc": "Styling Lib"}
 			]},
 			{"img":"React-Dark.svg", "name":"React", "desc": "JS Lib", "more": [
+				{"img":"ReactRouterDom_Dark.svg", "name":"React-Router-Dom", "desc": "React Lib"},
+				{"img":"Vite-Dark.svg", "name":"Vite", "desc": "Framework Lib"},
 				{"img":"MaterialUI-Dark.svg", "name":"Material UI", "desc": "React Lib"},
-				{"img":"AntDesign.svg", "name":"Ant Design", "desc": "Component Lib"},
-				{"img":"ReactRouterDom_Dark.svg", "name":"React-Router-Dom", "desc": "React Lib"}
+				{"img":"AntDesign.svg", "name":"Ant Design", "desc": "Component Lib"}
 			]},
 			{"img":"JavaScript.svg", "name":"Java Script", "desc": "Lang"},
 			{"img":"NodeJS-Dark.svg", "name":"Node JS", "desc": "JS Lib"}
 		]},
 		{"catName": "Back-end", "skills": [
-			{"img":"PHP-Dark.svg", "name":"PHP", "desc": "Lang", "more": null},
-			{"img":"Python-Dark.svg", "name":"Python", "desc": "Lang", "more": null},
-			{"img":"Powershell-Dark.svg", "name":"Shell Script", "desc": "Lang", "more": [
-				{"img":"Bash-Dark.svg", "name":"Bash", "desc": "Lang"}
+			{"img":"PHP-Dark.svg", "name":"PHP", "desc": "Lang", "more": [
+				{"img":"Powershell-Dark.svg", "name":"Shell Script", "desc": "Lang"},
+				{"img":"MySQL-Dark.svg", "name":"MySQL", "desc": "RDBMS"},
+				{"img":"SQLite.svg", "name":"SQLite", "desc": "RDBMS"}
 			]},
-			{"img":"ExpressJS-Dark.svg", "name":"Express JS", "desc": "Node JS Lib", "more": null}
+			{"img":"Python-Dark.svg", "name":"Python", "desc": "Lang", "more": null},
+			{"img":"ExpressJS-Dark.svg", "name":"Express JS", "desc": "Node JS Lib", "more": null},
+			{"img":"CPP.svg", "name":"C++", "desc": "Lang", "more": null}
 		]},
 		{"catName": "General Tools", "skills": [
 			{"img":"Git.svg", "name":"Git", "desc": "Version Control", "more": [
@@ -46,10 +53,11 @@
 				{"img":"GitLab-Dark.svg", "name":"Gitlab", "desc": "Version Control"}
 			]},
 			{"img":"Figma-Dark.svg", "name":"Figma", "desc": "Design Tool", "more": null},
+			{"img":"Sublime-Dark.svg", "name":"Sublime Text", "desc": "Code Editor", "more": null},
+			{"img":"VSCode-Dark.svg", "name":"Visual Studio Code", "desc": "Code Editor", "more": null},
 			{"img":"Notion-Dark.svg", "name":"Notion", "desc": "Organization Tool", "more": null},
 			{"img":"Trello.svg", "name":"Trello", "desc": "Organization Tool", "more": null},
-			{"img":"SpanishFlag.webp", "name":"Spanish", "desc": "Native Lang", "more": null},
-			{"img":"EnglishFlag.webp", "name":"English", "desc": "Second Lang", "more": null}
+			{"img":"Monday.png", "name":"Monday", "desc": "Organization Tool", "more": null}
 		]}
 	],
 	"projects": {
