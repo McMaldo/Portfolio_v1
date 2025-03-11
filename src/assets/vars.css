@@ -10,20 +10,25 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     
-    /* static in both themes */
-    --bg-color-footer: #242424;
-    --font-color-footer: rgb(198, 203, 215);
-    --font-color-soft-footer: rgba(198, 203, 215, 0.5);
-    
     /* general colors */
     --font-color: rgba(255, 255, 255, 0.87);
     --font-color-soft: #888;
-    --bg-color: #161618;
+    --icon-color: #bbb;
+
+    --bg: #02000b;
+    --bg-color: #13131a;
     --bg-color-soft: #2D2B37;
-    --bg-color-tag: #26252E;
+
+    --bg-color-tag: #1e1d28;
     --bg-color-tag-dark: #26252e79;
     --bg-color-tag-light: #32303d;
     --box-shadow-tag-hover: 0 0 1px 1px #383844;
+
+    --bg-color-button-red: #ff4141;
+    --footer-borders: rgba(180, 180, 200, 0.5);
+
+    --bg-color-warm: #161618;
+    --bg-color-tag-warm: #26252E;
 
     /* main colors */
     --main-color: #6F2CE3;

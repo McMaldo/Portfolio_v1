@@ -9,12 +9,12 @@ footer{
 	flex-direction: column;
 	padding: 1rem 2rem;
 	.heading{
-		color: #999;
+		color: var(--font-color-soft);
 	}
 	.heading, .info{
 		width: 100%;
 		padding: .5rem 0;
-		border-bottom: 2px solid rgb(55, 55, 55);
+		border-bottom: 2px solid var(--footer-borders);
 	}
 	h3, p, a{
 		font-size: 0.8rem;
@@ -46,7 +46,7 @@ footer{
 			padding: 0 .5rem;
 		}
 		p:first-child{
-			border-right: 1px solid rgb(55, 55, 55);
+			border-right: 1px solid var(--font-color-soft);
 		}
 	}
 }

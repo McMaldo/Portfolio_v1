@@ -80,6 +80,7 @@
     position: relative;
     flex: 0 0 fit-content;
     padding: 0;
+    user-select: none;
     transition: all .2s;
 }
 .hobbies article.imgContainer .type{
@@ -123,5 +124,4 @@
     width: auto;
     height: 100%;
     object-fit: contain;
-    user-select: none;
 }

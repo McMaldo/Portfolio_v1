@@ -24,25 +24,25 @@
     right: -1rem;
     width: 2px;
     height: calc(100% - 2rem);
-    background: linear-gradient(#2F145E 40%, #6F2CE3 75%, #2F145E 90%);
+    background: linear-gradient(var(--main-color-soft) 40%, var(--main-color) 75%, var(--main-color-soft) 90%);
 }
 .aboutMe p{
     text-indent: 20px;
     text-align: justify;
-    color: #bbb;
+    color: var(--icon-color);
 }
 .aboutMe .eduItem{
     border-radius: .75rem;
-    background-color: #26252E;
+    background-color: var(--bg-color-tag);
     padding: .5rem;
     transition: all .3s;
 }
 .aboutMe .eduItem :first-child{
-    color: #888;
+    color: var(--font-color-soft);
     font-size: 12px;
 }
 .aboutMe .eduItem:hover{
-    box-shadow: 0 0 1px 1px #3e3d4b;
+    box-shadow: var(--box-shadow-tag-hover);
 }
 
 @media (max-width: 800px){

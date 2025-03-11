@@ -15,10 +15,11 @@ import Menu from '../component/menu/Menu';
 export default function Portfolio_v1() {
 
   let size = useWindowSize();
-  let [isTranslatedToEnglish, setTranslatedToEnglish] = useLocalStorage("translatedToEnglish", true);
+  let [isDarkMode] = useLocalStorage("darkMode", true);
+  let [isTranslatedToEnglish] = useLocalStorage("translatedToEnglish", true);
 
   return (
-    <div className='portfolio'>
+    <div className={'portfolio ' + (isDarkMode? "darkMode" : "lightMode")}>
       <section className='left'>
         <div className="leftContent">
           <img src="/Portfolio_v1/img/avatar.webp" className="avatar"/>

@@ -56,7 +56,7 @@
 			{"img":"Sublime-Dark.svg", "name":"Sublime Text", "desc": "Code Editor", "more": null},
 			{"img":"VSCode-Dark.svg", "name":"Visual Studio Code", "desc": "Code Editor", "more": null},
 			{"img":"Notion-Dark.svg", "name":"Notion", "desc": "Organization Tool", "more": null},
-			{"img":"Trello.svg", "name":"Trello", "desc": "Organization Tool", "more": null},
+			{"img":"Trello-Dark.svg", "name":"Trello", "desc": "Organization Tool", "more": null},
 			{"img":"Monday.png", "name":"Monday", "desc": "Organization Tool", "more": null}
 		]}
 	],

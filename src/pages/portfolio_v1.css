@@ -134,6 +134,7 @@ header .heading{
 }
 header .heading h1{
   font-size: 48px;
+  text-align: center;
 }
 header .heading .extras{
   color: var(--bg-color-soft);

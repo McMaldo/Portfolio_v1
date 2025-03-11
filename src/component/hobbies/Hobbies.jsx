@@ -42,13 +42,13 @@ export default function Hobbies() {
                         </div>
                     </article>))}
                     <button>
-                        Show More
+                        {isTranslatedToEnglish? "Show More" : "Ver Más"}
                     </button>
                 </div>
             </>
             ):(
             <button className={s.expand} onClick={() => setArticlesVisible(true)}>
-                About My Hobbies
+                {isTranslatedToEnglish? "About My Hobbies" : "Acerca de Mis Pasatiempos"}
             </button>
             )}
         </div>

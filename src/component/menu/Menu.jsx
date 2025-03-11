@@ -2,7 +2,7 @@ import { useState } from "react";
 import s from "./menu.module.css";
 import { useLocalStorage } from "@uidotdev/usehooks";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faMoon, faPenToSquare, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faMoon, faPenToSquare, faSun, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 export default function Menu() {
 
@@ -21,8 +21,8 @@ export default function Menu() {
                     {isTranslatedToEnglish? "EN" : "ES"}
                 </button>
             </>)}
-            <button onClick={() => setExpanded(!isExpanded)}>
-                <FontAwesomeIcon icon={faBars}/>
+            <button className={isExpanded? s.close : ""} onClick={() => setExpanded(!isExpanded)}>
+                <FontAwesomeIcon icon={isExpanded? faXmark : faBars}/>
             </button>
         </div>
     );
