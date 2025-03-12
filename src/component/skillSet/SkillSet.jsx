@@ -1,11 +1,14 @@
 import { useState } from "react";
 import s from './skillSet.module.css';
+import { useLocalStorage } from "@uidotdev/usehooks";
 import userData from "../../assets/userData.json";
 import SkillTagMore from "../skillTagDesc/SkillTagMore";
 
 export default function SkillSet() {
 
-  return (
+	let [isDarkMode] = useLocalStorage("darkMode", true);
+
+	return (
 		<div className={s.skillSet}>
 			{userData.skillTags.map((cat, catKey) => (
 				<div key={catKey}>
@@ -19,7 +22,7 @@ export default function SkillSet() {
 									onMouseEnter={() => setMostrarComponente(true)}
 									onMouseLeave={() => setMostrarComponente(false)}
 								>
-									<img src={userData.SKILLTAGS_ICONS_DIR + skill.img} alt="" />
+									<img src={userData.SKILLTAGS_ICONS_DIR + (isDarkMode ? skill.img : skill.img.replace(/-Dark/g, "-Light"))} alt="" />
 									<div className={s.name}>{skill.name}</div>
 									<div className={s.desc}>{skill.desc}</div>
 									

@@ -1,184 +1,227 @@
-.portfolio{
-  width: 100%;
-  max-width: 1080px;
-  height: 100%;
+.body{
+	width: 100%;
+	height: 100%;
   display: flex;
-  padding: 2rem;
-  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg);
+  color: var(--font-color);
+}
+.portfolio{
+	width: 100%;
+	max-width: 1080px;
+	height: 100%;
+	display: flex;
+	padding: 2rem;
+	gap: 2rem;
 }
 section{
-  padding: 0;
-  border: 2px solid transparent;
-  border-radius: 1.5rem;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  overflow-y: scroll;
+	padding: 0;
+	border: 2px solid transparent;
+	border-radius: 1.5rem;
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	overflow-y: scroll;
 }
 section::-webkit-scrollbar{
-  width: 0;
+	width: 0;
 }
 
 /* LEFT------------------------------------------------------------------------ */
 section.left{
-  width: 14.75rem;
-  height: fit-content;
-  max-height: calc(100vh - 4rem);
-  align-self: center;
-  background-image: linear-gradient(var(--bg-color), var(--bg-color)),
-    linear-gradient(90deg, var(--main-color), var(--main-color-soft));
+	width: 14.75rem;
+	height: fit-content;
+	max-height: calc(100vh - 4rem);
+	align-self: center;
+	background-image: linear-gradient(var(--bg-color), var(--bg-color)),
+		linear-gradient(90deg, var(--main-color), var(--main-color-soft));
 }
 section .leftContent{
-  padding: 1.75rem;
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
+	padding: 1.75rem;
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
 }
 .avatar{
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 1rem;
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	border-radius: 1rem;
+	position: relative;
+	overflow: hidden;
 }
+.avatar img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.avatar img.active{
+	animation: entryMovement .4s ease-in-out;
+}
+.avatar img:not(.active){
+	right: 100%;
+	animation: exitMovement .4s ease-in-out;
+}
+@keyframes entryMovement {
+	0% {
+		left: 100%;
+	}
+	100% {
+		left: 0%;
+	}
+}
+@keyframes exitMovement {
+	0% {
+		right: 0%;
+	}
+	100% {
+		right: 100%;
+	}
+}
+
 .infoTags{
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
 }
 section.left h2{
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 section.left h5,
 section.left .spkLangTag{
-  color: #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 400;
-  background-color: var(--bg-color-tag);
-  border-radius: .25rem;
-  padding: .25rem .375rem;
+	color: var(--font-color-soft);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 400;
+	background-color: var(--bg-color-tag);
+	border-radius: .25rem;
+	padding: .25rem .375rem;
 }
 section.left .spkLangs{
-  width: 100%;
-  display: flex;
-  gap: .5rem;
+	width: 100%;
+	display: flex;
+	gap: .5rem;
 }
 section.left .spkLangs .spkLangTag{
-  width: 50%;
-  font-size: 13px;
-  display: flex;
-  gap: .375rem;
+	width: 50%;
+	font-size: 13px;
+	display: flex;
+	gap: .375rem;
 }
 section.left .spkLangs .spkLangTag:first-child{
-  justify-content: end;
+	justify-content: end;
 }
 section.left .spkLangs .spkLangTag:last-child{
-  justify-content: start;
+	justify-content: start;
 }
 section.left .spkLangs .spkLangTag img{
-  height: 1rem;
-  aspect-ratio: 1 / 1;
+	height: 1rem;
+	aspect-ratio: 1 / 1;
 }
 section.left h3{
-  margin-top: .5rem;
+	margin-top: .5rem;
 }
 section.left h3,
 main h3{
-  width: fit-content;
-  position: relative;
+	width: fit-content;
+	position: relative;
 }
 section.left h3{
-  margin: .5rem 0;
+	margin: .5rem 0;
 }
 main h3{
-  margin-bottom: 1rem;
-  padding-top: 1.5rem;
+	margin-bottom: 1rem;
+	padding-top: 1.5rem;
 }
 section.left h3::after,
 main h3::after{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: -2rem;
-  width: calc(100% + 2.5rem);
-  height: 2px;
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: -2rem;
+	width: calc(100% + 2.5rem);
+	height: 2px;
 }
 section.left h3::after{
-  background: linear-gradient(90deg, var(--main-color), var(--main-color-soft));
+	background: linear-gradient(90deg, var(--main-color), var(--main-color-soft));
 }
 main h3::after{
-  background: linear-gradient(90deg, var(--main-color-soft), var(--main-color));
+	background: linear-gradient(90deg, var(--main-color-soft), var(--main-color));
 }
 
 /* RIGHT----------------------------------------------------------------------- */
 section.right{
-  width: calc(100% - 16.75rem);
-  height: calc(100vh - 4rem);
-  background-image: linear-gradient(var(--bg-color), var(--bg-color)),
-    linear-gradient(90deg, var(--main-color-soft) 60%, var(--main-color));
+	width: calc(100% - 16.75rem);
+	height: calc(100vh - 4rem);
+	background-image: linear-gradient(var(--bg-color), var(--bg-color)),
+		linear-gradient(90deg, var(--main-color-soft) 60%, var(--main-color));
 }
 header{
-  width: 100%;
-  height: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  user-select: none;
+	width: 100%;
+	height: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	user-select: none;
 }
 header .heading{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 header .heading h1{
-  font-size: 48px;
-  text-align: center;
+	font-size: 48px;
+	text-align: center;
 }
 header .heading .extras{
-  color: var(--bg-color-soft);
-  font-weight: 700;
-  font-size: 20px;
-  display: flex;
-  gap: 2rem;
+	color: var(--bg-color-soft);
+	font-weight: 700;
+	font-size: 20px;
+	display: flex;
+	gap: 2rem;
 }
 header nav{
-  z-index: 2;
-  width: 16.5rem;
-  height: 2.5rem;
-  display: flex;
-  position: absolute;
-  bottom: calc(-1.25rem - 1px);
-  right: 2rem;
-  border-radius: .75rem;
-  border: 2px solid transparent;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  background-image: linear-gradient(var(--bg-color-tag), var(--bg-color-tag)),
-    linear-gradient(90deg, #341668 0%, var(--main-color));
-  overflow: hidden;
+	z-index: 2;
+	width: 16.5rem;
+	height: 2.5rem;
+	display: flex;
+	position: absolute;
+	bottom: calc(-1.25rem - 1px);
+	right: 2rem;
+	border-radius: .75rem;
+	border: 2px solid transparent;
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	background-image: linear-gradient(var(--bg-color-tag), var(--bg-color-tag)),
+		linear-gradient(90deg, var(--main-color-medium) 0%, var(--main-color));
+	overflow: hidden;
 }
 header::after{
-  z-index: 1;
-  content: "";
-  position: absolute;
-  left: 2rem;
-  bottom: 0;
-  height: 2px;
-  width: calc(100% - 2rem);
-  background: linear-gradient(90deg, var(--bg-color) 0%, var(--main-color-soft) 1%, var(--main-color-soft) 55%, var(--main-color));
+	z-index: 1;
+	content: "";
+	position: absolute;
+	left: 2rem;
+	bottom: 0;
+	height: 2px;
+	width: calc(100% - 2rem);
+	background: linear-gradient(90deg, var(--bg-color) 0%, var(--main-color-soft) 1%, var(--main-color-soft) 55%, var(--main-color));
 }
 header nav button{
-  width: 5.5rem;
-  height: 100%;
-  background: transparent;
-  cursor: pointer;
-  transition: all .1s;
+	width: 5.5rem;
+	height: 100%;
+	color: var(--font-color);
+	background: transparent;
+	cursor: pointer;
+	transition: all .1s;
 }
 header nav button:hover{
-  padding: .5rem;
-  background: var(--bg-color-tag-light);
+	padding: .5rem;
+	background: var(--bg-color-tag-light);
 }
 
 .gradient {
@@ -211,46 +254,46 @@ header .heading .extras{
 	}
 }
 main{
-  padding: 1rem 2rem;
+	padding: 1rem 2rem;
 }
 
 @media (max-width: 750px){
-  .portfolio{
-    height: fit-content;
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-  }
-  section.right,
-  section.left{
-    width: 100%;
-  }
-  section .leftContent{
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  section.left h2{
-    height: fit-content;
-  }
-  .avatar,
-  .infoTags{
-    width: calc(50% - .25rem);
-  }
-  section.right{
-    height: fit-content;
-  }
-  header{
-    max-height: 15rem;
-  }
+	.portfolio{
+		height: fit-content;
+		flex-direction: column;
+		padding: 1rem;
+		gap: 1rem;
+	}
+	section.right,
+	section.left{
+		width: 100%;
+	}
+	section .leftContent{
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	section.left h2{
+		height: fit-content;
+	}
+	.avatar,
+	.infoTags{
+		width: calc(50% - .25rem);
+	}
+	section.right{
+		height: fit-content;
+	}
+	header{
+		max-height: 15rem;
+	}
 }
 @media (max-width: 500px){
-  header .heading h1{
-    font-size: 40px;
-  }
-  header nav{
-    right: unset;
-  }
-  header::after{
-    width: calc(100% - 4rem);
-  }
+	header .heading h1{
+		font-size: 40px;
+	}
+	header nav{
+		right: unset;
+	}
+	header::after{
+		width: calc(100% - 4rem);
+	}
 }

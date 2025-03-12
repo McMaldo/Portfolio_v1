@@ -33,19 +33,31 @@
     /* main colors */
     --main-color: #6F2CE3;
     --main-color-soft: #2F145E;
+    --main-color-medium: #341668;
 }
 
-/* light theme active */
-@media (prefers-color-scheme: light) {
-    :root {
-        /* general colors */
-        --font-color: rgba(0, 0, 0, 0.87);
-        --font-color-soft: rgba(0, 0, 0, 0.6);
-        --bg-color: #d8dbdd;
-        --bg-color-tag: rgba(100, 108, 255, 0.15);
-        --bg-color-tag-hover: rgba(102, 110, 255, 0.25);
-        --bg-color-tag-shadow: rgba(0, 0, 0, 0.2);
+[data-theme='light']{
+    --font-color: #222;
+    --font-color-soft: #444;
+    --icon-color: #666;
 
-        /* main colors */
-    }
+    --bg: #d3cde7;
+    --bg-color: #dadaf8;
+    --bg-color-soft: #aca6cc;
+
+    --bg-color-tag: #c3bfff;
+    --bg-color-tag-dark: #a2a1b4;
+    --bg-color-tag-light: #adaad3;
+    --box-shadow-tag-hover: 0 0 1px 1px #adadc2;
+
+    --bg-color-button-red: #ff4141;
+    --footer-borders: #3e3e4680;
+
+    --bg-color-warm: #161618;
+    --bg-color-tag-warm: #26252E;
+
+    /* main colors */
+    --main-color: #6F2CE3;
+    --main-color-soft: #ae8ded;
+    --main-color-medium: #ae8ded;
 }

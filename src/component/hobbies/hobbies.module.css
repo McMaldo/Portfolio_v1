@@ -20,6 +20,7 @@
 }
 .hobbies .expand{
     margin-top: .5rem;
+    color: var(--font-color);
 }
 .hobbies button:hover{
     box-shadow: var(--box-shadow-tag-hover);

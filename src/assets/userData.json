@@ -29,7 +29,7 @@
 				{"img":"TailwindCSS-Dark.svg", "name":"Tailwind CSS", "desc": "Styling Lib"}
 			]},
 			{"img":"React-Dark.svg", "name":"React", "desc": "JS Lib", "more": [
-				{"img":"ReactRouterDom_Dark.svg", "name":"React-Router-Dom", "desc": "React Lib"},
+				{"img":"ReactRouterDom-Dark.svg", "name":"React-Router-Dom", "desc": "React Lib"},
 				{"img":"Vite-Dark.svg", "name":"Vite", "desc": "Framework Lib"},
 				{"img":"MaterialUI-Dark.svg", "name":"Material UI", "desc": "React Lib"},
 				{"img":"AntDesign.svg", "name":"Ant Design", "desc": "Component Lib"}
