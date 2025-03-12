@@ -20,7 +20,7 @@ export default function AboutMe() {
 						At the same time with lot of practice in Back-end y Data Bases for the Web.
 					</p>
 					<p>
-						Currently focus on React JS, with its multiples libraries like MUI, AntD, rrd, etc.
+						Currently focused on React JS, with its multiples libraries like MUI, AntD, rrd, etc.
 					</p>
 				</> : <>
 					<p>

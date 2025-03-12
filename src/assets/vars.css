@@ -11,7 +11,7 @@
     -moz-osx-font-smoothing: grayscale;
     
     /* general colors */
-    --font-color: rgba(255, 255, 255, 0.87);
+    --font-color: #ffffffde;
     --font-color-soft: #888;
     --icon-color: #bbb;
 
@@ -25,7 +25,7 @@
     --box-shadow-tag-hover: 0 0 1px 1px #383844;
 
     --bg-color-button-red: #ff4141;
-    --footer-borders: rgba(180, 180, 200, 0.5);
+    --footer-borders: #b4b4c880;
 
     --bg-color-warm: #161618;
     --bg-color-tag-warm: #26252E;

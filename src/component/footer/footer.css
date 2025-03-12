@@ -7,13 +7,15 @@ footer{
 	width: 100%;
 	min-height: 200px;
 	flex-direction: column;
+	background: var(--bg);
 	padding: 1rem 2rem;
+
 	.heading{
 		color: var(--font-color-soft);
+		padding: 0 0 .5rem 0; 
 	}
 	.heading, .info{
 		width: 100%;
-		padding: .5rem 0;
 		border-bottom: 2px solid var(--footer-borders);
 	}
 	h3, p, a{
@@ -28,9 +30,9 @@ footer{
 	}
 	.info{
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-evenly;
 		flex-wrap: wrap;
-		padding: 20px 30px;
+		padding: 1rem 0;
 		div{
 			width: fit-content;
 			flex-direction: column;
