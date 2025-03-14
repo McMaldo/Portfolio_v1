@@ -125,9 +125,4 @@
     width: auto;
     height: 100%;
     object-fit: contain;
-    filter: brightness(75%);
-    transition: all .2s;
-}
-.hobbies article.imgContainer:hover img{
-    filter: brightness(100%);
 }

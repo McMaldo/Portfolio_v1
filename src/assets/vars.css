@@ -30,7 +30,6 @@
     --bg-color-warm: #161618;
     --bg-color-tag-warm: #26252E;
 
-    /* main colors */
     --main-color: #6F2CE3;
     --main-color-soft: #2F145E;
     --main-color-medium: #341668;
@@ -42,7 +41,7 @@
     --icon-color: #666;
 
     --bg: #d3cde7;
-    --bg-color: #dadaf8;
+    --bg-color: #fff8f7;
     --bg-color-soft: #aca6cc;
 
     --bg-color-tag: #c3bfff;
@@ -50,14 +49,32 @@
     --bg-color-tag-light: #adaad3;
     --box-shadow-tag-hover: 0 0 1px 1px #adadc2;
 
-    --bg-color-button-red: #ff4141;
+    --bg-color-button-red: #ff6a6a;
     --footer-borders: #3e3e4680;
 
-    --bg-color-warm: #161618;
-    --bg-color-tag-warm: #26252E;
-
-    /* main colors */
     --main-color: #6F2CE3;
     --main-color-soft: #ae8ded;
     --main-color-medium: #ae8ded;
+}
+
+[data-theme='pinky']{
+    --font-color: #222;
+    --font-color-soft: #444;
+    --icon-color: #666;
+
+    --bg: #ffd9df;
+    --bg-color: #fff8f7;
+    --bg-color-soft: #aca6cc;
+
+    --bg-color-tag: #ffe1e5;
+    --bg-color-tag-dark: #e8aefe;
+    --bg-color-tag-light: #f4edf2;
+    --box-shadow-tag-hover: 0 0 1px 1px #adadc2;
+
+    --bg-color-button-red: #ff6a6a;
+    --footer-borders: #3e3e4680;
+
+    --main-color: #ff89ee;
+    --main-color-soft: #f3b1e7;
+    --main-color-medium: #f3b1e7;
 }

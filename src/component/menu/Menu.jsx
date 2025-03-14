@@ -2,7 +2,8 @@ import { useState } from "react";
 import s from "./menu.module.css";
 import { useLocalStorage } from "@uidotdev/usehooks";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faMoon, faPenToSquare, faSun, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCake, faMoon, faPenToSquare, faSun, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { useTheme } from "../../hook/useTheme";
 
 function CustomPanel(){
 	return(
@@ -31,8 +32,13 @@ export default function Menu() {
 	let [isExpanded, setExpanded] = useState(false);
 	let [isOpenedCustomPanel, setOpenedCustomPanel] = useState(false);
 
-	const DEFAULT_DARK = window.matchMedia('(prefers-color-scheme: dark)').matches;
-	let [isDarkMode, setDarkMode] = useLocalStorage("darkMode", DEFAULT_DARK);
+	let { theme, setTheme } = useTheme();
+	let themeIcons = {
+		dark: faMoon,
+		light: faSun,
+		pinky: faCake
+	}
+
 	let [isTranslatedToEnglish, setTranslatedToEnglish] = useLocalStorage("translatedToEnglish", true);
 
 	return(
@@ -48,12 +54,10 @@ export default function Menu() {
 					</span>
 				</button>
 				<button 
-					onClick={() => setDarkMode(!isDarkMode)} 
-					title={isTranslatedToEnglish? 
-						(isDarkMode? "Switch to Light Theme" : "Switch to Dark Theme") : 
-						(isDarkMode? "Cambiar a Tema Claro" : "Cambiar a Tema Oscuro")}
+					onClick={() => setTheme()} 
+					title={isTranslatedToEnglish? "Switch Theme" : "Cambiar Tema"}
 				>
-					<FontAwesomeIcon icon={isDarkMode? faMoon : faSun}/>
+					<FontAwesomeIcon icon={themeIcons[theme]}/>
 				</button>
 				<button 
 					onClick={() => setTranslatedToEnglish(!isTranslatedToEnglish)}

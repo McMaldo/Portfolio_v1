@@ -62,10 +62,3 @@ h2, h3{
 ::-moz-selection{
   background: var(--main-color-soft);
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-}

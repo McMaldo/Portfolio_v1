@@ -1,6 +1,7 @@
 import React from "react";
 import './portfolio_v1.css';
 import { useWindowSize, useLocalStorage } from "@uidotdev/usehooks";
+import { useTheme } from "../hook/useTheme";
 import userData from "../assets/userData.json";
 
 import Accounts from "../component/accounts/Accounts";
@@ -15,17 +16,17 @@ import Menu from '../component/menu/Menu';
 export default function Portfolio_v1() {
 
 	let size = useWindowSize();
-	let [isDarkMode] = useLocalStorage("darkMode", true);
+	let {theme} = useTheme();
 	let [isTranslatedToEnglish] = useLocalStorage("translatedToEnglish", true);
 
 	return (
-		<div className="body" data-theme={isDarkMode? "dark" : "light"}>
+		<div className="body" data-theme={theme? theme : "dark"}>
 			<div className='portfolio'>
 				<section className='left'>
 					<div className="leftContent">
 						<div className="avatar">
-							<img src="/Portfolio_v1/img/avatar-dark.webp" className={isDarkMode? "active" : ""}/>
-							<img src="/Portfolio_v1/img/avatar-light.webp" className={isDarkMode? "" : "active"}/>
+							<img src="/Portfolio_v1/img/avatar-dark.webp" className={theme=="dark"? "active" : ""}/>
+							<img src="/Portfolio_v1/img/avatar-light.webp" className={theme=="dark"? "" : "active"}/>
 						</div>
 						<div className="infoTags">
 							<h2>{userData.name}</h2>
