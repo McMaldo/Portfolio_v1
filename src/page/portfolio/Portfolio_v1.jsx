@@ -1,17 +1,17 @@
 import React from "react";
 import './portfolio_v1.css';
 import { useWindowSize, useLocalStorage } from "@uidotdev/usehooks";
-import { useTheme } from "../hook/useTheme";
-import userData from "../assets/userData.json";
+import { useTheme } from "../../hook/useTheme";
+import userData from "../../assets/userData.json";
 
-import Accounts from "../component/accounts/Accounts";
-import Contacts from "../component/contacts/Contacs";
-import SkillSet from "../component/skillSet/SkillSet";
-import Portfolio from "../component/portfolio/Portfolio";
-import AboutMe from "../component/aboutMe/AboutMe";
-import Hobbies from "../component/hobbies/Hobbies";
-import Footer from '../component/footer/Footer';
-import Menu from '../component/menu/Menu';
+import Accounts from "../../component/accounts/Accounts";
+import Contacts from "../../component/contacts/Contacs";
+import SkillSet from "../../component/skillSet/SkillSet";
+import Projects from "../../component/projects/Projects";
+import AboutMe from "../../component/aboutMe/AboutMe";
+import Hobbies from "../../component/hobbies/Hobbies";
+import Footer from '../../component/footer/Footer';
+import Menu from '../../component/menu/Menu';
 
 export default function Portfolio_v1() {
 
@@ -73,7 +73,7 @@ export default function Portfolio_v1() {
 						<h3 id="SkillSet">{isTranslatedToEnglish? "Skill Set" : "Habilidades"}</h3>
 						<SkillSet/>
 						<h3 id="Portfolio">{isTranslatedToEnglish? "Portfolio" : "Portafolio"}</h3>
-						<Portfolio/>
+						<Projects/>
 						<h3 id="AboutMe">{isTranslatedToEnglish? "About Me" : "Sobre Mi"}</h3>
 						<AboutMe/>
 						<Hobbies/>

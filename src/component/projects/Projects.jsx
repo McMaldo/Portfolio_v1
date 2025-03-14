@@ -1,18 +1,18 @@
 import React from "react";
-import s from './portfolio.module.css';
+import s from './projects.module.css';
 import { useLocalStorage } from "@uidotdev/usehooks";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faGitlab } from '@fortawesome/free-brands-svg-icons';
 import { projects } from "../../assets/userData.json";
 
-export default function Portfolio() {
+export default function Projects() {
 
 	const {ARTICLES_IMGS_DIR} = projects;
 	let [isTranslatedToEnglish] = useLocalStorage("translatedToEnglish", true);
 
 	return (
-		<div className={s.portfolio}>
+		<div className={s.projects}>
 			{projects.articles.map((p, pKey) => (
 				<article key={pKey}>
 					<div className={s.imgContainer}>
