@@ -66,28 +66,28 @@
 			{"img": "kiwi_tt.webp", "name": "Kiwi TT", "techs": ["React", "JS", "CSS", "MUI", "AntD"], "desc": {
 				"en": "Allows you to administrate a work team through the agile metodology SCRUM, distributing tasks with differents priorities & submission deadlines",
 				"es": "Permite administrar a un grupo de trabajo mediante la metodología agil SCRUM, designando tareas con distintas prioridades y plazos de entrega."
-			}, "gh": "", "gl": ""},
+			}, "demo":"https://kiwi.escuelarobertoarlt.com/", "gh": "", "gl": ""},
 			{"img": "App_Resto.webp", "name": "App Resto", "techs": ["React", "EX", "Node", "JS", "CSS"], "desc": {
 				"en": "Offers multiples plates with differents clasifications, a cart to manage the purchases & generates the total to pay. Also brings an API to record all the purchases",
 				"es": "Ofrece múltiples platos con diferentes clasificaciones, un carrito para administrar las compras y un generador del total a pagar. Además una API para registar las compras."
-			}, "gh": "https://github.com/McMaldo/act_14_react", "gl": ""},
+			}, "demo":"https://mcmaldo.github.io/act_14_react/", "gh": "https://github.com/McMaldo/act_14_react", "gl": ""},
 			{"img": "App_Station.webp", "name": "App Station", "techs": ["PHP", "CSS", "HTML", "JS"], "desc": {
 				"en": "Shows the climate change in a web app completely responsive, check the statistics as the temperature, humidity, atmospheric pressure & more",
 				"es": "Observa el cambio climatico en un app web totalmente responsive, verifica estadisticas como la temperatura, humedad, presión atmosferica y más."
-			}, "gh": "https://github.com/McMaldo/app-estacion", "gl": "https://gitlab.com/mcmaldo/app-estacion"},
+			}, "demo":"", "gh": "https://github.com/McMaldo/app-estacion", "gl": "https://gitlab.com/mcmaldo/app-estacion"},
 
 			{"img": "App_Clothing_Store.webp", "name": "App Clothing Store", "techs": ["CSS", "JS", "HTML"], "desc": {
 				"en": "E-commerce with multiples clothing options, & a cart to manage the purchases from the user. It's a SPA built with only JS Vanila for its functionality",
 				"es": "E-commerce con múltiples opciones de ropa, y un carrito para administrar las compras de un usuario. Es una SPA elaborada con únicamente JS Vanila para su funcionalidad."
-			}, "gh": "https://github.com/McMaldo/app_clothing_store", "gl": ""},
+			}, "demo":"https://mcmaldo.github.io/app_clothing_store/", "gh": "https://github.com/McMaldo/app_clothing_store", "gl": ""},
 			{"img": "Webgenerator.webp", "name": "Webgenerator", "techs": ["PHP", "HTML", "ShellScript"], "desc": {
 				"en": "Generates the structure for a web application and manage all the apps from your account. All user apps can be edited or deleted by an administrator.",
 				"es": "Genera la estrucutra para una aplicación web. Además permite adminitrar las generadas por un mismo usuario y las de todos los registrados por un admin."
-			}, "gh": "https://github.com/McMaldo/webgenerator", "gl": "https://gitlab.com/mcmaldo/webgenerator"},
+			}, "demo":"", "gh": "https://github.com/McMaldo/webgenerator", "gl": "https://gitlab.com/mcmaldo/webgenerator"},
 			{"img": "", "name": "Kiwi PM", "techs": ["React", "JS", "CSS"], "desc": {
 				"en": "Insert your Github username, select from your repositories, select from a variety of templates, a color palette, and create your ideal portfolio.",
 				"es": "En base al nombre de usuario de Github, genera el porfolio ideal seleccionando entre una variedad de plantillas y una paleta de colores personalizada."
-			}, "gh": "", "gl": ""}
+			}, "demo":"", "gh": "", "gl": ""}
 		]
 	},
 	"hobbies": {

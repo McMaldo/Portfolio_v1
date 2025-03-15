@@ -5,31 +5,32 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faCake, faMoon, faPenToSquare, faSun, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { useTheme } from "../../hook/useTheme";
 
+function extractCssVarValue(cssVar) {
+	let portfolio = document.querySelector("#root .portfolio");
+	let portfolioStyles = getComputedStyle(portfolio);
+	return portfolioStyles.getPropertyValue(cssVar);
+}
+
 function CustomPanel(){
+	let palette = ["main", "font", "bg"];
 	return(
 		<div className={s.customPanel}>
-			<div className={s.option}>
-				<div className={s.desc}>main</div>
-				<div className={s.value}>#6F2CE3</div>
-				<div className={s.preview} style={{background: "#6F2CE3"}}></div>
-			</div>
-			<div className={s.option}>
-				<div className={s.desc}>font</div>
-				<div className={s.value}>#ffffffde</div>
-				<div className={s.preview} style={{background: "#ffffffde"}}></div>
-			</div>
-			<div className={s.option}>
-				<div className={s.desc}>back</div>
-				<div className={s.value}>#13131a</div>
-				<div className={s.preview} style={{background: "#13131a"}}></div>
-			</div>
+			{palette.map((paletteColor, paletteColorKey) => (
+				<div className={s.option} key={paletteColorKey}>
+					<div className={s.desc}>{paletteColor}</div>
+					<div className={s.value}>{extractCssVarValue(`--${paletteColor}-color`)}</div>
+					<div className={s.preview}>
+						<div style={{background: `var(--${paletteColor}-color)`}}></div>
+					</div>
+				</div>
+			))}
 		</div>
 	)
 }
 
 export default function Menu() {
 
-	let [isExpanded, setExpanded] = useState(false);
+	let [isExpanded, setExpanded] = useState(true);
 	let [isOpenedCustomPanel, setOpenedCustomPanel] = useState(false);
 
 	let { theme, setTheme } = useTheme();
