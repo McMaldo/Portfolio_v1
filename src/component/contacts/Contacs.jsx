@@ -1,7 +1,37 @@
-import React from "react";
+import { useState } from "react";
 import s from './contacts.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faMobile, faCalendar, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faMobile, faCalendar, faLocationDot, faClone, faCheck } from '@fortawesome/free-solid-svg-icons';
+
+function ContactItem({contact: c}) {
+
+	const [isCopied, setIsCopied] = useState(false);
+
+	const copyToClipboard = (textToCopy) => {
+		navigator.clipboard.writeText(textToCopy).then(() => {
+			setIsCopied(true);
+			setTimeout(() => {
+				setIsCopied(false);
+			}, 2000);
+		})
+		.catch((error) => {
+			console.error('Error al copiar el texto: ', error);
+		})
+	}
+
+	return (
+		<div className={s.contactItem} onClick={() => copyToClipboard(c.desc)}>
+			<span><FontAwesomeIcon icon={c.icon}/></span>
+			<div className={s.content}>
+				<div>{c.name}</div>
+				<div className={s.text}>{c.desc}</div>
+			</div>
+			<div className={s.isCopied+" "+(isCopied? s.copied : "")}>
+				<FontAwesomeIcon icon={isCopied? faCheck : faClone}/>
+			</div>
+		</div>
+	)
+}
 
 export default function Contacts() {
 
@@ -12,26 +42,10 @@ export default function Contacts() {
 		{icon:faLocationDot, name:"LOCATION", desc:"Buenos Aires, Argentina"}
 	];
 
-	let copyToClipboard = (textToCopy) => {
-		navigator.clipboard.writeText(textToCopy).then(() => {
-			console.log('Texto copiado al portapapeles');
-			alert('Texto copiado al portapapeles');
-		})
-		.catch((error) => {
-			console.error('Error al copiar el texto: ', error);
-		})
-	}
-
 	return (
 		<div className={s.contacts}>
 			{contacts.map((c, cKey) => (
-				<div className={s.contactItem} key={cKey} onClick={() => copyToClipboard(c.desc)}>
-					<span><FontAwesomeIcon icon={c.icon}/></span>
-					<div className={s.content}>
-						<div>{c.name}</div>
-						<div className={s.text}>{c.desc}</div>
-					</div>
-				</div>
+				<ContactItem contact={c} key={cKey}/>
 			))}
 		</div>
 	)
