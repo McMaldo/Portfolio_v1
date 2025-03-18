@@ -41,9 +41,6 @@
     color: var(--font-color-soft);
     font-size: 12px;
 }
-.aboutMe .eduItem:hover{
-    box-shadow: var(--box-shadow-tag-hover);
-}
 
 @media (max-width: 800px){
     .aboutMe{

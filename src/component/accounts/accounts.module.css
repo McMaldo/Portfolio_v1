@@ -10,7 +10,11 @@
   place-items: center;
   background: var(--bg-color-tag);
   border-radius: .5rem;
+  transition: all .2s;
   cursor: pointer;
+}
+.accounts a:hover{
+  box-shadow: var(--box-shadow-tag-hover);
 }
 .accounts a svg{
   width: 1.375rem;

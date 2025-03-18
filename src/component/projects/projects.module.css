@@ -34,7 +34,7 @@
     width: 100%;
     display: flex;
     justify-content: right;
-    padding-right: .5rem;
+    padding: 0 .5rem 2px 0;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -52,16 +52,22 @@
     right: -.5rem;
     transition: all .3s ease-in-out;
 }
+.projects article .imgContainer .links a{
+    z-index: 3;
+    line-height: 1;
+    color: var(--font-color);
+    background: var(--bg-color-tag);
+    border-radius: 50%;
+    padding: .5rem;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+.projects article .imgContainer .links a:hover{
+    box-shadow: var(--box-shadow-tag-hover);
+}
 .projects article .imgContainer .links svg{
     width: 1.5rem;
     height: 1.5rem;
-    color: transparent;
-    padding: .375rem;
-    border-radius: 50%;
-    transition: all .5s ease-in-out;
-}
-.projects article .imgContainer .links a{
-    z-index: 3;
 }
 .projects article .techs{
     width: 100%;
@@ -78,9 +84,8 @@
     color: var(--font-color-soft);
 }
 
-.projects article:hover .imgContainer .links svg{
-    color: var(--font-color);
-    background: var(--bg-color-tag);
+.projects article:hover .imgContainer .links a{
+    opacity: 1;
 }
 .projects article:hover .imgContainer .links::after{
     bottom: -1.5rem;

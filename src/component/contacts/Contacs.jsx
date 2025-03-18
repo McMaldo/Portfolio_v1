@@ -26,7 +26,7 @@ function ContactItem({contact: c}) {
 				<div>{c.name}</div>
 				<div className={s.text}>{c.desc}</div>
 			</div>
-			<div className={s.isCopied+" "+(isCopied? s.copied : "")}>
+			<div className={s.isCopied}>
 				<FontAwesomeIcon icon={isCopied? faCheck : faClone}/>
 			</div>
 		</div>
