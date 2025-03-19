@@ -93,13 +93,32 @@
 	"hobbies": {
 		"ARTICLES_IMGS_DIR": "/Portfolio_v1/img/hobbies/",
 		"articles": [
-			{"img": "Berserk-Cover.webp", "type": "manga"},
-			{"img": "OnePiece-Cover.webp", "type": "manga"},
-			{"img": "Invincible-Cover.webp", "type": "comic"},
-			{"img": "Blasphemous1-Cover.webp", "type": "game"},
-			{"img": "HotlineMiami1-Cover.webp", "type": "game"},
-			{"img": "djangoUnchained-Cover.webp", "type": "film"},
-			{"img": "EternalSunshineoftheSpotlessMind-Cover.webp", "type": "film"}
+			{"imgList": [
+				"Taekwondo.webp"
+			], "type": {"en": "sport", "es": "deporte"}},
+			{"imgList": [
+				"RoverScout.webp"
+			], "type": {"en": "activity", "es": "actividad"}},
+			{"imgList": [
+				"Berserk-Cover.webp",
+				"OnePiece-Cover.webp",
+				"Bleach-Cover.webp",
+				"Vagabond-Cover.webp"
+			], "type": {"en": "mangas", "es": "mangas"}},
+			{"imgList": [
+				"Invincible-Cover.webp",
+				"TheBoys-Cover.webp"
+			], "type": {"en": "comics", "es": "comics"}},
+			{"imgList": [
+				"Blasphemous1-Cover.webp", 
+				"HotlineMiami1-Cover.webp",
+				"Broforce-Cover.webp",
+				"KOF13-Cover.webp"
+			], "type": {"en": "games", "es": "videojuegos"}},
+			{"imgList": [
+				"djangoUnchained-Cover.webp",
+				"EternalSunshineoftheSpotlessMind-Cover.webp"
+			], "type": {"en": "films", "es": "películas"}}
 		] 
 	}
 }
