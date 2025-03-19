@@ -40,13 +40,12 @@ export default function Footer() {
 					<h3>Credits</h3>
 					<a href="https://codingstella.github.io/vCard-personal-portfolio/">CodingStella (inspiration)</a>
 					<a href="https://andrijaweb.vercel.app/">Andrijaweb (skill tags)</a>
-					<a href="https://www.1001freefonts.com/es/prototype.font">Protype (body font)</a>
+					<a href="https://www.1001freefonts.com/es/prototype.font">Prototype (body font)</a>
 					<a href="https://www.1001freefonts.com/es/orbitron.font">Orbitron (heading font)</a>
-					<a href="https://github.com/tandpfun/skill-icons">skill-icons-gh (techs svgs)</a>
+					<a href="https://github.com/tandpfun/skill-icons">skill-icons-gh (tech svgs)</a>
 					<a href="https://usehooks.com/">useHooks (React library)</a>
 					<a href="https://kasela.com.ar/us/Landing">Kasela (life time counter)</a>
 					<a href="https://fontawesome.com/">FontAwesome (icons)</a>
-					<a href="https://bennettfeely.com/clippy/">Clippy (polygon generator)</a>
 				</div>
 				<div className="tech group center">
 					<h3>Tech Stack</h3>

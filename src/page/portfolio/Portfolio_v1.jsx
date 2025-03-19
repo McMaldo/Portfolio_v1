@@ -22,15 +22,15 @@ export default function Portfolio_v1() {
 	return (
 		<div className="body" data-theme={theme? theme : "dark"}>
 			<div className='portfolio'>
-				<section className='left'>
-					<div className="leftContent">
+				<aside>
+					<div className="asideContent">
 						<div className="avatar">
 							<img src="/Portfolio_v1/img/avatar-dark.webp" className={theme=="dark"? "active" : ""}/>
 							<img src="/Portfolio_v1/img/avatar-light.webp" className={theme=="dark"? "" : "active"}/>
 						</div>
 						<div className="infoTags">
 							<h2>{userData.name}</h2>
-							<h5>{userData.focusedOn}</h5>
+							<h5>{isTranslatedToEnglish? userData.focusedOn.en : userData.focusedOn.es}</h5>
 							<div className="spkLangs">
 								<div className="spkLangTag" title="Native Lang">
 									<div>{isTranslatedToEnglish? "Spanish" : "Español"}</div>
@@ -46,8 +46,8 @@ export default function Portfolio_v1() {
 						<Contacts/>
 						{size.width >= 750 && <Accounts/>}
 					</div>
-				</section>
-				<section className='right'>
+				</aside>
+				<main>
 					<header>
 						<div className='heading'>
 							<h1 className='gradient'>{isTranslatedToEnglish? userData.heading.h1.en : userData.heading.h1.es}</h1>
@@ -65,21 +65,21 @@ export default function Portfolio_v1() {
 								{isTranslatedToEnglish? "Portfolio" : "Portafolio"}
 							</button>
 							<button onClick={() => document.querySelector(`#AboutMe`).scrollIntoView({behavior: 'smooth'})}>
-								{isTranslatedToEnglish? "About Me" : "Sobre Mi"}
+								{isTranslatedToEnglish? "About Me" : "Sobre Mí"}
 							</button>
 						</nav>
 					</header>
-					<main>
+					<section className="mainContent">
 						<h3 id="SkillSet">{isTranslatedToEnglish? "Skill Set" : "Habilidades"}</h3>
 						<SkillSet/>
 						<h3 id="Portfolio">{isTranslatedToEnglish? "Portfolio" : "Portafolio"}</h3>
 						<Projects/>
-						<h3 id="AboutMe">{isTranslatedToEnglish? "About Me" : "Sobre Mi"}</h3>
+						<h3 id="AboutMe">{isTranslatedToEnglish? "About Me" : "Sobre Mí"}</h3>
 						<AboutMe/>
 						<Hobbies/>
-					</main>
+					</section>
 					<Footer/>
-				</section>
+				</main>
 				<Menu/>
 			</div>
 		</div>

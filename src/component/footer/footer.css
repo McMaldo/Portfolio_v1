@@ -41,7 +41,7 @@ footer{
 		}
 		.group{
 			flex-direction: column;
-			justify-content: center;
+			justify-content: start;
 			align-items: start;
 		}
 		.time{grid-area: time;}

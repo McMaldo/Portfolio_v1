@@ -17,7 +17,7 @@ export default function Projects() {
 			{projects.articles.map((p, pKey) => (
 				<article key={pKey}>
 					<div className={s.imgContainer}>
-						<img src={ARTICLES_IMGS_DIR + p.img} alt="" />
+						<img className={!p.img? s.noImg : ""} src={p.img? ARTICLES_IMGS_DIR + p.img : "/Portfolio_v1/img/no-image.svg"} alt="" />
 						<div className={p.demo || p.gh || p.gl ? s.links : ""}>
 							{p.demo ? <a href={p.demo} title="demo"><FontAwesomeIcon icon={faGlobe}/></a> : ""}
 							{p.gh ? <a href={p.gh} title="github repo"><FontAwesomeIcon icon={faGithub}/></a> : ""}

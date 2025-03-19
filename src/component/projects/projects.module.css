@@ -30,6 +30,17 @@
     object-fit: cover;
     object-position: center;
 }
+.projects article .imgContainer img.noImg{
+    width: 50%;
+    height: 50%;
+    object-fit: unset;
+    object-position: unset;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    color: var(--font-color-soft);
+}
 .projects article .imgContainer .links{
     width: 100%;
     display: flex;

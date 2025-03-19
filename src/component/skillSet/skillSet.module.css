@@ -1,11 +1,11 @@
 .skillSet h4{
 	font-weight: 400;
-	padding: .5rem 0 .125rem 0;
+	padding-top: .5rem;
 	color: var(--font-color-soft);
 }
 .tagSlider{
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 	grid-template-rows: repeat(auto-fit, minmax(3.375rem, 1fr));
 	justify-content: center;
 	gap: .5rem;
@@ -21,7 +21,7 @@
 	border-radius: .75rem;
 	background: var(--bg-color-tag);
 	padding: .5rem;
-	transition: all .3s;
+	transition: all .2s;
 	position: relative;
 }
 .skillTag:hover{
@@ -31,7 +31,7 @@
 	filter: drop-shadow(0 0 10px var(--bg-color-tag-dark));
 }
 .skillTagMore{
-	background: linear-gradient(90deg, var(--bg-color-tag) 47%, var(--bg-color-tag-light) 50%, var(--bg-color-tag) 60%);
+	background: linear-gradient(90deg, var(--bg-color-tag) 40%, var(--bg-color-tag-light) 50%, var(--bg-color-tag) 54%);
 	background-size: 300% 100%;
 	animation: gradientBack 3s linear infinite;
 }
@@ -40,13 +40,13 @@
 }
 @keyframes gradientBack {
 	0% {
-		background-position: 0%;
+		background-position: 100%;
 	}
 	50% {
-		background-position: 100%;
+		background-position: 0%;
 	}
 	100% {
-		background-position: 100%;
+		background-position: 0%;
 	}
 }
 .skillTag img{
@@ -54,7 +54,7 @@
 	width: 2.375rem;
 	height: 2.375rem;
 	user-select: none;
-	transition: all .3s;
+	transition: all .2s;
 }
 .skillTag .name{
 	grid-area: name;
