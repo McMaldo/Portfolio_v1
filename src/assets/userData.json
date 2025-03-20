@@ -47,7 +47,7 @@
 			{"img":"ExpressJS-Dark.svg", "name":"Express JS", "desc": "Node JS Library", "more": null},
 			{"img":"CPP.svg", "name":"C++", "desc": "Programming Lang", "more": null}
 		]},
-		{"catName": "General Tools", "skills": [
+		{"catName": "Programming Tools", "skills": [
 			{"img":"Git.svg", "name":"Git", "desc": "Version Control", "more": [
 				{"img":"Github-Dark.svg", "name":"Github", "desc": "Version Control"},
 				{"img":"GitLab-Dark.svg", "name":"Gitlab", "desc": "Version Control"}
@@ -58,6 +58,26 @@
 			{"img":"Notion-Dark.svg", "name":"Notion", "desc": "Organization Tool", "more": null},
 			{"img":"Trello-Dark.svg", "name":"Trello", "desc": "Organization Tool", "more": null},
 			{"img":"Monday.png", "name":"Monday", "desc": "Organization Tool", "more": null}
+		]},
+		{"catName": "Programming Concepts", "skills": [
+			{"en": "SCRUM", "es": "SCRUM"},
+			{"en": "OOP", "es": "POO"},
+			{"en": "DOM", "es": "DOM"},
+			{"en": "CustomHooks", "es": "Hooks Personalizados"},
+			{"en": "MVC Architecture", "es": "Arquitectura MVC"},
+			{"en": "Client-server Architecture", "es": "Arquitectura Cliente-Servidor"}
+		]},
+		{"catName": "Soft Skills", "skills": [
+			{"en": "Effective communication", "es": "Comunicación efectiva"},
+			{"en": "Active listening", "es": "Escucha activa"},
+			{"en": "Empathy", "es": "Empatía"},
+			{"en": "Patience and perseverance", "es": "Paciencia y perseverancia"},
+			{"en": "Curiosity", "es": "Curiosidad"},
+			{"en": "Continuous learning mindset", "es": "Mentalidad de aprendizaje continuo"},
+			{"en": "Collaboration", "es": "Colaboración"},
+			{"en": "Self-motivation", "es": "Auto-motivación"},
+			{"en": "Creativity", "es": "Creatividad"},
+			{"en": "Autonomy", "es": "Autonomía"}
 		]}
 	],
 	"projects": {
