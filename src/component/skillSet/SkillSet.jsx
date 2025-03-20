@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import s from './skillSet.module.css';
 import { useTheme } from "../../hook/useTheme";
 import userData from "../../assets/userData.json";
