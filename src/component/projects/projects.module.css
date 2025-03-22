@@ -24,6 +24,22 @@
     user-select: none;
     overflow: hidden;
 }
+.projects article .imgContainer .colaboratorsCount{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .25rem .5rem;
+    position: absolute;
+    left: .25rem;
+    top: .25rem;
+    background: var(--bg-color-tag);
+    border-radius: .5rem;
+    transition: all .3s;
+    opacity: 0;
+}
+.projects article:hover .imgContainer .colaboratorsCount{
+    opacity: 1;
+}
 .projects article .imgContainer img{
     width: 100%;
     height: 100%;

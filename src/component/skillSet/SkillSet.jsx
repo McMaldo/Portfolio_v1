@@ -5,6 +5,7 @@ import userData from "../../assets/userData.json";
 import SkillTagMore from "../skillTagDesc/SkillTagMore";
 import { useLocalStorage } from "@uidotdev/usehooks";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 function SkillTag({skill}) {
 	let {theme} = useTheme();
@@ -49,7 +50,7 @@ function SkillTagsCategory({cat, index}) {
 				toggleExpanded();
 			}}
 		>
-			<FontAwesomeIcon icon="fa-solid fa-caret-right" className={isExpanded ? s.expanded : ""} />
+			<FontAwesomeIcon icon={faCaretRight} className={isExpanded ? s.expanded : ""} />
 			<h4>{cat.catName}</h4>
 		</summary>
 		{cat.catName === "Programming Concepts" || cat.catName === "Soft Skills" ? (
