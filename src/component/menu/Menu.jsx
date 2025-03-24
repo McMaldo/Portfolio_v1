@@ -11,10 +11,10 @@ function extractCssVarValue(cssVar) {
 	return portfolioStyles.getPropertyValue(cssVar);
 }
 
-function CustomPanel(){
+function PalettePanel(){
 	let palette = ["main", "font", "bg"];
 	return(
-		<div className={s.customPanel}>
+		<div className={s.palettePanel}>
 			{palette.map((paletteColor, paletteColorKey) => (
 				<div className={s.option} key={paletteColorKey}>
 					<div className={s.desc}>{paletteColor}</div>
@@ -31,7 +31,7 @@ function CustomPanel(){
 export default function Menu() {
 
 	let [isExpanded, setExpanded] = useState(true);
-	let [isOpenedCustomPanel, setOpenedCustomPanel] = useState(false);
+	let [isOpenedPalettePanel, setOpenedPalettePanel] = useState(false);
 
 	let { theme, setTheme } = useTheme();
 	let themeIcons = {
@@ -43,14 +43,14 @@ export default function Menu() {
 	let [isTranslatedToEnglish, setTranslatedToEnglish] = useLocalStorage("translatedToEnglish", true);
 
 	return(
-		<div className={s.menu+" "+(isOpenedCustomPanel && s.openedCustomPanel)}>
+		<div className={s.menu+" "+(isOpenedPalettePanel && s.openedPalettePanel)}>
 			{isExpanded && (<>
 				<button
-					onMouseEnter={() => setOpenedCustomPanel(true)}
-					onMouseLeave={() => setOpenedCustomPanel(false)}
+					onMouseEnter={() => setOpenedPalettePanel(true)}
+					onMouseLeave={() => setOpenedPalettePanel(false)}
 				>
-					{isOpenedCustomPanel && <CustomPanel/>}
-					<span onClick={() => setOpenedCustomPanel(!isOpenedCustomPanel)}>
+					{isOpenedPalettePanel && <PalettePanel/>}
+					<span onClick={() => setOpenedPalettePanel(!isOpenedPalettePanel)}>
 						<FontAwesomeIcon icon={faPenToSquare}/>
 					</span>
 				</button>

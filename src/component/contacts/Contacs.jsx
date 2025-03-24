@@ -1,11 +1,13 @@
 import { useState } from "react";
 import s from './contacts.module.css';
+import { useLocalStorage } from "@uidotdev/usehooks";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faMobile, faCalendar, faLocationDot, faClone, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 function ContactItem({contact: c}) {
 
 	const [isCopied, setIsCopied] = useState(false);
+	let [isTranslatedToEnglish] = useLocalStorage("translatedToEnglish", true);
 
 	const copyToClipboard = (textToCopy) => {
 		navigator.clipboard.writeText(textToCopy).then(() => {
@@ -23,8 +25,8 @@ function ContactItem({contact: c}) {
 		<div className={s.contactItem} onClick={() => copyToClipboard(c.desc)}>
 			<span><FontAwesomeIcon icon={c.icon}/></span>
 			<div className={s.content}>
-				<div>{c.name}</div>
-				<div className={s.text}>{c.desc}</div>
+				<div>{isTranslatedToEnglish? c.name.en : c.name.es}</div>
+				<div className={s.text}>{c.desc.en? (isTranslatedToEnglish? c.desc.en : c.desc.es) : c.desc}</div>
 			</div>
 			<div className={s.isCopied}>
 				<FontAwesomeIcon icon={isCopied? faCheck : faClone}/>
@@ -36,10 +38,10 @@ function ContactItem({contact: c}) {
 export default function Contacts() {
 
 	let contacts = [
-		{icon:faEnvelope, name:"EMAIL", desc:"maldonado.ignacio.pablo@gmail.com"},
-		{icon:faMobile, name:"PHONE", desc:"+54 911 3055-7307"},
-		{icon:faCalendar, name:"BIRTRHDAY", desc:"December 24, 2005"},
-		{icon:faLocationDot, name:"LOCATION", desc:"Buenos Aires, Argentina"}
+		{icon:faEnvelope, name:{en: "EMAIL", es: "EMAIL"}, desc:"maldonado.ignacio.pablo@gmail.com"},
+		{icon:faMobile, name:{en: "PHONE", es: "TELEFONO"}, desc:"+54 911 3055-7307"},
+		{icon:faCalendar, name:{en: "BIRTRHDAY", es: "NACIMIENTO"}, desc:{en: "December 24, 2005", es: "24 de Diciembre, 2005"}},
+		{icon:faLocationDot, name:{en: "LOCATION", es: "LOCACIÓN"}, desc:"Buenos Aires, Argentina"}
 	];
 
 	return (
