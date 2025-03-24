@@ -4,6 +4,7 @@ import { useLocalStorage } from "@uidotdev/usehooks";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faCake, faMoon, faPenToSquare, faSun, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { useTheme } from "../../hook/useTheme";
+import { icon } from "@fortawesome/fontawesome-svg-core";
 
 function extractCssVarValue(cssVar) {
 	let portfolio = document.querySelector("#root .portfolio");
@@ -13,8 +14,9 @@ function extractCssVarValue(cssVar) {
 
 function PalettePanel(){
 	let palette = ["main", "font", "bg"];
+
 	return(
-		<div className={s.palettePanel}>
+		<div className={s.selectorPanel}>
 			{palette.map((paletteColor, paletteColorKey) => (
 				<div className={s.option} key={paletteColorKey}>
 					<div className={s.desc}>{paletteColor}</div>
@@ -24,6 +26,54 @@ function PalettePanel(){
 					</div>
 				</div>
 			))}
+			<div className={s.conector}></div>
+		</div>
+	)
+}
+function ThemePanel({themeIcons}){
+	let themeList = ["dark", "light", "pinky"];
+	let { theme, setTheme } = useTheme();
+
+	return(
+		<div className={s.selectorPanel}>
+			{themeList.map((themeOption, themeKey) => (
+				<div 
+					className={s.option+" "+(theme == themeOption ? s.selected : "")} 
+					onClick={() => setTheme(themeKey)}
+					key={themeKey}
+				>
+					<div className={s.value}>
+						<FontAwesomeIcon icon={themeIcons[themeOption]}/>
+						<span>{themeOption}</span>
+					</div>
+					<div className={s.preview} data-theme={themeOption} style={{background: `var(--bg)`}}>
+						<div style={{background: `var(--main-color)`}}></div>
+					</div>
+				</div>
+			))}
+			<div className={s.conector}></div>
+		</div>
+	)
+}
+function LangPanel(){
+	let [isTranslatedToEnglish, setTranslatedToEnglish] = useLocalStorage("translatedToEnglish", true);
+	let langList = [{lang:"Español",icon:"SpanishFlag.webp"}, {lang:"English",icon:"EnglishFlag.webp"}];
+
+	return(
+		<div className={s.selectorPanel}>
+			{langList.map(({lang, icon}, langKey) => (
+				<div 
+					className={s.option+" "+(isTranslatedToEnglish & lang == "English" | !isTranslatedToEnglish & lang == "Español" ? s.selected : "")} 
+					onClick={() => setTranslatedToEnglish(lang === "English")} 
+					key={langKey}
+				>
+					<div className={s.value}>
+						<img src={"/Portfolio_v1/icons/"+icon} alt="" />
+						<span>{lang}</span>
+					</div>
+				</div>
+			))}
+			<div className={s.conector}></div>
 		</div>
 	)
 }
@@ -31,7 +81,7 @@ function PalettePanel(){
 export default function Menu() {
 
 	let [isExpanded, setExpanded] = useState(true);
-	let [isOpenedPalettePanel, setOpenedPalettePanel] = useState(false);
+	let [panelOpened, setPanelOpened] = useState("");
 
 	let { theme, setTheme } = useTheme();
 	let themeIcons = {
@@ -43,29 +93,44 @@ export default function Menu() {
 	let [isTranslatedToEnglish, setTranslatedToEnglish] = useLocalStorage("translatedToEnglish", true);
 
 	return(
-		<div className={s.menu+" "+(isOpenedPalettePanel && s.openedPalettePanel)}>
+		<div className={s.menu+" "+(panelOpened == "palette" && s.openedTopPanel)}>
 			{isExpanded && (<>
-				<button
-					onMouseEnter={() => setOpenedPalettePanel(true)}
-					onMouseLeave={() => setOpenedPalettePanel(false)}
+				<div 
+					className={s.btnContainer}
+					onMouseEnter={() => setPanelOpened("palette")}
+					onMouseLeave={() => setPanelOpened("")}
 				>
-					{isOpenedPalettePanel && <PalettePanel/>}
-					<span onClick={() => setOpenedPalettePanel(!isOpenedPalettePanel)}>
+					{panelOpened == "palette" && <PalettePanel/>}
+					<button onClick={() => setPanelOpened("")}>
 						<FontAwesomeIcon icon={faPenToSquare}/>
-					</span>
-				</button>
-				<button 
-					onClick={() => setTheme()} 
-					title={isTranslatedToEnglish? "Switch Theme" : "Cambiar Tema"}
+					</button>
+				</div>
+				<div 
+					className={s.btnContainer} 
+					onMouseEnter={() => setPanelOpened("theme")}
+					onMouseLeave={() => setPanelOpened("")}
 				>
-					<FontAwesomeIcon icon={themeIcons[theme]}/>
-				</button>
-				<button 
-					onClick={() => setTranslatedToEnglish(!isTranslatedToEnglish)}
-					title={isTranslatedToEnglish? "Cambiar a Español / Switch to Spanish" : "Switch to English / Cambiar a Inglés"}
+					{panelOpened == "theme" && <ThemePanel themeIcons={themeIcons}/>}
+					<button 
+						onClick={() => setTheme()}  
+						title={isTranslatedToEnglish? "Switch Theme" : "Cambiar Tema"}
+					>
+						<FontAwesomeIcon icon={themeIcons[theme]}/>
+					</button>
+				</div>
+				<div 
+					className={s.btnContainer} 
+					onMouseEnter={() => setPanelOpened("lang")}
+					onMouseLeave={() => setPanelOpened("")}
 				>
-					{isTranslatedToEnglish? "EN" : "ES"}
-				</button>
+					{panelOpened == "lang" && <LangPanel/>}
+					<button
+						onClick={() => setTranslatedToEnglish(!isTranslatedToEnglish)}
+						title={isTranslatedToEnglish? "Cambiar a Español / Switch to Spanish" : "Switch to English / Cambiar a Inglés"}
+					>
+						{isTranslatedToEnglish? "EN" : "ES"}
+					</button>
+				</div>
 			</>)}
 			<button className={isExpanded? s.close : ""} onClick={() => setExpanded(!isExpanded)}>
 				<FontAwesomeIcon icon={isExpanded? faXmark : faBars}/>
