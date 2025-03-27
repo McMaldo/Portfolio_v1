@@ -111,6 +111,18 @@ section.mainContent h3::after{
 	height: 2px;
 	background: linear-gradient(90deg, var(--main-color-soft), var(--main-color));
 }
+section.mainContent button.expand{
+	width: 200px;
+	text-align: center;
+	margin: 1.5rem 0 0 calc(50% - 100px);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    background: var(--bg-color-tag);
+    transition: all .3s;
+}
+section.mainContent button.expand:hover{
+	box-shadow: var(--box-shadow-tag-hover);
+}
 
 @media (max-width: 500px){
 	header .heading h1{

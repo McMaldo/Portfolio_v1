@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, lazy, Suspense } from "react";
 import './mainPage.css';
 import { useLocalStorage } from "@uidotdev/usehooks";
 import userData from "../../assets/userData.json";
@@ -6,12 +6,15 @@ import userData from "../../assets/userData.json";
 import SkillSet from "../../component/skillSet/SkillSet";
 import Projects from "../../component/projects/Projects";
 import AboutMe from "../../component/aboutMe/AboutMe";
-import Hobbies from "../../component/hobbies/Hobbies";
 import Footer from '../../component/footer/Footer';
+
+const Hobbies = lazy(() => import('../../component/hobbies/Hobbies'));
+import Loading from '../../component/loading/Loading';
 
 export default function Main() {
 
 	let [isTranslatedToEnglish] = useLocalStorage("translatedToEnglish", true);
+    let [isHobbiesSectionVisible, setHobbiesSectionVisible] = useState(false);
 
 	return (
 		<>
@@ -43,7 +46,16 @@ export default function Main() {
 				<Projects/>
 				<h3 id="AboutMe">{isTranslatedToEnglish? "About Me" : "Sobre Mí"}</h3>
 				<AboutMe/>
-				<Hobbies/>
+				{
+					!isHobbiesSectionVisible ?
+					<button className="expand" onClick={() => setHobbiesSectionVisible(true)}>
+						{isTranslatedToEnglish? "About My Hobbies" : "Acerca de Mis Pasatiempos"}
+					</button>
+					:
+					<Suspense fallback={<Loading/>}>
+						<Hobbies/>
+					</Suspense>
+				}
 			</section>
 			<Footer/>
 		</>

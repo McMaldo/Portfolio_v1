@@ -28,49 +28,40 @@ const ImgCarousel = ({article, en}) => {
 export default function Hobbies() {
 
     let [isTranslatedToEnglish] = useLocalStorage("translatedToEnglish", true);
-    let [isArticlesVisible, setArticlesVisible] = useState(false);
 
     return(
-        <div className={s.hobbies+" "+(isArticlesVisible? s.scrollable : "")}>
-            {isArticlesVisible ? (
-            <>
-                <h3>{isTranslatedToEnglish? "My Hobbies" : "Mis Pasatiempos"}</h3>
-                <div className={s.hobbiesSlider}>
-                    <article>
-                        {isTranslatedToEnglish? 
-                        <>
-                            <span>Taekwon-Do ITF</span>
-                            <span>Scout (S.Ca.Di)</span>
-                            <span>Mangas</span>
-                            <span>Comics</span>
-                            <span>Videogames</span>
-                            <span>Anime</span>
-                            <span>Films</span>
-                            <span>Music</span>
-                        </> : <>
-                            <span>Taekwon-Do ITF</span>
-                            <span>Scout (S.Ca.Di)</span>
-                            <span>Mangas</span>
-                            <span>Comics</span>
-                            <span>Videojuegos</span>
-                            <span>Anime</span>
-                            <span>Películas</span>
-                            <span>Música</span>
-                        </>}
-                    </article>
-                    {hobbies.articles.map((article, articleKey) => (
-                        <ImgCarousel article={article} key={articleKey} en={isTranslatedToEnglish}/>
-                    ))}
-                    <button>
-                        {isTranslatedToEnglish? "Show More" : "Ver Más"}
-                    </button>
-                </div>
-            </>
-            ):(
-            <button className={s.expand} onClick={() => setArticlesVisible(true)}>
-                {isTranslatedToEnglish? "About My Hobbies" : "Acerca de Mis Pasatiempos"}
-            </button>
-            )}
+        <div className={s.hobbies}>
+            <h3>{isTranslatedToEnglish? "My Hobbies" : "Mis Pasatiempos"}</h3>
+            <div className={s.hobbiesSlider}>
+                <article>
+                    {isTranslatedToEnglish? 
+                    <>
+                        <span>Taekwon-Do ITF</span>
+                        <span>Scout (S.Ca.Di)</span>
+                        <span>Mangas</span>
+                        <span>Comics</span>
+                        <span>Videogames</span>
+                        <span>Anime</span>
+                        <span>Films</span>
+                        <span>Music</span>
+                    </> : <>
+                        <span>Taekwon-Do ITF</span>
+                        <span>Scout (S.Ca.Di)</span>
+                        <span>Mangas</span>
+                        <span>Comics</span>
+                        <span>Videojuegos</span>
+                        <span>Anime</span>
+                        <span>Películas</span>
+                        <span>Música</span>
+                    </>}
+                </article>
+                {hobbies.articles.map((article, articleKey) => (
+                    <ImgCarousel article={article} key={articleKey} en={isTranslatedToEnglish}/>
+                ))}
+                <button>
+                    {isTranslatedToEnglish? "Show More" : "Ver Más"}
+                </button>
+            </div>
         </div>
     );
 }
