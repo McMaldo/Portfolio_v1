@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import './portfolio_v1.css';
 import { useWindowSize, useLocalStorage } from "@uidotdev/usehooks";
 import { useTheme } from "../../hook/useTheme";
@@ -10,8 +10,11 @@ import SkillSet from "../../component/skillSet/SkillSet";
 import Projects from "../../component/projects/Projects";
 import AboutMe from "../../component/aboutMe/AboutMe";
 import Hobbies from "../../component/hobbies/Hobbies";
-import Footer from '../../component/footer/Footer';
+// import Footer from '../../component/footer/Footer';
 import Menu from '../../component/menu/Menu';
+import Loading from '../../component/loading/Loading';
+
+const Footer = lazy(() => import('../../component/footer/Footer'));
 
 export default function Portfolio_v1() {
 
@@ -78,7 +81,9 @@ export default function Portfolio_v1() {
 						<AboutMe/>
 						<Hobbies/>
 					</section>
-					<Footer/>
+					<Suspense fallback={<Loading/>}> 
+						<Footer/>
+					</Suspense>
 				</main>
 				<Menu/>
 			</div>
