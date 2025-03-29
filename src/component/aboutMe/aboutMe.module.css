@@ -27,7 +27,6 @@
 }
 .aboutMe p{
     text-indent: 20px;
-    text-align: justify;
     color: var(--icon-color);
 }
 .aboutMe .eduItem{

@@ -43,7 +43,7 @@ export default function AboutMe() {
 					<div>{isTranslatedToEnglish? "Title" : "Título"}: Tecnicatura en Programación Personal y Profesional</div>
 				</div>
 				<div className={s.eduItem}>
-					<div>{isTranslatedToEnglish? "College" : "Universidad"}: UBA (Universidad Nacional de Buenos Aires), Bs. As., Argentina</div>
+					<div>{isTranslatedToEnglish? "College" : "Universidad"}: UBA, Bs. As., Argentina</div>
 					<div>{isTranslatedToEnglish? "Career" : "Carrera"}: Licenciatura en Ciencia de la Computación</div>
 					<div className={s.upperTag}>{isTranslatedToEnglish? "Current" : "Cursando"}</div>
 				</div>

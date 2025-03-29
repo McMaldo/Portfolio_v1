@@ -23,41 +23,40 @@
     ],
     "SKILLTAGS_ICONS_DIR": "/Portfolio_v1/icons/",
     "skillTags": [
-		{"catName": "Front-end", "skills": [
-			{"img":"CSS.svg", "name":"CSS", "desc": "Styling Lang", "more": [
-				{"img":"Bootstrap.svg", "name":"Bootstrap", "desc": "Styling Library"},
-				{"img":"TailwindCSS-Dark.svg", "name":"Tailwind CSS", "desc": "Styling Library"}
-			]},
-			{"img":"React-Dark.svg", "name":"React", "desc": "Java Script Library", "more": [
+		{"catName": "Front-end & Design", "skills": [
+			{"img":"React-Dark.svg", "name":"React", "desc": "JS Library", "more": [
 				{"img":"ReactRouterDom-Dark.svg", "name":"React-Router-Dom", "desc": "React Library"},
 				{"img":"Vite-Dark.svg", "name":"Vite", "desc": "Framework Library"},
 				{"img":"MaterialUI-Dark.svg", "name":"Material UI", "desc": "React Library"},
 				{"img":"AntDesign.svg", "name":"Ant Design", "desc": "Component Library"}
 			]},
-			{"img":"JavaScript.svg", "name":"Java Script", "desc": "Programming Lang"},
-			{"img":"NodeJS-Dark.svg", "name":"Node JS", "desc": "Java Script Library"}
-		]},
-		{"catName": "Back-end", "skills": [
-			{"img":"PHP-Dark.svg", "name":"PHP", "desc": "Programming Lang", "more": [
-				{"img":"Powershell-Dark.svg", "name":"Shell Script", "desc": "Scripting Lang"},
-				{"img":"MySQL-Dark.svg", "name":"MySQL", "desc": "RDBMS"},
-				{"img":"SQLite.svg", "name":"SQLite", "desc": "RDBMS"}
+			{"img":"CSS.svg", "name":"CSS", "desc": "Styling Lang.", "more": [
+				{"img":"Bootstrap.svg", "name":"Bootstrap", "desc": "Styling Library"},
+				{"img":"TailwindCSS-Dark.svg", "name":"Tailwind CSS", "desc": "Styling Library"}
 			]},
-			{"img":"Python-Dark.svg", "name":"Python", "desc": "Programming Lang", "more": null},
-			{"img":"ExpressJS-Dark.svg", "name":"Express JS", "desc": "Node JS Library", "more": null},
-			{"img":"CPP.svg", "name":"C++", "desc": "Programming Lang", "more": null}
+			{"img":"JavaScript.svg", "name":"Java Script", "desc": "Programming Lang."},
+			{"img":"Figma-Dark.svg", "name":"Figma", "desc": "Design Tool"}
+		]},
+		{"catName": "Back-end & Data Base", "skills": [
+			{"img":"ExpressJS-Dark.svg", "name":"Express JS", "desc": "Node JS Library", "more": [
+				{"img":"NodeJS-Dark.svg", "name":"Node JS", "desc": "JS Library"}
+			]},
+			{"img":"PHP-Dark.svg", "name":"PHP", "desc": "Programming Lang.", "more": [
+				{"img":"Powershell-Dark.svg", "name":"Shell Script", "desc": "Scripting Lang."}
+			]},
+			{"img":"Python-Dark.svg", "name":"Python", "desc": "Programming Lang."},
+			{"img":"MySQL-Dark.svg", "name":"MySQL", "desc": "RDBMS"}
 		]},
 		{"catName": "Programming Tools", "skills": [
 			{"img":"Git.svg", "name":"Git", "desc": "Version Control", "more": [
 				{"img":"Github-Dark.svg", "name":"Github", "desc": "Version Control"},
 				{"img":"GitLab-Dark.svg", "name":"Gitlab", "desc": "Version Control"}
 			]},
-			{"img":"Figma-Dark.svg", "name":"Figma", "desc": "Design Tool", "more": null},
-			{"img":"Sublime-Dark.svg", "name":"Sublime Text", "desc": "Code Editor", "more": null},
-			{"img":"VSCode-Dark.svg", "name":"Visual Studio Code", "desc": "Code Editor", "more": null},
-			{"img":"Notion-Dark.svg", "name":"Notion", "desc": "Organization Tool", "more": null},
-			{"img":"Trello-Dark.svg", "name":"Trello", "desc": "Organization Tool", "more": null},
-			{"img":"Monday.png", "name":"Monday", "desc": "Organization Tool", "more": null}
+			{"img":"VSCode-Dark.svg", "name":"Visual Studio Code", "desc": "Code Editor", "more": [
+				{"img":"Sublime-Dark.svg", "name":"Sublime Text", "desc": "Code Editor"}
+			]},
+			{"img":"Notion-Dark.svg", "name":"Notion", "desc": "Organization & Notes"},
+			{"img":"Trello-Dark.svg", "name":"Trello", "desc": "Organization"}
 		]},
 		{"catName": "Programming Concepts", "skills": [
 			{"en": "SCRUM", "es": "SCRUM"},
@@ -76,8 +75,7 @@
 			{"en": "Continuous learning mindset", "es": "Mentalidad de aprendizaje continuo"},
 			{"en": "Collaboration", "es": "Colaboración"},
 			{"en": "Self-motivation", "es": "Auto-motivación"},
-			{"en": "Creativity", "es": "Creatividad"},
-			{"en": "Autonomy", "es": "Autonomía"}
+			{"en": "Creativity", "es": "Creatividad"}
 		]}
 	],
 	"projects": {

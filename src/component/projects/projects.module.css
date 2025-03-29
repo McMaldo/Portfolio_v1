@@ -106,9 +106,16 @@
     user-select: none;
 }
 .projects article .desc{
-    text-align: justify;
     font-size: 14px;
     color: var(--font-color-soft);
+}
+@supports (text-wrap: pretty) and (hyphenate-limit-chars: 7){
+    .projects article .desc{
+        text-align: justify;
+        hyphens: auto;
+        hyphenate-limit-chars: 7;
+        -ms-hyphenate-limit-chars: 7;
+    }
 }
 
 .projects article:hover .imgContainer .links a{
