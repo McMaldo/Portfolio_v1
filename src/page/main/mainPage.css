@@ -7,8 +7,10 @@ header{
 	justify-content: center;
 	position: relative;
 	user-select: none;
+	background: radial-gradient(var(--main-color), var(--bg-color) 80%);
 }
 header .heading{
+	z-index: 2;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -24,6 +26,25 @@ header .heading .extras{
 	font-size: 20px;
 	display: flex;
 	gap: 2rem;
+
+	background: linear-gradient(323deg, var(--bg-color-soft) 25%, var(--main-color) 50%, var(--bg-color-soft) 75%);
+	background-size: 400% 400%;
+	animation: gradient 4s linear infinite;
+
+	background-clip: text;
+	color: transparent;
+	box-shadow: none;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 0%;
+	}
+	50% {
+		background-position: 100% 0%;
+	}
+	100% {
+		background-position: 100% 100%;
+	}
 }
 header nav{
 	z-index: 2;
@@ -63,36 +84,25 @@ header nav button:hover{
 	padding: .5rem;
 	background: var(--bg-color-tag-light);
 }
-
-.gradient {
-	background: linear-gradient(323deg, var(--font-color) 25%, var(--main-color) 50%, var(--font-color) 75%);
-	background-size: 400% 400%;
-	animation: gradient 4s linear infinite;
-
-	background-clip: text;
-	color: transparent;
-	box-shadow: none;
+header .headingBackground{
+	z-index: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(auto-fit, minmax(22px, 1fr));
+	background: radial-gradient(var(--main-color), var(--bg-color) 80%);
+	overflow: hidden;
 }
-header .heading .extras{
-	background: linear-gradient(323deg, var(--bg-color-soft) 25%, var(--main-color) 50%, var(--bg-color-soft) 75%);
-	background-size: 400% 400%;
-	animation: gradient 4s linear infinite;
+header .headingBackground div{
+	aspect-ratio: 1 / 1;
+	border-radius: 2px;
+	background: var(--bg-color);
+}
 
-	background-clip: text;
-	color: transparent;
-	box-shadow: none;
-}
-@keyframes gradient {
-	0% {
-		background-position: 0% 0%;
-	}
-	50% {
-		background-position: 100% 0%;
-	}
-	100% {
-		background-position: 100% 100%;
-	}
-}
 section.mainContent{
 	padding: 1rem 2rem;
 }
