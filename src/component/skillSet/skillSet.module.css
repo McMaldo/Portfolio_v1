@@ -1,11 +1,12 @@
 .skillSet summary{
+	width: fit-content;
 	display: flex;
 	align-items: center;
 	color: var(--font-color-soft);
 	user-select: none;
 	cursor: pointer;
 	gap: .5rem;
-	padding-top: .5rem;
+	margin-top: .5rem;
 }
 .skillSet summary:hover svg{
 	color: var(--font-color);

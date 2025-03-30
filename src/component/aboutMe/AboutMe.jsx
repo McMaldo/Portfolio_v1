@@ -13,7 +13,7 @@ export default function AboutMe() {
 				<>
 					<p>
 						Maldonado Ignacio, also known as Maldo. Personal & Professional 
-						Information Technology Technician, programming since the age of 15.
+						IT Technician, programming since the age of 15.
 					</p>
 					<p>
 						With a strong affinity for Front-end Development and Web Design, 

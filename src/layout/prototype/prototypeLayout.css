@@ -120,6 +120,7 @@ aside .spkLangs .spkLangTag:last-child{
 aside .spkLangs .spkLangTag img{
 	height: 1rem;
 	aspect-ratio: 1 / 1;
+	user-select: none;
 }
 
 /* RIGHT----------------------------------------------------------------------- */

@@ -32,8 +32,8 @@ export default function Main() {
 					<button onClick={() => document.querySelector(`#SkillSet`).scrollIntoView({behavior: 'smooth'})}>
 						{isTranslatedToEnglish? "Skill Set" : "Habilidades"}
 					</button>
-					<button onClick={() => document.querySelector(`#Portfolio`).scrollIntoView({behavior: 'smooth'})}>
-						{isTranslatedToEnglish? "Portfolio" : "Portafolio"}
+					<button onClick={() => document.querySelector(`#Projects`).scrollIntoView({behavior: 'smooth'})}>
+						{isTranslatedToEnglish? "Projects" : "Proyectos"}
 					</button>
 					<button onClick={() => document.querySelector(`#AboutMe`).scrollIntoView({behavior: 'smooth'})}>
 						{isTranslatedToEnglish? "About Me" : "Sobre Mí"}
@@ -44,7 +44,7 @@ export default function Main() {
 			<section className="mainContent">
 				<h3 id="SkillSet">{isTranslatedToEnglish? "Skill Set" : "Habilidades"}</h3>
 				<SkillSet/>
-				<h3 id="Portfolio">{isTranslatedToEnglish? "Portfolio" : "Portafolio"}</h3>
+				<h3 id="Projects">{isTranslatedToEnglish? "Projects" : "Proyectos"}</h3>
 				<Projects/>
 				<h3 id="AboutMe">{isTranslatedToEnglish? "About Me" : "Sobre Mí"}</h3>
 				<AboutMe/>
