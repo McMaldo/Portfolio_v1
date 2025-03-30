@@ -1,17 +1,18 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./bgDots.css";
+import MouseFollower from "../MouseFollower/MouseFollower";
 
 const BgDots = () => {
 	const containerRef = useRef(null);
 	const [divCount, setDivCount] = useState(0);
-	const divArea = 22 * 22;
+	const divArea = 20 * 20;
 
 	useEffect(() => {
 		if (!containerRef.current) return;
 
 		const updateDivCount = () => {
 			const { width, height } = containerRef.current.getBoundingClientRect();
-			const containerArea = width * (height + 18);
+			const containerArea = width * (height + 20);
 			const newDivCount = Math.ceil(containerArea / divArea);
 			setDivCount(newDivCount);
 		};
@@ -33,8 +34,11 @@ const BgDots = () => {
 	));
 
 	return (
-		<div className="bgDots" ref={containerRef}>
-			{divs}
+		<div className="bgDotsContainer">
+			<div className="bgDots" ref={containerRef}>
+				{divs}
+			</div>
+			<MouseFollower zIndex={0}/>
 		</div>
 	);
 };

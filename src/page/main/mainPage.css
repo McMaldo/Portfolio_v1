@@ -7,6 +7,7 @@ header{
 	justify-content: center;
 	position: relative;
 	user-select: none;
+	padding: 0 1rem;
 }
 header .heading{
 	z-index: 2;
@@ -14,6 +15,10 @@ header .heading{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	border: 1px solid var(--bg-color-tag);
+	backdrop-filter: blur(1px);
+	padding: 0 .75rem .25rem .75rem;
+	border-radius: .75rem;
 }
 header .heading h1{
 	font-size: 48px;
@@ -25,24 +30,20 @@ header .heading .extras{
 	font-size: 20px;
 	display: flex;
 	gap: 2rem;
-
-	background: linear-gradient(323deg, var(--bg-color-soft) 25%, var(--main-color) 50%, var(--bg-color-soft) 75%);
-	background-size: 400% 400%;
-	animation: gradient 4s linear infinite;
-
-	background-clip: text;
-	color: transparent;
-	box-shadow: none;
+	transition: color .2s;
+}
+header:hover .heading .extras{
+	color: var(--main-color);
 }
 @keyframes gradient {
 	0% {
-		background-position: 0% 0%;
+		background-position: 100% 100%;
 	}
 	50% {
 		background-position: 100% 0%;
 	}
 	100% {
-		background-position: 100% 100%;
+		background-position: 0% 0%;
 	}
 }
 header nav{
