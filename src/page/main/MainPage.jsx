@@ -1,29 +1,16 @@
 import React, { useState, lazy, Suspense } from "react";
 import './mainPage.css';
-import { useLocalStorage, useWindowSize } from "@uidotdev/usehooks";
+import { useLocalStorage } from "@uidotdev/usehooks";
 import userData from "../../assets/userData.json";
 
 import SkillSet from "../../component/skillSet/SkillSet";
 import Projects from "../../component/projects/Projects";
 import AboutMe from "../../component/aboutMe/AboutMe";
 import Footer from '../../component/footer/Footer';
+import BgDots from "../../component/bgDots/BgDots";
 
 const Hobbies = lazy(() => import('../../component/hobbies/Hobbies'));
 import Loading from '../../component/loading/Loading';
-
-const HeadingBackground = () => {
-	const { width } = useWindowSize();
-
-	const divs = Array.from({ length: (width > 450 ? 532 : 200) }, (_, index) => (
-		<div key={index}></div>
-	));
-
-	return (
-		<div className="headingBackground">
-			{divs}
-		</div>
-	);
-}
 
 export default function Main() {
 
@@ -52,7 +39,7 @@ export default function Main() {
 						{isTranslatedToEnglish? "About Me" : "Sobre Mí"}
 					</button>
 				</nav>
-				<HeadingBackground/>
+				<BgDots/>
 			</header>
 			<section className="mainContent">
 				<h3 id="SkillSet">{isTranslatedToEnglish? "Skill Set" : "Habilidades"}</h3>
