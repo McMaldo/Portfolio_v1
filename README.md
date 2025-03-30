@@ -1,8 +1,63 @@
-# React + Vite
+# McMaldo Prototype Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tech Stack
+<div styles="display: flex; gap: 10px;">
+  <img src="https://github.com/McMaldo/McMaldo/raw/main/icons/React-Dark.svg" width="36" title="React">
+  <img src="https://github.com/McMaldo/McMaldo/raw/main/icons/JavaScript.svg" width="36" title="Java Script">
+  <img src="https://github.com/McMaldo/McMaldo/raw/main/icons/CSS.svg" width="36" title="CSS">
+</div>
 
-Currently, two official plugins are available:
+## Content
+<ul>
+  <li>Skills</li>
+  <li>Projects</li>
+  <li>AboutMe</li>
+  <li>Hobbies</li>
+  <li>Contacts</li>
+</ul>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Structure
+
+```
+Portfolio_v1/
+├── public/
+│   ├── font/               # Custom fonts (Orbitron, Prototype)
+│   ├── icons/              # SVG gh-skill-icons
+│   └── img/
+│
+├── src/
+│   ├── assets/
+│   │   ├── index.css
+│   │   ├── userData.json   # User data configuration
+│   │   └── vars.css        # CSS variables
+│   │
+│   ├── component/
+│   │   ├── aboutMe/        # About Me section
+│   │   ├── accounts/       # Social accounts
+│   │   ├── bgDots/         # Background dots effect
+│   │   ├── contacts/       # Contact information
+│   │   ├── footer/         # Footer component
+│   │   ├── hobbies/        # Hobbies section
+│   │   ├── loading/        # Loading component
+│   │   ├── menu/           # Customisation menu
+│   │   ├── projects/       # Projects showcase
+│   │   ├── skillSet/       # Skills section
+│   │   └── skillTagDesc/   # Skill tag descriptions
+│   │
+│   ├── hook/               # Custom hooks
+│   │   ├── useLifeTime.js  # Based from KaselaDev's
+│   │   └── useTheme.js
+│   │
+│   ├── layout/
+│   │   └── prototype/      # Main layout structure
+│   │
+│   ├── page/
+│   │   ├── error/          # Error page
+│   │   └── main/           # Main page
+│   │
+│   └── main.jsx            # Application entry point
+│
+├── package.json
+├── index.html
+└── README.md
+```
