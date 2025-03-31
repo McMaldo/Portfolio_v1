@@ -21,14 +21,14 @@
 		{"icon": "faCalendar", "name": "BIRTRHDAY", "desc": "December 24, 2005"},
 		{"icon": "faLocationDot", "name": "LOCATION", "desc": "Buenos Aires, Argentina"}
     ],
-    "SKILLTAGS_ICONS_DIR": "/Portfolio_v1/icons/",
+    "SKILLTAGS_ICONS_DIR": "https://raw.githubusercontent.com/McMaldo/skill-icons/main/icons/",
     "skillTags": [
 		{"catName": "Front-end & Design", "skills": [
 			{"img":"React-Dark.svg", "name":"React", "desc": "JS Library", "more": [
 				{"img":"ReactRouterDom-Dark.svg", "name":"React-Router-Dom", "desc": "React Library"},
 				{"img":"Vite-Dark.svg", "name":"Vite", "desc": "Framework Library"},
 				{"img":"MaterialUI-Dark.svg", "name":"Material UI", "desc": "React Library"},
-				{"img":"AntDesign.svg", "name":"Ant Design", "desc": "Component Library"}
+				{"img":"AntDesign-Dark.svg", "name":"Ant Design", "desc": "Component Library"}
 			]},
 			{"img":"CSS.svg", "name":"CSS", "desc": "Styling Lang.", "more": [
 				{"img":"Bootstrap.svg", "name":"Bootstrap", "desc": "Styling Library"},
