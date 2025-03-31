@@ -11,10 +11,10 @@
 .bgDots{
 	z-index: 3;
 	position: relative;
-	width: 100%;
+	width: 105%;
 	height: 100%;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+	grid-template-columns: repeat(auto-fit, 20px);
 }
 .bgDots div{
 	aspect-ratio: 1 / 1;

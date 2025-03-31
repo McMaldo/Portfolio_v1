@@ -1,13 +1,37 @@
+.mainScroll{
+	position: relative;
+	z-index: 4;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	scrollbar-gutter: auto;
+}
+.mainScroll::-webkit-scrollbar{
+	background: transparent;
+	width: 8px;
+}
+.mainScroll::-webkit-scrollbar-thumb{
+	border: 1px solid transparent;
+	border-width: 1.5rem 1px;
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	background-image: linear-gradient(var(--font-color-soft), var(--font-color-soft)),
+		linear-gradient(90deg, transparent, transparent);
+}
+.mainScroll::-webkit-scrollbar-thumb:hover{
+	background-image: linear-gradient(var(--font-color), var(--font-color)),
+		linear-gradient(90deg, transparent, transparent);
+}
+
 header{
 	width: 100%;
 	height: 50%;
-	min-height: 15rem;
 	display: flex;
-	align-items: center;
+	align-items: end;
 	justify-content: center;
 	position: relative;
 	user-select: none;
-	padding: 0 1rem;
+	padding: 0 1rem 2rem 1rem;
 }
 header .heading{
 	z-index: 2;
@@ -17,12 +41,14 @@ header .heading{
 	align-items: center;
 	border: 1px solid var(--bg-color-tag);
 	backdrop-filter: blur(1px);
-	padding: 0 .75rem .25rem .75rem;
 	border-radius: .75rem;
+	padding: .75rem;
+	gap: .5rem;
 }
 header .heading h1{
 	font-size: 48px;
 	text-align: center;
+	line-height: 1;
 }
 header .heading .extras{
 	color: var(--bg-color-soft);
@@ -32,7 +58,7 @@ header .heading .extras{
 	gap: 2rem;
 	transition: color .2s;
 }
-header:hover .heading .extras{
+.mainScroll:hover header .heading .extras{
 	color: var(--main-color);
 }
 @keyframes gradient {
@@ -46,33 +72,23 @@ header:hover .heading .extras{
 		background-position: 0% 0%;
 	}
 }
-header nav{
-	z-index: 2;
+nav{
+	z-index: 9;
 	width: 16.5rem;
 	height: 2.5rem;
 	display: flex;
 	position: absolute;
-	bottom: calc(-1.25rem - 1px);
-	right: 2rem;
+	top: 1rem;
+	right: 1rem;
 	border-radius: .75rem;
-	border: 2px solid transparent;
+	border: 1px solid transparent;
 	background-origin: border-box;
 	background-clip: content-box, border-box;
 	background-image: linear-gradient(var(--bg-color-tag), var(--bg-color-tag)),
 		linear-gradient(90deg, var(--main-color-medium) 0%, var(--main-color));
 	overflow: hidden;
 }
-header::after{
-	z-index: 1;
-	content: "";
-	position: absolute;
-	left: 2rem;
-	bottom: 0;
-	height: 2px;
-	width: calc(100% - 2rem);
-	background: linear-gradient(90deg, var(--bg-color) 0%, var(--main-color-soft) 1%, var(--main-color-soft) 55%, var(--main-color));
-}
-header nav button{
+nav button{
 	width: 5.5rem;
 	height: 100%;
 	color: var(--font-color);
@@ -80,13 +96,15 @@ header nav button{
 	cursor: pointer;
 	transition: all .1s;
 }
-header nav button:hover{
+nav button:hover{
 	padding: .5rem;
 	background: var(--bg-color-tag-light);
 }
 
 section.mainContent{
+	z-index: 4;
 	padding: 1rem 2rem;
+	background: linear-gradient(180deg, transparent, var(--bg-color) 20%);
 }
 section.mainContent h3{
 	width: fit-content;
@@ -100,7 +118,7 @@ section.mainContent h3::after{
 	bottom: 0;
 	left: -2rem;
 	width: calc(100% + 2.5rem);
-	height: 2px;
+	height: 1px;
 	background: linear-gradient(90deg, var(--main-color-soft), var(--main-color));
 }
 section.mainContent button.expand{
@@ -117,13 +135,22 @@ section.mainContent button.expand:hover{
 }
 
 @media (max-width: 500px){
+	nav{
+		position: fixed;
+		top: .5rem;
+		right: .5rem;
+		border-color: var(--main-color);
+	}
+	header{
+		padding: 2rem .5rem .5rem .5rem;
+	}
 	header .heading h1{
 		font-size: 40px;
 	}
-	header nav{
-		right: unset;
-	}
 	header::after{
 		width: calc(100% - 4rem);
+	}
+	.mainScroll::-webkit-scrollbar{
+		width: 0;
 	}
 }

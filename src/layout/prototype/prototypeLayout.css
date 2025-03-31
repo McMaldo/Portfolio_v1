@@ -17,7 +17,7 @@
 }
 aside, 
 main{
-	border: 2px solid transparent;
+	border: 1px solid transparent;
 	border-radius: 1.5rem;
 	background-origin: border-box;
 	background-clip: content-box, border-box;
@@ -125,27 +125,12 @@ aside .spkLangs .spkLangTag img{
 
 /* RIGHT----------------------------------------------------------------------- */
 main{
+	position: relative;
 	width: calc(100% - 16.75rem);
 	height: calc(100vh - 4rem);
 	background-image: linear-gradient(var(--bg-color), var(--bg-color)),
 		linear-gradient(90deg, var(--main-color-soft) 60%, var(--main-color));
-	scrollbar-gutter: auto;
-}
-main::-webkit-scrollbar{
-	background: transparent;
-	width: 8px;
-}
-main::-webkit-scrollbar-thumb{
-	border: 1px solid transparent;
-	border-width: 1.5rem 1px;
-	background-origin: border-box;
-	background-clip: content-box, border-box;
-	background-image: linear-gradient(var(--font-color-soft), var(--font-color-soft)),
-		linear-gradient(90deg, transparent, transparent);
-}
-main::-webkit-scrollbar-thumb:hover{
-	background-image: linear-gradient(var(--font-color), var(--font-color)),
-		linear-gradient(90deg, transparent, transparent);
+	overflow: hidden;
 }
 
 @media (max-width: 750px){
@@ -172,11 +157,5 @@ main::-webkit-scrollbar-thumb:hover{
 	}
 	main{
 		height: fit-content;
-	}
-	main::-webkit-scrollbar{
-		width: 0;
-	}
-	header{
-		max-height: 15rem;
 	}
 }

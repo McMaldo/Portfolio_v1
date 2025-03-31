@@ -1,21 +1,17 @@
 .menu{
     z-index: 9;
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: .5rem;
+    right: .5rem;
     display: flex;
     flex-direction: column;
     padding: .5rem;
     gap: .5rem;
-    border-radius: 1rem 0 0 0;
-    border: 2px solid var(--main-color);
-    border-width: 2px 0 0 2px;
+    border-radius: 1rem;
+    border: 1px solid var(--main-color);
     background: var(--bg-color);
-    transition: all .3s ease-out;
+    transition: all .2s ease-out;
     user-select: none;
-}
-.menu.openedTopPanel{
-    border-radius: 0;
 }
 .menu .btnContainer{
     z-index: 10;
@@ -62,14 +58,14 @@
     width: 10rem;
     position: absolute;
     right: calc(100% + .5rem);
-    top: calc(-.5rem - 2px);
+    top: calc(-.5rem - 1px);
     display: flex;
     flex-direction: column;
     gap: .5rem;
     padding: .5rem 0 .5rem .5rem;
     border-radius: .5rem 0 0 .5rem;
     background: var(--bg-color);
-    border: 2px solid var(--main-color);
+    border: 1px solid var(--main-color);
     border-right: 0;
 }
 .selectorPanel .conector{
@@ -166,26 +162,33 @@
     left: 0;
 }
 .selectorPanel::after,
-.selectorPanel::before{
+.menu.openedTopPanel .selectorPanel::before{
     content: "";
     width: 1rem;
     height: 1rem;
     background: transparent;
-    border: 2px solid var(--main-color);
+    border: 1px solid var(--main-color);
     position: absolute;
     right: 0;
 }
-.selectorPanel::before{
-    bottom: calc(-1rem - 2px);
-    border-width: 2px 2px 0 0;
+.menu.openedTopPanel .selectorPanel::before{
+    bottom: calc(-1rem - 1px);
+    border-width: 1px 1px 0 0;
     border-top-right-radius: .5rem;
     box-shadow: .5rem -.5rem 0 .5rem var(--bg-color);
 }
 .selectorPanel::after{
-    top: calc(-1rem - 2px);
-    border-width: 0 2px 2px 0;
+    top: calc(-1rem - 1px);
+    border-width: 0 1px 1px 0;
     border-bottom-right-radius: .5rem;
     box-shadow: .5rem .5rem 0 .5rem var(--bg-color);
+}
+
+.menu.openedTopPanel{
+    border-top-left-radius: 0;
+}
+.menu.openedBottomPanel{
+    border-bottom-left-radius: 0;
 }
 .menu.openedTopPanel .selectorPanel::after{
     content: none;

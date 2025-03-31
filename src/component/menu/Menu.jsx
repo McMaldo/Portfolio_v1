@@ -123,7 +123,7 @@ const Menu = () => {
     const handleMouseLeave = () => setPanelOpened("");
 
     return (
-        <div className={`${s.menu} ${panelOpened === "palette" ? s.openedTopPanel : ""}`}>
+        <div className={`${s.menu} ${panelOpened === "palette" ? s.openedTopPanel : panelOpened ? s.openedBottomPanel : ""}`}>
             {isExpanded && (
                 <>
                     <div 
