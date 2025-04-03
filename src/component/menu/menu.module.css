@@ -67,6 +67,15 @@
     background: var(--bg-color);
     border: 1px solid var(--main-color);
     border-right: 0;
+    animation: appearance .2s;
+}
+@keyframes appearance {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 .selectorPanel .conector{
     width: .5rem;
