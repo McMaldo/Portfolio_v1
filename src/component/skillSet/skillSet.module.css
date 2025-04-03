@@ -15,7 +15,7 @@
 	font-weight: 400;
 }
 .skillSet summary svg{
-	transition: all .2s;
+	transition: transform .2s;
 }
 .skillSet summary svg.expanded{
 	transform: rotate(90deg);
@@ -55,14 +55,11 @@
 	display: grid;
 	align-items: center;
 	background: var(--bg-color-tag);
-	transition: all .2s;
+	transition: box-shadow .2s;
 }
 .skillTag:hover,
 .skillTagSimple:hover{
 	box-shadow: var(--box-shadow-tag-hover);
-}
-.skillTag:hover img{
-	filter: drop-shadow(0 0 10px var(--bg-color-tag-dark));
 }
 .skillTagMore{
 	background: linear-gradient(90deg, var(--bg-color-tag) 40%, var(--bg-color-tag-light) 50%, var(--bg-color-tag) 54%);
@@ -88,7 +85,10 @@
 	width: 2.375rem;
 	height: 2.375rem;
 	user-select: none;
-	transition: all .2s;
+	transition: filter .2s;
+}
+.skillTag:hover img{
+	filter: drop-shadow(0 0 10px var(--bg-color-tag-dark));
 }
 .skillTag .name{
 	grid-area: name;

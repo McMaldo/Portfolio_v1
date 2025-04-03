@@ -13,7 +13,7 @@
 	position: absolute;
 	pointer-events: none;
 	transform-origin: center;
-	transition: transform .15s ease-out, opacity .2s ease-out;
+	transition: transform .15s ease-out;
 	margin-left: -60px;
 	margin-top: -60px;
 	opacity: 0;
@@ -21,4 +21,8 @@
 
 .mouseFollower.visible {
 	opacity: 1;
+}
+
+.trail-dot {
+	transition: opacity .5s ease-out;
 }

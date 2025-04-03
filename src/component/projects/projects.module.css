@@ -1,7 +1,7 @@
 .projects{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(12rem, 1fr));
     gap: .5rem;
 }
@@ -9,7 +9,6 @@
     border-radius: .75rem;
     background-color: var(--bg-color-tag);
     padding: .5rem;
-    transition: all .3s;
 }
 .projects article .imgContainer{
     width: 100%;
@@ -31,7 +30,7 @@
     top: .25rem;
     background: var(--bg-color-tag);
     border-radius: .5rem;
-    transition: all .3s;
+    transition: opacity .3s;
     opacity: 0;
 }
 .projects article:hover .imgContainer .colaboratorsCount{
@@ -74,7 +73,10 @@
     position: absolute;
     bottom: -3rem;
     right: -.5rem;
-    transition: all .3s ease-in-out;
+    transition: bottom .3s ease-in-out;
+}
+.projects article:hover .imgContainer .links::after{
+    bottom: -1.5rem;
 }
 .projects article .imgContainer .links a{
     z-index: 3;
@@ -84,7 +86,10 @@
     border-radius: 50%;
     padding: .5rem;
     opacity: 0;
-    transition: all .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+}
+.projects article:hover .imgContainer .links a{
+    opacity: 1;
 }
 .projects article .imgContainer .links a:hover{
     box-shadow: var(--box-shadow-tag-hover);
@@ -99,8 +104,8 @@
     justify-content: space-between;
     font-size: 11px;
     color: var(--font-color-soft);
-    padding-top: .25rem;
     user-select: none;
+    padding: .5rem 0;
 }
 .projects article .desc{
     font-size: 14px;
@@ -113,11 +118,4 @@
         hyphenate-limit-chars: 7;
         -ms-hyphenate-limit-chars: 7;
     }
-}
-
-.projects article:hover .imgContainer .links a{
-    opacity: 1;
-}
-.projects article:hover .imgContainer .links::after{
-    bottom: -1.5rem;
 }

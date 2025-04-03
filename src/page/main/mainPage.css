@@ -94,10 +94,9 @@ nav button{
 	color: var(--font-color);
 	background: transparent;
 	cursor: pointer;
-	transition: all .1s;
+	transition: background .1s;
 }
 nav button:hover{
-	padding: .5rem;
 	background: var(--bg-color-tag-light);
 }
 
@@ -128,7 +127,7 @@ section.mainContent button.expand{
     padding: .5rem 1rem;
     border-radius: .5rem;
     background: var(--bg-color-tag);
-    transition: all .3s;
+    transition: box-shadow .3s;
 }
 section.mainContent button.expand:hover{
 	box-shadow: var(--box-shadow-tag-hover);

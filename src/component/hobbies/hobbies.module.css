@@ -64,7 +64,7 @@
     border-radius: .25rem;
     color: var(--font-color-soft);
     background: var(--main-color-soft);
-    transition: all .2s;
+    transition: color .2s;
 }
 .hobbiesSlider article:first-child span:hover{
     color: var(--font-color);

@@ -11,6 +11,15 @@
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    animation: opening .2s;
+}
+@keyframes opening {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 .skillTagMore h5{
     color: var(--font-color-soft);
@@ -30,7 +39,6 @@
     width: 2.375rem;
     height: 2.375rem;
     user-select: none;
-    transition: all .3s;
 }
 .skillTag .name{
     grid-area: name;

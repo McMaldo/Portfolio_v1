@@ -4,6 +4,7 @@ import './mouseFollower.css';
 const MouseFollower = ({zIndex}) => {
 	const [position, setPosition] = useState({ x: 0, y: 0 });
 	const [isVisible, setIsVisible] = useState(false);
+	const [trail, setTrail] = useState([]);
 	const containerRef = useRef(null);
 
 	useEffect(() => {
@@ -23,7 +24,12 @@ const MouseFollower = ({zIndex}) => {
 
 			setIsVisible(isInside);
 			if (isInside) {
-				setPosition({ x, y });
+				const newPosition = { x, y };
+				setPosition(newPosition);
+				setTrail(prevTrail => {
+					const newTrail = [...prevTrail, newPosition];
+					return newTrail.slice(-10); // Keep only last 10 positions
+				});
 			}
 		};
 
@@ -40,6 +46,17 @@ const MouseFollower = ({zIndex}) => {
 			style={{"zIndex": zIndex}}
 			className="mouseFollowerContainer"
 		>
+			{trail.map((pos, index) => (
+				<div
+					key={index}
+					className={`mouseFollower trail-dot`}
+					style={{
+						zIndex: zIndex + 1,
+						transform: `translate(${pos.x}px, ${pos.y}px)`,
+						opacity: isVisible ? ((index + 1) / trail.length) : 0
+					}}
+				/>
+			))}
 			<div
 				className={`mouseFollower ${isVisible ? 'visible' : ''}`}
 				style={{

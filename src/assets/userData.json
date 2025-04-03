@@ -68,15 +68,15 @@
 			{"en": "Client-server Architecture", "es": "Arquitectura Cliente-Servidor"}
 		]},
 		{"catName": "Soft Skills", "skills": [
+			{"en": "Continuous learning mindset", "es": "Mentalidad de aprendizaje continuo"},
+			{"en": "Self-motivation", "es": "Auto-motivación"},
+			{"en": "Creativity", "es": "Creatividad"},
+			{"en": "Patience and perseverance", "es": "Paciencia y perseverancia"},
 			{"en": "Effective communication", "es": "Comunicación efectiva"},
 			{"en": "Active listening", "es": "Escucha activa"},
-			{"en": "Empathy", "es": "Empatía"},
-			{"en": "Patience and perseverance", "es": "Paciencia y perseverancia"},
 			{"en": "Curiosity", "es": "Curiosidad"},
-			{"en": "Continuous learning mindset", "es": "Mentalidad de aprendizaje continuo"},
 			{"en": "Collaboration", "es": "Colaboración"},
-			{"en": "Self-motivation", "es": "Auto-motivación"},
-			{"en": "Creativity", "es": "Creatividad"}
+			{"en": "Empathy", "es": "Empatía"}
 		]}
 	],
 	"projects": {

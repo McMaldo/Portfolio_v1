@@ -33,7 +33,6 @@
     border-radius: .75rem;
     background-color: var(--bg-color-tag);
     padding: .5rem;
-    transition: all .3s;
     position: relative;
 }
 .aboutMe .eduItem :first-child{
