@@ -51,9 +51,9 @@ function SkillTagsCategory({cat, index}) {
 			}}
 		>
 			<FontAwesomeIcon icon={faCaretRight} className={isExpanded ? s.expanded : ""} />
-			<h4>{cat.catName}</h4>
+			<h4>{isTranslatedToEnglish ?  cat.catName.en : cat.catName.es}</h4>
 		</summary>
-		{cat.catName === "Programming Concepts" || cat.catName === "Soft Skills" ? (
+		{cat.catName.en === "Programming Concepts" || cat.catName.en === "Soft Skills" ? (
 			<div className={s.tagSliderSimple}>
 			{cat.skills.map((skill, skillKey) => (
 				<div className={s.skillTagSimple} key={skillKey}>
