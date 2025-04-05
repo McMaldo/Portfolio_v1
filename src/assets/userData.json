@@ -52,7 +52,7 @@
 				{"img":"Github-Dark.svg", "name":"Github", "desc": "Version Control"},
 				{"img":"GitLab-Dark.svg", "name":"Gitlab", "desc": "Version Control"}
 			]},
-			{"img":"Windsurf.svg", "name":"Windsurf Editor", "desc": "Code Editor", "more": [
+			{"img":"TraeIA-Dark.svg", "name":"Trae Editor", "desc": "Code Editor", "more": [
 				{"img":"VSCode-Dark.svg", "name":"Visual Studio Code", "desc": "Code Editor"},
 				{"img":"Sublime-Dark.svg", "name":"Sublime Text", "desc": "Code Editor"}
 			]},
