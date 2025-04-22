@@ -31,8 +31,7 @@
 				{"img":"AntDesign-Dark.svg", "name":"Ant Design", "desc": "Component Library"}
 			]},
 			{"img":"CSS.svg", "name":"CSS", "desc": "Styling Lang.", "more": [
-				{"img":"Bootstrap.svg", "name":"Bootstrap", "desc": "Styling Library"},
-				{"img":"TailwindCSS-Dark.svg", "name":"Tailwind CSS", "desc": "Styling Library"}
+				{"img":"Bootstrap.svg", "name":"Bootstrap", "desc": "Styling Library"}
 			]},
 			{"img":"JavaScript.svg", "name":"Java Script", "desc": "Programming Lang."},
 			{"img":"Figma-Dark.svg", "name":"Figma", "desc": "Design Tool"}
