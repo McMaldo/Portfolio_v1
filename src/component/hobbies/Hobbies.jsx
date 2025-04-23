@@ -12,13 +12,21 @@ const ImgCarousel = ({article, en}) => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % imgList.length);
-        }, 5000);
+            console.log(currentIndex)
+        }, 8000);
         return () => clearInterval(interval);
     }, [imgList.length]);
 
     return (
         <article className={s.imgContainer+" "+(imgList.length > 1 ? s.imgCarousel : "")}>
-            <img src={hobbies.ARTICLES_IMGS_DIR+imgList[currentIndex]} alt="img"/>
+            {imgList.map((imgSrc, imgIndex) => (
+                <img 
+                    src={hobbies.ARTICLES_IMGS_DIR+imgSrc}
+                    className={imgIndex == currentIndex ? s.showing : ""}
+                    alt="img" 
+                    key={imgIndex}
+                />
+            ))}
             <div className={s.type}>
                 <span>{en? type.en : type.es}</span>
             </div>

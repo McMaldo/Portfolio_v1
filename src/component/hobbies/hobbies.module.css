@@ -96,24 +96,19 @@
     object-fit: cover;
 }
 .hobbiesSlider article.imgCarousel img{
-    animation: imgTransition 5s ease-in-out infinite;
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
-@keyframes imgTransition {
-	0% {
-		opacity: 0;
-	}
-	10% {
-		opacity: 1;
-	}
-	90% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
+.hobbiesSlider article.imgCarousel img.showing{
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
 }
 .hobbies article.imgContainer .type{
     position: absolute;
+    z-index: 2;
     bottom: 0;
     right: 0;
     padding: 0 0 0 .375rem;
@@ -122,7 +117,7 @@
 }
 .hobbies article.imgContainer .type span{
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 .hobbies article.imgContainer .type::before,
 .hobbies article.imgContainer .type::after {

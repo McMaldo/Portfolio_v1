@@ -103,7 +103,7 @@ nav button:hover{
 section.mainContent{
 	z-index: 4;
 	padding: 1rem 2rem;
-	background: linear-gradient(180deg, transparent, var(--bg-color) 20%);
+	background: linear-gradient(180deg, transparent 10%, var(--bg-color) 25%, var(--bg-color) 80%, transparent);
 }
 section.mainContent h3{
 	width: fit-content;
