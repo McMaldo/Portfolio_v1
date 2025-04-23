@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import s from "./hobbies.module.css";
 import { useLocalStorage } from "@uidotdev/usehooks";
 import { hobbies } from "../../assets/userData.json";
+import { Spotify } from "react-spotify-embed";
 
 const ImgCarousel = ({article, en}) => {
 
@@ -58,9 +59,10 @@ export default function Hobbies() {
                 {hobbies.articles.map((article, articleKey) => (
                     <ImgCarousel article={article} key={articleKey} en={isTranslatedToEnglish}/>
                 ))}
-                <button>
+                <Spotify className={s.playlist} style={{borderRadius:12}} link="https://open.spotify.com/playlist/59erNp9dwujZVshxmCiR4s?utm_source=generator&theme=0" />
+                {/* <button>
                     {isTranslatedToEnglish? "Show More" : "Ver Más"}
-                </button>
+                </button> */}
             </div>
         </div>
     );
