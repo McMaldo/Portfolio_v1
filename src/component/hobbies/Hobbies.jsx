@@ -3,6 +3,8 @@ import s from "./hobbies.module.css";
 import { useLocalStorage } from "@uidotdev/usehooks";
 import { hobbies } from "../../assets/userData.json";
 import { Spotify } from "react-spotify-embed";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLink, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 const ImgCarousel = ({article, en}) => {
 
@@ -12,7 +14,6 @@ const ImgCarousel = ({article, en}) => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % imgList.length);
-            console.log(currentIndex)
         }, 8000);
         return () => clearInterval(interval);
     }, [imgList.length]);
@@ -67,6 +68,14 @@ export default function Hobbies() {
                 {hobbies.articles.map((article, articleKey) => (
                     <ImgCarousel article={article} key={articleKey} en={isTranslatedToEnglish}/>
                 ))}
+                <article className={s.imgContainer} style={{background: "transparent"}}>
+                    <a href="">
+                        <img style={{objectFit:"contain",cursor:"pointer"}} src="https://raw.githubusercontent.com/McMaldo/skill-icons/main/icons/Obsidian-Dark.svg"/>
+                        <div className={s.type}>
+                            <span>Obsidian Vaults<FontAwesomeIcon icon={faUpRightFromSquare}/></span>
+                        </div>
+                    </a>
+                </article>
                 <Spotify className={s.playlist} style={{borderRadius:12}} link="https://open.spotify.com/playlist/59erNp9dwujZVshxmCiR4s?utm_source=generator&theme=0" />
                 {/* <button>
                     {isTranslatedToEnglish? "Show More" : "Ver Más"}

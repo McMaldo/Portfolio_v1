@@ -119,6 +119,11 @@
     position: relative;
     z-index: 3;
 }
+.hobbies article.imgContainer .type svg{
+    color: var(--font-color);
+    margin-left: .375rem;
+    align-self: center;
+}
 .hobbies article.imgContainer .type::before,
 .hobbies article.imgContainer .type::after {
     content: "";
