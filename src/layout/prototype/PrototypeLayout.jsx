@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react';
 import { Outlet } from "react-router-dom";
 import './prototypeLayout.css';
 import { useWindowSize, useLocalStorage } from "@uidotdev/usehooks";
@@ -7,9 +8,10 @@ import userData from "../../assets/userData.json";
 import Accounts from "../../component/accounts/Accounts";
 import Contacts from "../../component/contacts/Contacs";
 import Menu from '../../component/menu/Menu';
-import PdfPreview from "../../component/pdfPreview/PdfPreview";
 
-import { useOverlay, OverlayProvider } from "../../context/OverlayContext";
+import Loading from '../../component/loading/Loading.jsx';
+const PdfPreview = lazy(() => import('../../component/pdfPreview/PdfPreview.jsx'));
+import { OverlayProvider } from "../../context/OverlayContext";
 
 export default function Prototype() {
 
@@ -51,7 +53,9 @@ export default function Prototype() {
 					</main>
 					<Menu/>
 				</div>
-				<PdfPreview/>
+				<Suspense fallback={<Loading/>}>
+					<PdfPreview/>
+				</Suspense>
 			</div>
 		</OverlayProvider>
 	)
