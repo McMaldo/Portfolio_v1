@@ -1,9 +1,12 @@
-import React from "react";
 import s from './aboutMe.module.css';
 import { useLocalStorage } from "@uidotdev/usehooks";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { useOverlay } from '../../context/OverlayContext';
 
 export default function AboutMe() {
 
+	let {openPdfPreview} = useOverlay();
 	let [isTranslatedToEnglish] = useLocalStorage("translatedToEnglish", true);
 	
 	return (
@@ -38,9 +41,13 @@ export default function AboutMe() {
 			</article>
 			<article>
 				<h4>{isTranslatedToEnglish? "Education" : "Educación"}</h4>
-				<div className={s.eduItem}>
+				<div className={s.eduItem} onClick={() => openPdfPreview("titulo_educativo_TÉCNICO_EN_INFORMÁTICA_PERSONAL_Y_PROFESIONAL")}>
 					<div>{isTranslatedToEnglish? "High Scholl" : "Secundaria"}: Técnica N°3, Malv. Arg., Bs. As., Argentina</div>
-					<div>{isTranslatedToEnglish? "Title" : "Título"}: Tecnicatura en Programación Personal y Profesional</div>
+					<div>{isTranslatedToEnglish? "Title" : "Título"}: Tecnicatura en Programación Personal y Profesional <FontAwesomeIcon icon={faUpRightFromSquare}/></div>
+				</div>
+				<div className={s.eduItem} onClick={() => openPdfPreview("cisco_netacad_shellscript")}>
+					<div>Cisco Networking Academy program</div>
+					<div>{isTranslatedToEnglish? "Title" : "Título"}: NDG Linux Unhatched <FontAwesomeIcon icon={faUpRightFromSquare}/></div>
 				</div>
 				<div className={s.eduItem}>
 					<div>{isTranslatedToEnglish? "College" : "Universidad"}: UBA, Bs. As., Argentina</div>
