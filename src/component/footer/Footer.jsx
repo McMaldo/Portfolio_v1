@@ -16,7 +16,7 @@ export default function Footer() {
 	const license = [faCreativeCommons, faCreativeCommonsBy, faCreativeCommonsNc, faCreativeCommonsSa];
 
 	return(
-		<footer className="center">
+		<footer className="footer center">
 			<h2 className="heading">Prototype Portfolio</h2>
 			<hr/>
 			<section className="info">

@@ -133,6 +133,10 @@ section.mainContent button.expand:hover{
 	box-shadow: var(--box-shadow-tag-hover);
 }
 
+.react-activity-calendar{
+	padding: 1rem 0;
+}
+
 @media (max-width: 500px){
 	nav{
 		position: fixed;

@@ -11,6 +11,7 @@ import BgDots from "../../component/bgDots/BgDots";
 
 const Hobbies = lazy(() => import('../../component/hobbies/Hobbies'));
 import Loading from '../../component/loading/Loading';
+import GitHubCalendar from 'react-github-calendar';
 
 export default function Main() {
 
@@ -50,6 +51,7 @@ export default function Main() {
 					<Projects/>
 					<h3 id="AboutMe">{isTranslatedToEnglish? "About Me" : "Sobre Mí"}</h3>
 					<AboutMe/>
+					<GitHubCalendar username="McMaldo" />
 					{
 						!isHobbiesSectionVisible ?
 						<button className="expand" onClick={() => setHobbiesSectionVisible(true)}>
