@@ -25,20 +25,56 @@
     height: calc(100% - 2rem);
     background: linear-gradient(var(--main-color-soft) 40%, var(--main-color) 75%, var(--main-color-soft) 90%);
 }
+.sectionsSwitch{
+    display: flex;
+    gap: .25rem;
+    width: fit-content;
+    padding: .25rem;
+    border-radius: .5rem;
+    border: 1px solid var(--main-color-soft);
+}
+.sectionsSwitch h4{
+    padding: 1px 6px;
+    user-select: none;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+.sectionsSwitch h4.current{
+    background: var(--bg-color-tag);
+}
+
 .aboutMe p{
     text-indent: 20px;
     color: var(--icon-color);
 }
 .aboutMe .eduItem{
-    border-radius: .75rem;
+	position: relative;
+    display: grid;
+	grid-template-columns: 2.5rem calc(100% - 3rem);
+	column-gap: .5rem;
+	grid-template-areas: 
+	"img comp"
+	"img title";
     background-color: var(--bg-color-tag);
-    padding: .5rem;
-    position: relative;
+	border-radius: .75rem;
+	padding: .5rem;
 }
-.aboutMe .eduItem :first-child{
+.aboutMe .eduItem img{
+    grid-area: img;
+	width: 2.5rem;
+	height: 2.5rem;
+	user-select: none;
+	transition: filter .2s;
+}
+.aboutMe .eduItem .comp{
+    grid-area: comp;
     color: var(--font-color-soft);
     font-size: 12px;
 }
+.aboutMe .eduItem .title{
+    grid-area: title;
+}
+
 .aboutMe .eduItem .upperTag{
     padding: 0 .5rem;
     position: absolute;
@@ -55,9 +91,17 @@
     color: var(--font-color);
 }
 .aboutMe .eduItem svg{
+    cursor: pointer;
+    position: absolute;
+    right: .5rem;
+    align-self: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    color: var(--icon-color);
+    background: var(--bg-color-tag);
+    padding: .5rem;
     opacity: 0;
     transition: opacity .3s;
-    color: var(--icon-color);
 }
 .aboutMe .eduItem:hover svg{
     opacity: 1;

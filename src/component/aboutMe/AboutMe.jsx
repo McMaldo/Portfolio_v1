@@ -1,13 +1,54 @@
 import s from './aboutMe.module.css';
 import { useLocalStorage } from "@uidotdev/usehooks";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { faFilePdf, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { useOverlay } from '../../context/OverlayContext';
+import { useState } from 'react';
+import { useTheme } from '../../hook/useTheme';
 
 export default function AboutMe() {
 
+	let {theme} = useTheme();
 	let {openPdfPreview} = useOverlay();
 	let [isTranslatedToEnglish] = useLocalStorage("translatedToEnglish", true);
+	let [viewSelected, setViewSelected] = useState("education");
+
+	let titles = {
+		education:[
+			{lvl:{en:"High School", es:"Secundaria"},
+			logo:"/Portfolio_v1/icons/RobertoArlt-Logo.svg",
+			company:"Técnica N°3, Malvinas Argentinas, Buenos Aires, Argentina",
+			link:"https://tecnica3.com.ar/",
+			title:"Tecnicatura en Programación Personal y Profesional",
+			pdf:"titulo_educativo_TÉCNICO_EN_INFORMÁTICA_PERSONAL_Y_PROFESIONAL"},
+
+			{lvl:{en:"College", es:"Universidad"},
+			logo:"/Portfolio_v1/icons/UBA-Logo.svg",
+			company: "Universidad de Buenos Aires, Buenos Aires, Argentina",
+			link:"https://www.uba.ar/",
+			title: "Licenciatura en Ciencia de la Computación",
+			pdf:undefined}
+		],
+		certificates:[
+			{logo: "Powershell-Dark",
+			company: "Cisco Networking Academy program",
+			link:"https://www.netacad.com/courses/linux-unhatched?courseLang=en-US",
+			title: "NDG Linux Unhatched",
+			pdf: "cisco_netacad_shellscript"},
+
+			{logo: "CSS",
+			company: "HackerRank",
+			link:"https://www.hackerrank.com/skills-verification/css",
+			title: "CSS (Basic) Certificate",
+			pdf: "hackerrack_css_basic_certificate"},
+
+			{logo: "JavaScript",
+			company: "HackerRank",
+			link:"https://www.hackerrank.com/skills-verification/javascript_basic",
+			title: "JavaScript (Basic) Certificate",
+			pdf: "hackerrack_js_basic_certificate"}
+		]
+	}
 	
 	return (
 		<div className={s.aboutMe}>
@@ -40,20 +81,34 @@ export default function AboutMe() {
 				</>}
 			</article>
 			<article>
-				<h4>{isTranslatedToEnglish? "Education" : "Educación"}</h4>
-				<div className={s.eduItem} onClick={() => openPdfPreview("titulo_educativo_TÉCNICO_EN_INFORMÁTICA_PERSONAL_Y_PROFESIONAL")}>
-					<div>{isTranslatedToEnglish? "High Scholl" : "Secundaria"}: Técnica N°3, Malv. Arg., Bs. As., Argentina</div>
-					<div>{isTranslatedToEnglish? "Title" : "Título"}: Tecnicatura en Programación Personal y Profesional <FontAwesomeIcon icon={faUpRightFromSquare}/></div>
+				<div className={s.sectionsSwitch}>
+					<h4 className={viewSelected==="education"? s.current : ""} onClick={()=> setViewSelected("education")}>
+						{isTranslatedToEnglish? "Education" : "Educación"}
+					</h4>
+					<h4 className={viewSelected==="certificates"? s.current : ""} onClick={()=> setViewSelected("certificates")}>
+						{isTranslatedToEnglish? "Certificates" : "Certificados"}
+					</h4>
 				</div>
-				<div className={s.eduItem} onClick={() => openPdfPreview("cisco_netacad_shellscript")}>
-					<div>Cisco Networking Academy program</div>
-					<div>{isTranslatedToEnglish? "Title" : "Título"}: NDG Linux Unhatched <FontAwesomeIcon icon={faUpRightFromSquare}/></div>
-				</div>
-				<div className={s.eduItem}>
-					<div>{isTranslatedToEnglish? "College" : "Universidad"}: UBA, Bs. As., Argentina</div>
-					<div>{isTranslatedToEnglish? "Career" : "Carrera"}: Licenciatura en Ciencia de la Computación</div>
-					<div className={s.upperTag}>{isTranslatedToEnglish? "Current" : "Cursando"}</div>
-				</div>
+				{viewSelected === "education" ?
+					titles.education.map((item, index) => (
+						<div key={index} className={s.eduItem}>
+							<img src={item.logo} alt="logo" />
+							<a href={item.link} target="_blank" className={s.comp}>{item.lvl && (isTranslatedToEnglish? item.lvl.en : item.lvl.es)}: {item.company}</a>
+							<div className={s.title}>{(isTranslatedToEnglish? "Title" : "Título")}: {item.title}</div>
+							{item.pdf && <FontAwesomeIcon icon={faFilePdf} onClick={() => openPdfPreview(item.pdf)}/>}
+							{!item.pdf && <div className={s.upperTag}>{isTranslatedToEnglish? "Current" : "Cursando"}</div>}
+						</div>
+					))
+				:
+					titles.certificates.map((item, index) => (
+						<div key={index} className={s.eduItem}>
+							<img src={"https://raw.githubusercontent.com/McMaldo/skill-icons/main/icons/" + (theme=="dark"? item.logo : item.logo.replace(/-Dark/g, "-Light")) + ".svg"} alt="" />
+							<a href={item.link} target="_blank" className={s.comp}>{item.company}</a>
+							<div className={s.title}>{item.title}</div>
+							<FontAwesomeIcon icon={faFilePdf} onClick={() => openPdfPreview(item.pdf)}/>
+						</div>
+					))
+				}
 			</article>
 		</div>
 	)
