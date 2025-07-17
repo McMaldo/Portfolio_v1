@@ -3,7 +3,7 @@ import { useLocalStorage } from "@uidotdev/usehooks";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePdf, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { useOverlay } from '../../context/OverlayContext';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useTheme } from '../../hook/useTheme';
 
 export default function AboutMe() {
@@ -12,6 +12,7 @@ export default function AboutMe() {
 	let {openPdfPreview} = useOverlay();
 	let [isTranslatedToEnglish] = useLocalStorage("translatedToEnglish", true);
 	let [viewSelected, setViewSelected] = useState("education");
+	let aboutMeArticle = useRef();
 
 	let titles = {
 		education:[
@@ -30,29 +31,47 @@ export default function AboutMe() {
 			pdf:undefined}
 		],
 		certificates:[
-			{logo: "Powershell-Dark",
-			company: "Cisco Networking Academy program",
-			link:"https://www.netacad.com/courses/linux-unhatched?courseLang=en-US",
-			title: "NDG Linux Unhatched",
-			pdf: "cisco_netacad_shellscript"},
+			{skill: "JavaScript",
+			company: "HackerRank",
+			link:"https://www.hackerrank.com/skills-verification/javascript_basic",
+			title: "JavaScript (Basic) Certificate",
+			pdf: "hackerrack_js_basic_certificate"},
 
-			{logo: "CSS",
+			{skill: "CSS",
 			company: "HackerRank",
 			link:"https://www.hackerrank.com/skills-verification/css",
 			title: "CSS (Basic) Certificate",
 			pdf: "hackerrack_css_basic_certificate"},
-
-			{logo: "JavaScript",
-			company: "HackerRank",
-			link:"https://www.hackerrank.com/skills-verification/javascript_basic",
-			title: "JavaScript (Basic) Certificate",
-			pdf: "hackerrack_js_basic_certificate"}
+			
+			{logo: "CFP",
+			company: "CFP 401 Tortuguitas",
+			link:"https://cfp401.edu.ar/",
+			title: "Pensamiento Computacional - Programación",
+			pdf: "CFP401_PensamientoComputacional-Programacion"},
+			
+			{logo: "CFP",
+			company: "CFP 401 Tortuguitas",
+			link:"https://cfp401.edu.ar/",
+			title: "Robotica y Automatización",
+			pdf: "CFP401_RoboticayAutomatizacion"},
+			
+			{logo: "CFP",
+			company: "CFP 401 Tortuguitas",
+			link:"https://cfp401.edu.ar/",
+			title: "Diseño y Fabricación Digital",
+			pdf: "CFP401_DisenoyFabricacionDigitial"},
+			
+			{skill: "Powershell-Dark",
+			company: "Cisco Networking Academy program",
+			link:"https://www.netacad.com/courses/linux-unhatched?courseLang=en-US",
+			title: "NDG Linux Unhatched",
+			pdf: "cisco_netacad_shellscript"}
 		]
 	}
 	
 	return (
 		<div className={s.aboutMe}>
-			<article>
+			<article ref={aboutMeArticle}>
 				{isTranslatedToEnglish? 
 				<>
 					<p>
@@ -80,7 +99,7 @@ export default function AboutMe() {
 					</p>
 				</>}
 			</article>
-			<article>
+			<article style={{height: aboutMeArticle.current? aboutMeArticle.current.offsetHeight : "100%"}}>
 				<div className={s.sectionsSwitch}>
 					<h4 className={viewSelected==="education"? s.current : ""} onClick={()=> setViewSelected("education")}>
 						{isTranslatedToEnglish? "Education" : "Educación"}
@@ -89,26 +108,29 @@ export default function AboutMe() {
 						{isTranslatedToEnglish? "Certificates" : "Certificados"}
 					</h4>
 				</div>
-				{viewSelected === "education" ?
+				<div className={"customScroll "+s.eduItemsList}>
+					{viewSelected === "education" ?
 					titles.education.map((item, index) => (
 						<div key={index} className={s.eduItem}>
 							<img src={item.logo} alt="logo" />
-							<a href={item.link} target="_blank" className={s.comp}>{item.lvl && (isTranslatedToEnglish? item.lvl.en : item.lvl.es)}: {item.company}</a>
+							<a href={item.link} target="_blank" className={s.comp}>{item.lvl && (isTranslatedToEnglish? item.lvl.en : item.lvl.es)}: {item.company}<FontAwesomeIcon icon={faUpRightFromSquare}/></a>
 							<div className={s.title}>{(isTranslatedToEnglish? "Title" : "Título")}: {item.title}</div>
-							{item.pdf && <FontAwesomeIcon icon={faFilePdf} onClick={() => openPdfPreview(item.pdf)}/>}
+							{item.pdf && <FontAwesomeIcon className={s.openPdf} icon={faFilePdf} onClick={() => openPdfPreview(item.pdf)}/>}
 							{!item.pdf && <div className={s.upperTag}>{isTranslatedToEnglish? "Current" : "Cursando"}</div>}
 						</div>
 					))
-				:
+					:
 					titles.certificates.map((item, index) => (
 						<div key={index} className={s.eduItem}>
-							<img src={"https://raw.githubusercontent.com/McMaldo/skill-icons/main/icons/" + (theme=="dark"? item.logo : item.logo.replace(/-Dark/g, "-Light")) + ".svg"} alt="" />
-							<a href={item.link} target="_blank" className={s.comp}>{item.company}</a>
+							{item.skill && <img src={"https://raw.githubusercontent.com/McMaldo/skill-icons/main/icons/" + (theme=="dark"? item.skill : item.skill.replace(/-Dark/g, "-Light")) + ".svg"} alt="" />}
+							{item.logo && <img src={"/Portfolio_v1/icons/" + item.logo + ".svg"} alt="logo" />}
+							<a href={item.link} target="_blank" className={s.comp}>{item.company}<FontAwesomeIcon icon={faUpRightFromSquare}/></a>
 							<div className={s.title}>{item.title}</div>
-							<FontAwesomeIcon icon={faFilePdf} onClick={() => openPdfPreview(item.pdf)}/>
+							<FontAwesomeIcon className={s.openPdf} icon={faFilePdf} onClick={() => openPdfPreview(item.pdf)}/>
 						</div>
 					))
-				}
+					}
+				</div>
 			</article>
 		</div>
 	)

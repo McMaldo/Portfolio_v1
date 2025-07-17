@@ -7,14 +7,15 @@ import { useOverlay } from '../../context/OverlayContext';
 
 const PdfPreview = () => {
 
-	let {pdfUrl, isOverlayOpened, setOverlayOpened} = useOverlay();
+	let {pdfName, isOverlayOpened, setOverlayOpened} = useOverlay();
+	let pdfUrl = `/Portfolio_v1/certificates/${pdfName}.pdf`;
 	
 	return (
 		!isOverlayOpened? "" :
 		<div className={s.overlay}>
 			<div className={s.options}>
 				<a href={pdfUrl} target="_blank"><FontAwesomeIcon icon={faUpRightFromSquare}/></a>
-				<a href={pdfUrl} download="MaldonadoPablo_Certificado"><FontAwesomeIcon icon={faDownload}/></a>
+				<a href={pdfUrl} download={"MaldonadoPablo_"+pdfName}><FontAwesomeIcon icon={faDownload}/></a>
 				<FontAwesomeIcon icon={faXmark} onClick={() => setOverlayOpened(false)}/>
 			</div>
 			<div className={s.pdfBox}>

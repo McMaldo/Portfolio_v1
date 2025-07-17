@@ -119,7 +119,7 @@ footer.footer{
 	}
 }
 @media (max-width: 600px){
-	footer .info{
+	footer.footer .info{
 		grid-template-areas: 
 		"time auth"
 		"credits tech";

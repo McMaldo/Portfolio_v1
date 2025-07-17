@@ -5,15 +5,15 @@ const OverlayContext = createContext();
 export const OverlayProvider = ({ children }) => {
 
 	const [isOverlayOpened, setOverlayOpened] = useState(false);
-	const [pdfUrl, setPdfUrl] = useState("");
-	let openPdfPreview = (pdfUrl) => {
-		setPdfUrl(`/Portfolio_v1/certificates/${pdfUrl}.pdf`);
+	const [pdfName, setPdfName] = useState("");
+	let openPdfPreview = (pdfName) => {
+		setPdfName(pdfName);
 		setOverlayOpened(true);
 		return 0;
 	};
 
 	return (
-		<OverlayContext.Provider value={{isOverlayOpened, setOverlayOpened, pdfUrl, openPdfPreview}}>
+		<OverlayContext.Provider value={{isOverlayOpened, setOverlayOpened, pdfName, openPdfPreview}}>
 			{children}
 		</OverlayContext.Provider>
 	);

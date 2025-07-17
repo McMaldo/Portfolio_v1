@@ -1,10 +1,12 @@
 .aboutMe{
     width: 100%;
     display: flex;
+    align-items: start;
     gap: 2rem;
     font-size: 14px;
 }
-.aboutMe article{
+.aboutMe article,
+.aboutMe .eduItemsList{
     display: flex;
     flex-direction: column;
 }
@@ -14,6 +16,14 @@
     position: relative;
 }
 .aboutMe article:last-child{
+    position: relative;
+}
+.aboutMe article:last-child .eduItemsList{
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-top: 3.5rem;
+    padding-right: .5rem;
+    padding: 3.5rem .5rem 1rem 0;
     gap: 1rem;
 }
 .aboutMe article:first-child::after{
@@ -26,12 +36,18 @@
     background: linear-gradient(var(--main-color-soft) 40%, var(--main-color) 75%, var(--main-color-soft) 90%);
 }
 .sectionsSwitch{
+    position: absolute;
+    top: .5rem;
+    left: 0;
+    z-index: 2;
     display: flex;
     gap: .25rem;
     width: fit-content;
     padding: .25rem;
     border-radius: .5rem;
     border: 1px solid var(--main-color-soft);
+    background: var(--bg-color);
+    box-shadow: 0 0 .5rem var(--bg-color);
 }
 .sectionsSwitch h4{
     padding: 1px 6px;
@@ -50,11 +66,11 @@
 .aboutMe .eduItem{
 	position: relative;
     display: grid;
-	grid-template-columns: 2.5rem calc(100% - 3rem);
+	grid-template-columns: 2.5rem calc(100% - 5rem) 1.5rem;
 	column-gap: .5rem;
 	grid-template-areas: 
-	"img comp"
-	"img title";
+	"img comp pdf"
+	"img title pdf";
     background-color: var(--bg-color-tag);
 	border-radius: .75rem;
 	padding: .5rem;
@@ -67,9 +83,17 @@
 	transition: filter .2s;
 }
 .aboutMe .eduItem .comp{
+    width: fit-content;
     grid-area: comp;
     color: var(--font-color-soft);
     font-size: 12px;
+}
+.aboutMe .eduItem .comp:hover{
+    text-decoration: underline;
+}
+.aboutMe .eduItem .comp svg{
+    font-size: 10px;
+    margin-left: 4px;
 }
 .aboutMe .eduItem .title{
     grid-area: title;
@@ -90,21 +114,33 @@
     background: var(--main-color);
     color: var(--font-color);
 }
-.aboutMe .eduItem svg{
+.aboutMe .eduItem .openPdf{
     cursor: pointer;
-    position: absolute;
-    right: .5rem;
+    grid-area: pdf;
     align-self: center;
     height: 1.5rem;
     width: 1.5rem;
     color: var(--icon-color);
-    background: var(--bg-color-tag);
-    padding: .5rem;
-    opacity: 0;
-    transition: opacity .3s;
+    transition: color .1s;
 }
-.aboutMe .eduItem:hover svg{
-    opacity: 1;
+.aboutMe .eduItem:hover .openPdf{
+    color: var(--font-color);
+}
+.aboutMe article:last-child::before,
+.aboutMe article:last-child::after{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1.5rem;
+    content: "";
+}
+.aboutMe article:last-child::before{
+    top: 0;
+    background: linear-gradient(var(--bg-color), transparent);
+}
+.aboutMe article:last-child::after{
+    bottom: 0;
+    background: linear-gradient(transparent, var(--bg-color));
 }
 
 @media (max-width: 800px){

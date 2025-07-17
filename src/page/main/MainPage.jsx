@@ -33,7 +33,7 @@ export default function Main() {
 				</button>
 			</nav>
 			{width > 750 && <BgDots/>}
-			<div className="mainScroll">
+			<div className="mainScroll customScroll">
 				<header>
 					<div className='heading'>
 						<h1>{isTranslatedToEnglish? userData.heading.h1.en : userData.heading.h1.es}</h1>
