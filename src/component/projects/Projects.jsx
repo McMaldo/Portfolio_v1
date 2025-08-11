@@ -21,7 +21,7 @@ export default function Projects() {
 							<FontAwesomeIcon icon={p.colaboratorsCount>2? faUsers : faUser}/>
 							<span>{p.colaboratorsCount}</span>
 						</div>
-						<img className={!p.img? s.noImg : ""} src={p.img? ARTICLES_IMGS_DIR + p.img : "/Portfolio_v1/img/no-image.svg"} alt="" />
+						<img className={!p.img? s.noImg : ""} src={p.img? ARTICLES_IMGS_DIR + p.img + ".webp" : "/Portfolio_v1/img/no-image.svg"} alt="" />
 						<div className={p.demo || p.gh || p.gl || p.figma ? s.links : ""}>
 							{p.demo ? <a href={p.demo} title="demo"><FontAwesomeIcon icon={faGlobe}/></a> : ""}
 							{p.gh ? <a href={p.gh} title="github repo"><FontAwesomeIcon icon={faGithub}/></a> : ""}
