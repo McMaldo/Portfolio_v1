@@ -1,4 +1,3 @@
-import React from "react";
 import s from './projects.module.css';
 import { useLocalStorage } from "@uidotdev/usehooks";
 
@@ -23,10 +22,10 @@ export default function Projects() {
 						</div>
 						<img className={!p.img? s.noImg : ""} src={p.img? ARTICLES_IMGS_DIR + p.img + ".webp" : "/Portfolio_v1/img/no-image.svg"} alt="" />
 						<div className={p.demo || p.gh || p.gl || p.figma ? s.links : ""}>
-							{p.demo ? <a href={p.demo} title="demo"><FontAwesomeIcon icon={faGlobe}/></a> : ""}
-							{p.gh ? <a href={p.gh} title="github repo"><FontAwesomeIcon icon={faGithub}/></a> : ""}
-							{p.gl ? <a href={p.gl} title="gitlab repo"><FontAwesomeIcon icon={faGitlab}/></a> : ""}
-							{p.figma ? <a href={p.figma} title="figma"><FontAwesomeIcon icon={faFigma}/></a> : ""}
+							{p.demo && <a href={p.demo} title="demo"><FontAwesomeIcon icon={faGlobe}/></a>}
+							{p.gh && <a href={p.gh} title="github repo"><FontAwesomeIcon icon={faGithub}/></a>}
+							{p.gl && <a href={p.gl} title="gitlab repo"><FontAwesomeIcon icon={faGitlab}/></a>}
+							{p.figma && <a href={p.figma} title="figma"><FontAwesomeIcon icon={faFigma}/></a>}
 						</div>
 					</div>
 					<div className={s.techs}>{p.techs.map((t, tKey) => <div key={tKey}>{t}</div>)}</div>
@@ -35,5 +34,5 @@ export default function Projects() {
 				</article>
 			))}
 		</div>
-  )
+	)
 }

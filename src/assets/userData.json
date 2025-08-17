@@ -81,11 +81,11 @@
 	"projects": {
 		"ARTICLES_IMGS_DIR": "/Portfolio_v1/img/projects/",
 		"articles": [
-			{"img": "kiwi_tt", "name": "Kiwi TT", "techs": ["React", "JS", "CSS", "MUI", "AntD", "MySQL"], "desc": {
+			{"img": "kiwi_tt", "name": "Kiwi TT", "techs": ["React.JS", "CSS", "MUI", "AntD", "MySQL"], "desc": {
 				"en": "Allows you to administrate a work team through the agile metodology SCRUM, distributing tasks with differents priorities & submission deadlines",
 				"es": "Permite administrar a un grupo de trabajo mediante la metodología agil SCRUM, designando tareas con distintas prioridades y plazos de entrega."
 			}, "demo":"https://kiwi.escuelarobertoarlt.com/", "gh": "", "gl": "", "colaboratorsCount": 4},
-			{"img": "App_Resto", "name": "App Resto", "techs": ["React", "EX", "Node", "JS", "CSS", "MySQL"], "desc": {
+			{"img": "App_Resto", "name": "App Resto", "techs": ["React.JS", "EX", "Node", "CSS", "MySQL"], "desc": {
 				"en": "Offers multiples plates with differents clasifications, a cart to manage the purchases & generates the total to pay. Also brings an API to record all the purchases",
 				"es": "Ofrece múltiples platos con diferentes clasificaciones, un carrito para administrar las compras y un generador del total a pagar. Además una API para registar las compras."
 			}, "demo":"https://mcmaldo.github.io/act_14_react/", "gh": "https://github.com/McMaldo/act_14_react", "gl": "", "colaboratorsCount": 2},
@@ -94,27 +94,28 @@
 				"es": "Observa el cambio climatico en un app web totalmente responsive, verifica estadisticas como la temperatura, humedad, presión atmosferica y más."
 			}, "demo":"", "gh": "https://github.com/McMaldo/app-estacion", "gl": "https://gitlab.com/mcmaldo/app-estacion", "colaboratorsCount": 1},
 
+			{"img": "Tech_Shop", "name": "Tech Shop", "techs": ["React.JS", "Tailwind CSS", "HTML", "Vercel"], "desc": {
+				"en": "E-commerce with a variety of peripherals to the computer, notebook, console & mobile, articles to your setup that you can filter by category, and price.",
+				"es": "E-commerce con una variedad de perifericos de computadora, notebook, consola y móvil, artículos para tu setup, que podrás filtrar por categoría, y precio."
+			}, "demo":"https://tech-shop-nu-five.vercel.app/", "gh": "https://github.com/McMaldo/tech_shop", "gl": "", "figma": "", "colaboratorsCount": 1},
 			{"img": "App_Clothing_Store", "name": "App Clothing Store", "techs": ["CSS", "JS", "HTML"], "desc": {
-				"en": "E-commerce with multiples clothing options, & a cart to manage the purchases from the user. It's a SPA built with only JS Vanila for its functionality",
-				"es": "E-commerce con múltiples opciones de ropa, y un carrito para administrar las compras de un usuario. Es una SPA elaborada con únicamente JS Vanila para su funcionalidad."
+				"en": "E-commerce with multiples clothing options, & a cart to manage the purchases from the user. It's a SPA built with only JS Vanilla for its functionality",
+				"es": "E-commerce con múltiples opciones de ropa, y un carrito para administrar las compras de un usuario. Es una SPA elaborada con únicamente JS Vanilla para su funcionalidad."
 			}, "demo":"https://mcmaldo.github.io/app_clothing_store/", "gh": "https://github.com/McMaldo/app_clothing_store", "gl": "", "colaboratorsCount": 1},
 			{"img": "Webgenerator", "name": "Webgenerator", "techs": ["PHP", "HTML", "ShellScript", "MySQL"], "desc": {
 				"en": "Generates the structure for a web application and manage all the apps from your account. All user apps can be edited or deleted by an administrator.",
 				"es": "Genera la estrucutra para una aplicación web. Además permite adminitrar las generadas por un mismo usuario y las de todos los registrados por un admin."
 			}, "demo":"", "gh": "https://github.com/McMaldo/webgenerator", "gl": "https://gitlab.com/mcmaldo/webgenerator", "colaboratorsCount": 1},
+
 			{"img": "Mini_Games_JS", "name": "Mini Games JS", "techs": ["JS", "CSS", "HTML"], "desc": {
 				"en": "A collection of mini games made with JS Vanilla, like: space invaders, pac-man and more.",
-				"es": "Una colección de mini juegos desarrollados con JS Vanila, como: space invaders, pac-man y más."
+				"es": "Una colección de mini juegos desarrollados con JS Vanilla, como: space invaders, pac-man y más."
 			}, "demo":"https://mcmaldo.github.io/mini_games_js/", "gh": "https://github.com/McMaldo/mini_games_js", "gl": "", "figma": "", "colaboratorsCount": 1},
-			{"img": "D&D_Char", "name": "D&D Character", "techs": ["React", "TS", "Tailwind CSS", "HTML"], "desc": {
+			{"img": "D&D_Char", "name": "D&D Character", "techs": ["React.TS", "Tailwind CSS", "HTML"], "desc": {
 				"en": "Build your own Character based on the Dungeons & Dragons rules from the 5th edition manuals. You can also learn about the different species and classes.",
 				"es": "Crea tu propio personaje basado en los manuales de la 5ta edición de Dungeons & Dragons. Además puedes aprender acerca de las distintas especies y clases."
 			}, "demo":"", "gh": "", "gl": "", "figma": "", "colaboratorsCount": 1},
-			{"img": "", "name": "Tech Shop", "techs": ["React", "JS", "Tailwind CSS", "HTML"], "desc": {
-				"en": "E-commerce with a variety of tech products, filter by category, brand, and price.",
-				"es": "E-commerce con una variedad de productos tecnológicos, filtra por categoría, marca y precio."
-			}, "demo":"", "gh": "", "gl": "", "figma": "", "colaboratorsCount": 1},
-			{"img": "", "name": "Kiwi PM", "techs": ["React", "JS", "Tailwind CSS", "HTML"], "desc": {
+			{"img": "", "name": "Kiwi PM", "techs": ["React.JS", "Tailwind CSS", "HTML", "Figma"], "desc": {
 				"en": "Insert your Github username, select from your repositories, select from a variety of templates, a color palette, and create your ideal portfolio.",
 				"es": "En base al nombre de usuario de Github, genera el porfolio ideal seleccionando entre una variedad de plantillas y una paleta de colores personalizada."
 			}, "demo":"", "gh": "", "gl": "", "figma": "https://www.figma.com/design/ehxLylyBXi6dKsPofVqJRF/Portfolio-Maker?node-id=2-127&t=PZ8PWaL04Cx6uTYj-1", "colaboratorsCount": 1}

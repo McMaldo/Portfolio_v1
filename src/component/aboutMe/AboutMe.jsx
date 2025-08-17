@@ -25,7 +25,7 @@ export default function AboutMe() {
 
 			{lvl:{en:"College", es:"Universidad"},
 			logo:"/Portfolio_v1/icons/UBA-Logo.svg",
-			company: "Universidad de Buenos Aires, Buenos Aires, Argentina",
+			company: "Universidad de Buenos Aires, Argentina",
 			link:"https://www.uba.ar/",
 			title: "Licenciatura en Ciencia de la Computación",
 			pdf:undefined}
