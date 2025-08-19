@@ -64,7 +64,7 @@
 .skillTagMore{
 	background: linear-gradient(90deg, var(--bg-color-tag) 40%, var(--bg-color-tag-light) 50%, var(--bg-color-tag) 54%);
 	background-size: 300% 100%;
-	animation: gradientBack 3s linear infinite;
+	animation: gradientBack 4s linear infinite;
 }
 .skillTagMore:hover{
 	border-radius: .75rem .75rem 0 0;
