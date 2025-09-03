@@ -26,15 +26,6 @@
     padding: 3rem .5rem 1rem 0;
     gap: 1rem;
 }
-.aboutMe article:first-child::after{
-    content: "";
-    position: absolute;
-    bottom: 1rem;
-    right: -1rem;
-    width: 2px;
-    height: calc(100% - 2rem);
-    background: linear-gradient(var(--main-color-soft) 40%, var(--main-color) 75%, var(--main-color-soft) 90%);
-}
 .sectionsSwitch{
     position: absolute;
     top: 0;
@@ -151,8 +142,5 @@
     }
     .aboutMe article:first-child{
         max-width: unset;
-    }
-    .aboutMe article:first-child::after{
-        content: none;
     }
 }

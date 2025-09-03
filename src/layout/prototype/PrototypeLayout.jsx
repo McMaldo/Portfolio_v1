@@ -9,7 +9,6 @@ import Accounts from "../../component/accounts/Accounts";
 import Contacts from "../../component/contacts/Contacs";
 import Menu from '../../component/menu/Menu';
 
-import Loading from '../../component/loading/Loading.jsx';
 const PdfPreview = lazy(() => import('../../component/pdfPreview/PdfPreview.jsx'));
 import { OverlayProvider } from "../../context/OverlayContext";
 
@@ -53,7 +52,7 @@ export default function Prototype() {
 					</main>
 					<Menu/>
 				</div>
-				<Suspense fallback={<Loading/>}>
+				<Suspense fallback={<div></div>}>
 					<PdfPreview/>
 				</Suspense>
 			</div>
