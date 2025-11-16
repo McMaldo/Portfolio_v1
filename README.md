@@ -2,9 +2,10 @@
 
 ## Tech Stack
 <div styles="display: flex; gap: 10px;">
-  <img src="https://github.com/McMaldo/McMaldo/raw/main/icons/React-Dark.svg" width="36" title="React">
-  <img src="https://github.com/McMaldo/McMaldo/raw/main/icons/JavaScript.svg" width="36" title="Java Script">
-  <img src="https://github.com/McMaldo/McMaldo/raw/main/icons/CSS.svg" width="36" title="CSS">
+  <img src="https://raw.githubusercontent.com/McMaldo/skill-icons/main/icons/React-Dark.svg" width="36" title="React">
+  <img src="https://raw.githubusercontent.com/McMaldo/skill-icons/main/icons/JavaScript.svg" width="36" title="Java Script">
+  <img src="https://raw.githubusercontent.com/McMaldo/skill-icons/main/icons/CSS.svg" width="36" title="CSS">
+  <img src="https://raw.githubusercontent.com/McMaldo/skill-icons/main/icons/Vite-Dark.svg" width="36" title="Vite">
 </div>
 
 ## Content
